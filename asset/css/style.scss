@@ -1460,3 +1460,46 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
 .disable-submit {
 
 }
+
+.form-checkbox-custom {
+  background: #A3A3A3;
+  &.active {
+    background: #75C350;
+    div {
+      background: #529B30;
+    }
+  }
+  input {
+    left: unset;
+    top: 6px;
+    right: 6px;
+
+  }
+  span {
+    top: 6px;
+    right: 6px;
+    left: unset;
+  }
+  input:checked ~ .icon.checkmark:after {
+    top: 7px;
+    left: 13px;
+  }
+  .icon {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    left: unset;
+    top: 0;
+    bottom: 0;
+    height: unset;
+    background: #5F5D5D;
+    border-radius: 0 6px 6px 0;
+    .checkmark {
+      width: 28px;
+      height: 28px;
+      top: 5px;
+      right: 6px;
+      border-radius: 4px;
+    }
+  }
+}

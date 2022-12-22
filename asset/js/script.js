@@ -46,10 +46,22 @@ $(document).ready(function () {
     $('body').on('click', '.icon-show', function () {
         $(this).toggleClass('show');
     })
-
     $('body').on('click', '.sub-input', function () {
         $(this).parent().parent().remove();
     })
+
+    $('body').on('click', '.tab-scroll', function (){
+        let id = $(this).attr('data-id');
+        if (id == 1){
+            $(window).scrollTop($('#tab1').offset().top - 160);
+        }
+        if (id == 2){
+            $(window).scrollTop($('#tab2').offset().top - 160);
+        }
+        if (id == 3){
+            $(window).scrollTop($('#tab3').offset().top - 160);
+        }
+    });
 
     $('body').on('click', '.icon-add-input', function () {
         $(this).parent().prev().append(`<div class="row row-cols-1 row-cols-lg-2 mt-3 gx-0">
@@ -163,6 +175,16 @@ $(document).ready(function () {
         $('.icon-disable').each(function (e, value) {
             $(value).attr('src', './asset/image/icon_sub_disable.svg');
             $(value).removeClass('sub-input');
+        });
+
+        $('.form-checkbox-custom').each(function (e, value){
+            $('input', $(this))[0].setAttribute("disabled", "");
+            if ($('input',value)[0].checked){
+                value.style.background = "#A2A2A2";
+                $('.icon', value).css('background', '#5F5D5D');
+            }else  {
+                value.style.background = "#A2A2A2";
+            }
         });
     })
 
