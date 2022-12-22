@@ -72,37 +72,60 @@ $(document).ready(function () {
                                         </div>`);
     })
 
-
     $('body').on('click', '.submit-form', function () {
-        $(this).text('登録完了')
+        $(this).addClass('d-none');
+        $(this).parent().next().removeClass('visually-hidden');
         $('.form-control').each(function (e, value) {
             if (value.value.length > 0) {
                 value.style.border = "2px solid #003B90";
-                value.style.backgroundColor = "#F5F5F5";
+                value.style.background = "#F5F5F5";
                 value.style.color = "#003B90";
                 value.style.fontWeight = "700";
                 value.setAttribute("readonly", "");
             } else {
                 value.style.border = "1px solid #DBDBDB";
-                value.style.backgroundColor = "#F5F5F5";
+                value.style.background = "#F5F5F5";
                 value.setAttribute("readonly", "");
             }
+
         })
 
         $('.form-checkbox').each(function (e, value) {
             $('.notification').removeClass('visually-hidden')
             if ($('input', $(this))[0].checked) {
                 value.style.border = "2px solid #003B90";
-                value.style.backgroundColor = "#F5F5F5";
+                value.style.background = "#F5F5F5";
                 $('input', $(this))[0].setAttribute("readOnly", "");
             } else {
                 value.style.border = "1px solid #DBDBDB";
-                value.style.backgroundColor = "#F5F5F5";
+                value.style.background = "#F5F5F5";
                 $('input', $(this))[0].setAttribute("disabled", "");
                 $('.checkmark', $(this)).css('background', '#F5F5F5');
                 $('.checkmark-radio', $(this)).css('background', '#F5F5F5');
             }
-        })
+        });
+
+        $('select').each(function (e, value) {
+            value.setAttribute("disabled", "");
+        });
+
+        $('.button-custom').each(function (e, value) {
+            $('img', value).attr('src', './asset/image/icon_add_disabled.svg');
+            $('span', value).addClass('text-gray-blur');
+            $(value).css('background', '#DBDBDB');
+            $(value).css('border', '1px dashed #003B90');
+            console.log();
+        });
+
+        $('.button-disable').each(function (e, value) {
+            $(value).addClass('bg-disable');
+            $('div', value).addClass('bg-disable-2');
+        });
+
+        $('.icon-disable').each(function (e, value) {
+            $(value).attr('src', './asset/image/icon_sub_disable.svg');
+            $(value).removeClass('sub-input');
+        });
     })
 
 

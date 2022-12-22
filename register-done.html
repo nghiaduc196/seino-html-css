@@ -10,7 +10,7 @@
     <div class="sidebar-wrapper">
         <div class="sidebar">
             <div class="box-slogan d-flex align-items-center">
-                <a href="#" id="menu"><img src="./asset/image/icon_menu.svg"></a>
+                <a class="cursor-pointer" id="menu"><img src="./asset/image/icon_menu.svg"></a>
                 <span class="slogan">web貸切システム</span>
             </div>
             <div class="box-info">
@@ -25,15 +25,21 @@
             <div class="box-menu">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center active" href="#">
+                        <a class="nav-link d-flex align-items-center" href="#">
                             <img class="icon-menu" src="./asset/image/icon_home.svg"/>
                             <span class="text-menu">トップメニュー</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <a class="nav-link d-flex align-items-center active" href="register-form.html">
                             <img class="icon-menu" src="./asset/image/icon_menu_2.svg"/>
                             <span class="text-menu">案件登録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="search.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_4.svg"/>
+                            <span class="text-menu">案件一覧</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -44,20 +50,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center" href="#">
-                            <img class="icon-menu" src="./asset/image/icon_menu_4.svg"/>
-                            <span class="text-menu">案件一覧</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
-                            <img class="icon-menu" src="./asset/image/icon_menu_5.svg"/>
-                            <span class="text-menu">共通コードメンテナンス</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
-                            <img class="icon-menu" src="./asset/image/icon_menu_6.svg"/>
-                            <span class="text-menu">共通コード一覧</span>
+                            <img class="icon-menu" src="./asset/image/icon_menu_8.svg"/>
+                            <span class="text-menu">仕立登録</span>
                         </a>
                     </li>
 
@@ -75,11 +69,11 @@
     <div class="content-wrapper">
 
         <section class="content">
-            <div class="header">
+            <div class="header position-sticky">
                 <div class="header-top d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
                         <img class="icon-menu" src="./asset/image/icon_menu_3.svg"/>
-                        <span class="text-menu">貸切案件登録</span>
+                        <span class="text-menu-1 fs-21 letter-spacing-10 ff-nt-sans fw-bolder">貸切案件登録</span>
                     </div>
                     <div class="me-15">
                         <button class="button w-200 bg-color-blue-1 rounded-pill p-2 d-flex align-items-center">
@@ -110,6 +104,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="main">
                 <div class="box-content row row-cols-md-2 row-cols-lg-2 gx-0">
                     <div class="col w-calc-319">
                         <div class="box-content-left">
@@ -234,14 +231,9 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <button class="submit-form button bg-color-green h-5 border-radius-5 text-white text-center w-100">
-                                        登録／更新
-                                    </button>
-                                </div>
-                                <div>
-                                    <button class="button bg-color-gray-dark h-5 border-radius-5 text-white text-center w-100 mt-3">
+                                    <a href="register-form.html" class="button bg-color-gray-dark h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
                                         キャンセル／更新
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +246,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
     </div>
@@ -262,41 +253,41 @@
 </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content rounded-0 bg-transparent border-0">
-            <div class="modal-body bg-error border-red border-radius-10 py-28 px-45 position-relative">
-                <div class="position-absolute top-13 right-17 cursor-pointer" data-bs-dismiss="modal">
-                    <img src="./asset/image/icon_x_error.svg"/>
-                </div>
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog modal-dialog-centered modal-lg">-->
+<!--        <div class="modal-content rounded-0 bg-transparent border-0">-->
+<!--            <div class="modal-body bg-error border-red border-radius-10 py-28 px-45 position-relative">-->
+<!--                <div class="position-absolute top-13 right-17 cursor-pointer" data-bs-dismiss="modal">-->
+<!--                    <img src="./asset/image/icon_x_error.svg"/>-->
+<!--                </div>-->
 
-                <div class="d-flex align-items-center">
-                    <img src="./asset/image/icon_!.svg"/>
-                    <div class="ms-25">
-                        <span class="text-red fw-bolder ff-nt-sans fs-18 letter-spacing-5">貸切受領印入力を行ってください</span>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center l-h-35 mt-10">
-                    <img class="visibility-hidden" src="./asset/image/icon_!.svg"/>
-                    <div class="ms-25 ff-nt-sans fst-normal fs-16 letter-spacing-5">
-                        <div><span>支払締日が近づいています。</span></div>
-                        <div><span>配達未完了の原票が<strong class="text-red">２件</strong>あります。</span></div>
-                        <div><span>カンガルーオンラインで貸切受領印入力を行ってください。</span></div>
-                    </div>
-                </div>
+<!--                <div class="d-flex align-items-center">-->
+<!--                    <img src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25">-->
+<!--                        <span class="text-red fw-bolder ff-nt-sans fs-18 letter-spacing-5">貸切受領印入力を行ってください</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="d-flex align-items-center l-h-35 mt-10">-->
+<!--                    <img class="visibility-hidden" src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25 ff-nt-sans fst-normal fs-16 letter-spacing-5">-->
+<!--                        <div><span>支払締日が近づいています。</span></div>-->
+<!--                        <div><span>配達未完了の原票が<strong class="text-red">２件</strong>あります。</span></div>-->
+<!--                        <div><span>カンガルーオンラインで貸切受領印入力を行ってください。</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            </div>
-            <div class="modal-footer justify-content-center border-0 mt-20">
-                <button type="button"
-                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"
-                        data-bs-dismiss="modal">
-                    <img class="me-25" src="./asset/image/icon_x.svg"/>
-                    <span>閉じる</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<!--            </div>-->
+<!--            <div class="modal-footer justify-content-center border-0 mt-20">-->
+<!--                <button type="button"-->
+<!--                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"-->
+<!--                        data-bs-dismiss="modal">-->
+<!--                    <img class="me-25" src="./asset/image/icon_x.svg"/>-->
+<!--                    <span>閉じる</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 
@@ -379,3 +370,4 @@
 </body>
 
 </html>
+

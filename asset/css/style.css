@@ -1,3 +1,7 @@
+@font-face {
+  font-family: notosan;
+  src: url("../font/Noto_Sans/NotoSans-Regular.ttf");
+}
 input:focus, button:focus, select:focus {
   box-shadow: none !important;
 }
@@ -50,11 +54,21 @@ input.input-number {
   background: #FFE5E0;
 }
 
-.bg-white {
+.bg-color-gray-blur {
+  background: #8A8A8A;
+}
+.bg-color-gray-blur:focus {
+  background: #8A8A8A !important;
+}
+
+.bg-white-custom {
   background: #FFFFFF;
 }
 
 .bg-base-color {
+  background: #003B90;
+}
+.bg-base-color:focus {
   background: #003B90 !important;
 }
 
@@ -63,6 +77,20 @@ input.input-number {
 }
 .bg-color-green:focus {
   background: #75C350 !important;
+}
+
+.bg-disable {
+  background: #A2A2A2 !important;
+}
+.bg-disable:focus {
+  background: #A2A2A2 !important;
+}
+
+.bg-disable-2 {
+  background: #5F5D5D !important;
+}
+.bg-disable-2:focus {
+  background: #5F5D5D !important;
 }
 
 .bg-color-red {
@@ -88,8 +116,15 @@ input.input-number {
   background: #DBDBDB;
 }
 
+.bg-color-gray-4 {
+  background: #414141;
+}
+
 .bg-color-blue-blur {
-  background: #CAD8EC !important;
+  background: #CAD8EC;
+}
+.bg-color-blue-blur:focus {
+  background: #CAD8EC;
 }
 
 .bg-color-gray-2 {
@@ -150,6 +185,10 @@ input.input-number {
 
 .w-120 {
   width: 120px;
+}
+
+.w-130 {
+  width: 130px;
 }
 
 .w-170 {
@@ -345,6 +384,33 @@ input.input-number {
   width: 92px;
 }
 
+.w-19-0 {
+  width: 19%;
+}
+@media only screen and (max-width: 1200px) {
+  .w-19-0 {
+    width: 36%;
+  }
+}
+
+.w-34-0 {
+  width: 34%;
+}
+@media only screen and (max-width: 1200px) {
+  .w-34-0 {
+    width: 64%;
+  }
+}
+
+.w-47-0 {
+  width: 47%;
+}
+@media only screen and (max-width: 1200px) {
+  .w-47-0 {
+    width: 100%;
+  }
+}
+
 .mt-26 {
   margin-top: 26px !important;
 }
@@ -487,6 +553,11 @@ input.input-number {
   padding-right: 45px;
 }
 
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .pb-27 {
   padding-bottom: 27px;
 }
@@ -530,6 +601,10 @@ input.input-number {
   height: 45px;
 }
 
+.h-41 {
+  height: 41px;
+}
+
 .m-h-158 {
   min-height: 158px !important;
 }
@@ -548,6 +623,30 @@ input.input-number {
 
 .border-gray {
   border: 1px solid #DBDBDB;
+}
+
+.border-radius-5-red {
+  position: relative;
+}
+.border-radius-5-red:before {
+  content: "";
+  position: absolute;
+  border-left: 5px solid #DA3915;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.border-radius-5-gray {
+  position: relative;
+}
+.border-radius-5-gray:before {
+  content: "";
+  position: absolute;
+  border-left: 5px solid #8A8A8A;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .border-input {
@@ -671,6 +770,10 @@ input.input-number {
   font-size: 21px;
 }
 
+.fs-20 {
+  font-size: 20px;
+}
+
 .fs-23 {
   font-size: 23px;
 }
@@ -684,7 +787,7 @@ input.input-number {
 }
 
 .ff-nt-sans {
-  font-family: "Noto Sans";
+  font-family: notosan;
 }
 
 .ff-roboto {
@@ -713,6 +816,10 @@ input.input-number {
 
 .right-17 {
   right: 17px;
+}
+
+.top-11 {
+  top: 11px;
 }
 
 li {
@@ -850,6 +957,7 @@ ul {
   margin-right: 20px;
 }
 .collapse-menu .sidebar .box-menu .logout .nav-link {
+  border-radius: 5px;
   width: 43px;
   height: 43px;
   padding: 0;
@@ -873,6 +981,11 @@ ul {
 }
 .content-wrapper .content {
   min-height: 100vh;
+}
+.content-wrapper .content .header {
+  z-index: 10;
+  background: #F1F4F7;
+  top: 0;
 }
 .content-wrapper .content .header .clearfix {
   border-bottom: 1px solid #CBCBCB;
@@ -913,6 +1026,16 @@ ul {
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .content-wrapper .content .header .header-bottom {
     margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .content-wrapper .content .header .header-bottom .header {
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .content-wrapper .content .header .header-bottom .header {
+    margin-right: 20px;
   }
 }
 .content-wrapper .content .header .header-bottom .title {
@@ -1006,6 +1129,32 @@ ul {
 .content-wrapper .content .header .box-content .title {
   color: #003B90;
 }
+.content-wrapper .content .header .box-content .tab-content {
+  margin-right: 32px;
+}
+@media only screen and (max-width: 992px) {
+  .content-wrapper .content .header .box-content .tab-content {
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .content-wrapper .content .header .box-content .tab-content {
+    margin-right: 20px;
+  }
+}
+.content-wrapper .content .header .box-content .tab-content .box-table {
+  font-size: 14px;
+}
+.content-wrapper .content .header .box-content .tab-content .box-table .table-project tr:nth-child {
+  background-color: #FFFFFF;
+}
+.content-wrapper .content .header .box-content .tab-content .box-table .table-project td {
+  padding: 30px 18px !important;
+}
+.content-wrapper .content .header .box-content .tab-content .box-table .table-project tr:nth-child(even) {
+  background-color: #F5F5F5;
+  color: #000;
+}
 .content-wrapper .content .header .box-content .box-content-left .box {
   padding: 32px 50px;
   background: #FFFFFF;
@@ -1035,7 +1184,7 @@ ul {
 }
 .content-wrapper .content .header .box-content .box-content-right {
   position: sticky;
-  top: 50px;
+  top: 200px;
 }
 .content-wrapper .content .header .box-content .box-content-right .custom-brick {
   position: relative;
@@ -1048,6 +1197,97 @@ ul {
   left: -4px;
   content: "";
   border-left: 4px solid #003B90;
+}
+.content-wrapper .content .main .box-content {
+  margin-left: 39px;
+}
+@media only screen and (max-width: 992px) {
+  .content-wrapper .content .main .box-content {
+    margin-left: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .content-wrapper .content .main .box-content {
+    margin-left: 20px;
+  }
+}
+.content-wrapper .content .main .box-content .title {
+  color: #003B90;
+}
+.content-wrapper .content .main .box-content .tab-content {
+  margin-right: 32px;
+}
+@media only screen and (max-width: 992px) {
+  .content-wrapper .content .main .box-content .tab-content {
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .content-wrapper .content .main .box-content .tab-content {
+    margin-right: 20px;
+  }
+}
+.content-wrapper .content .main .box-content .tab-content .box-table {
+  font-size: 14px;
+}
+.content-wrapper .content .main .box-content .tab-content .box-table .table-project tr:nth-child {
+  background-color: #FFFFFF;
+}
+.content-wrapper .content .main .box-content .tab-content .box-table .table-project td {
+  padding: 30px 18px !important;
+}
+.content-wrapper .content .main .box-content .tab-content .box-table .table-project tr:nth-child(even) {
+  background-color: #F5F5F5;
+  color: #000;
+}
+.content-wrapper .content .main .box-content .box-content-left .box {
+  padding: 32px 50px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+.content-wrapper .content .main .box-content .box-content-left .box .title {
+  color: #000000;
+}
+.content-wrapper .content .main .box-content .box-content-left .box .label {
+  margin-bottom: 14px;
+  margin-top: 30px;
+}
+.content-wrapper .content .main .box-content .box-content-left .box .label .button-danger {
+  border-radius: 4px;
+  background: #DA3915;
+  width: 62px;
+  height: 26px;
+  color: #fff;
+  line-height: 0;
+  margin-left: 19px;
+}
+.content-wrapper .content .main .box-content .box-content-left .box .label .button-danger:hover {
+  opacity: 0.8;
+}
+.content-wrapper .content .main .box-content .box-content-left .box-2 {
+  margin-top: 24px;
+}
+.content-wrapper .content .main .box-content .box-content-right {
+  position: sticky;
+  top: 200px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick {
+  position: relative;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick:before {
+  position: absolute;
+  width: 4px;
+  height: 21px;
+  top: 0;
+  left: -4px;
+  content: "";
+  border-left: 4px solid #003B90;
+}
+.content-wrapper .content .main .box-content .box-content-right .text-focus {
+  transition: 0.3s ease-in-out;
+}
+.content-wrapper .content .main .box-content .box-content-right .text-focus:hover {
+  font-weight: 700;
 }
 
 .input-field {
@@ -1216,8 +1456,18 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
 .table th {
   padding: 0 20px !important;
 }
+@media only screen and (max-width: 992px) {
+  .table th {
+    padding: 0 10px !important;
+  }
+}
 .table td {
   padding: 10px 20px !important;
+}
+@media only screen and (max-width: 992px) {
+  .table td {
+    padding: 10px 10px !important;
+  }
 }
 
 .box-show {

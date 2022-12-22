@@ -11,6 +11,10 @@ $base-color-brick: #003B90;
 $base-color-button: #E5EAF4;
 $base-color-button-red: #DA3915;
 
+@font-face {
+  font-family: notosan;
+  src: url('../font/Noto_Sans/NotoSans-Regular.ttf');
+}
 
 // inpput
 input:focus, button:focus, select:focus {
@@ -62,16 +66,37 @@ input {
 .bg-error {
   background: #FFE5E0;
 }
-.bg-white {
+.bg-color-gray-blur {
+  background: $base-color-gray-blur;
+  &:focus {
+    background: $base-color-gray-blur !important;
+  }
+}
+.bg-white-custom {
   background: #FFFFFF;
 }
 .bg-base-color {
-  background: $base-color !important;
+  background: $base-color ;
+  &:focus {
+    background: $base-color !important;
+  }
 }
 .bg-color-green {
   background: $base-color-green;
   &:focus {
     background: $base-color-green !important;
+  }
+}
+.bg-disable {
+  background: #A2A2A2 !important;
+  &:focus {
+    background: #A2A2A2 !important;
+  }
+}
+.bg-disable-2 {
+  background: #5F5D5D !important;
+  &:focus {
+    background: #5F5D5D !important;
   }
 }
 .bg-color-red {
@@ -92,8 +117,14 @@ input {
     background: $base-color-gray;
   }
 }
+.bg-color-gray-4 {
+  background: #414141;
+}
 .bg-color-blue-blur {
-  background: #CAD8EC !important;
+  background: #CAD8EC;
+  &:focus {
+    background: #CAD8EC;
+  }
 }
 .bg-color-gray-2 {
   background: #A3A3A3 !important;
@@ -123,7 +154,6 @@ input {
 .fw-500 {
   font-weight: 500;
 }
-
 // Width
 .w-24 {
   width: 24px;
@@ -143,6 +173,9 @@ input {
 }
 .w-120 {
   width: 120px;
+}
+.w-130 {
+  width: 130px;
 }
 .w-170 {
   width: 170px;
@@ -292,6 +325,24 @@ input {
 .w-92 {
   width: 92px;
 }
+.w-19-0 {
+  width: 19%;
+  @media only screen and (max-width: 1200px) {
+    width: 36%;
+  }
+}
+.w-34-0 {
+  width: 34%;
+  @media only screen and (max-width: 1200px) {
+    width: 64%;
+  }
+}
+.w-47-0 {
+  width: 47%;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
+}
 
 // margin
 .mt-26 {
@@ -402,6 +453,10 @@ input {
   padding-left: 45px;
   padding-right: 45px;
 }
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .pb-27 {
   padding-bottom: 27px;
 }
@@ -437,6 +492,9 @@ input {
 .h-45 {
   height: 45px;
 }
+.h-41 {
+  height: 41px;
+}
 .m-h-158 {
   min-height: 158px !important;
 }
@@ -453,6 +511,28 @@ input {
 // Border
 .border-gray {
   border: 1px solid $base-color-gray;
+}
+.border-radius-5-red {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    border-left: 5px solid $base-color-red;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+.border-radius-5-gray {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    border-left: 5px solid $base-color-gray-blur;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
 }
 .border-input {
   border: 1px solid $base-color-gray;
@@ -554,6 +634,9 @@ input {
 .fs-21 {
   font-size: 21px;
 }
+.fs-20 {
+  font-size: 20px;
+}
 .fs-23 {
   font-size: 23px;
 }
@@ -565,7 +648,7 @@ input {
 }
 
 .ff-nt-sans {
-  font-family: 'Noto Sans';
+  font-family: notosan;
 }
 .ff-roboto {
   font-family: 'Roboto';
@@ -590,6 +673,9 @@ input {
 }
 .right-17 {
   right: 17px;
+}
+.top-11 {
+  top: 11px;
 }
 // Base
 li {
@@ -616,6 +702,10 @@ ul {
     opacity: 0.8;
   }
 }
+
+//.wrapper {
+//  overflow: hidden;
+//}
 
 .sidebar-wrapper {
   position: fixed;
@@ -760,6 +850,7 @@ ul {
         margin-right: 20px;
 
         .nav-link {
+          border-radius: 5px;
           width: 43px;
           height: 43px  ;
           padding: 0;
@@ -788,6 +879,9 @@ ul {
   .content {
     min-height: 100vh;
     .header {
+      z-index: 10;
+      background: #F1F4F7;
+      top: 0;
       .clearfix {
         border-bottom: 1px solid #CBCBCB;
       }
@@ -820,6 +914,14 @@ ul {
         }
         @media only screen and (min-width: 992px) and (max-width: 1200px) {
           margin-left: 20px;
+        }
+        .header {
+          @media only screen and (max-width: 992px) {
+            margin-right: 15px;
+          }
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            margin-right: 20px;
+          }
         }
         .title {
           font-family: 'Roboto';
@@ -924,7 +1026,33 @@ ul {
         .title {
           color: $base-color;
         }
+        .tab-content {
+          margin-right: 32px;
+          @media only screen and (max-width: 992px) {
+            margin-right: 15px;
+          }
 
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            margin-right: 20px;
+          }
+          .box-table {
+            font-size: 14px;
+            .table-project {
+              //align-content: center;
+              tr:nth-child  {
+                background-color: #FFFFFF;
+              }
+              td {
+                padding: 30px 18px !important;
+              }
+
+              tr:nth-child(even){
+                background-color: $base-color-gray-1;
+                color: #000;
+              }
+            }
+          }
+        }
         .box-content-left{
           .box {
             padding: 32px 50px;
@@ -959,7 +1087,7 @@ ul {
         }
         .box-content-right {
           position: sticky;
-          top: 50px;
+          top: 200px;
 
           .custom-brick {
             position: relative;
@@ -972,6 +1100,104 @@ ul {
               content: "";
               border-left: 4px solid $base-color;
               //transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+    .main {
+      .box-content {
+        margin-left: 39px;
+        @media only screen and (max-width: 992px) {
+          margin-left: 15px;
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+          margin-left: 20px;
+        }
+
+        .title {
+          color: $base-color;
+        }
+        .tab-content {
+          margin-right: 32px;
+          @media only screen and (max-width: 992px) {
+            margin-right: 15px;
+          }
+
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            margin-right: 20px;
+          }
+          .box-table {
+            font-size: 14px;
+            .table-project {
+              //align-content: center;
+              tr:nth-child  {
+                background-color: #FFFFFF;
+              }
+              td {
+                padding: 30px 18px !important;
+              }
+
+              tr:nth-child(even){
+                background-color: $base-color-gray-1;
+                color: #000;
+              }
+            }
+          }
+        }
+        .box-content-left{
+          .box {
+            padding: 32px 50px;
+            background: #FFFFFF;
+            border-radius: 20px;
+            .title {
+              color: #000000;
+            }
+
+            .label {
+              margin-bottom: 14px;
+              margin-top: 30px;
+
+              .button-danger {
+                border-radius: 4px;
+                background: $base-color-button-red;
+                width: 62px;
+                height: 26px;
+                color: #fff;
+                line-height: 0;
+                margin-left: 19px;
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+          }
+          .box-2 {
+            margin-top: 24px;
+          }
+        }
+        .box-content-right {
+          position: sticky;
+          top: 200px;
+
+          .custom-brick {
+            position: relative;
+            &:before {
+              position: absolute;
+              width: 4px;
+              height: 21px;
+              top: 0;
+              left: -4px;
+              content: "";
+              border-left: 4px solid $base-color;
+            }
+          }
+          .text-focus {
+            transition: 0.3s ease-in-out;
+            &:hover {
+              font-weight: 700;
             }
           }
         }
@@ -1194,9 +1420,15 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
 .table {
   th {
     padding: 0 20px !important;
+    @media only screen and (max-width: 992px) {
+      padding: 0 10px !important;
+    }
   }
   td {
     padding: 10px 20px !important;
+    @media only screen and (max-width: 992px) {
+      padding: 10px 10px !important;
+    }
   }
 }
 //.table-border {
@@ -1222,4 +1454,9 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
   tr td:last-child, tr th:last-child  {
     border-right: 0;
   }
+}
+
+// disable submit
+.disable-submit {
+
 }
