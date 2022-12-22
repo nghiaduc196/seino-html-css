@@ -1193,6 +1193,21 @@ ul {
               content: "";
               border-left: 4px solid $base-color;
             }
+            &.active1 {
+              &:before {
+                top: 0;
+              }
+            }
+            &.active2 {
+              &:before {
+                top: 60px;
+              }
+            }
+            &.active3 {
+              &:before {
+                top: 119px;
+              }
+            }
           }
           .text-focus {
             transition: 0.3s ease-in-out;

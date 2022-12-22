@@ -1283,6 +1283,15 @@ ul {
   content: "";
   border-left: 4px solid #003B90;
 }
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active1:before {
+  top: 0;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active2:before {
+  top: 60px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active3:before {
+  top: 119px;
+}
 .content-wrapper .content .main .box-content .box-content-right .text-focus {
   transition: 0.3s ease-in-out;
 }
