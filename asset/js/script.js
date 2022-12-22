@@ -72,6 +72,40 @@ $(document).ready(function () {
                                         </div>`);
     })
 
+    $('body').on('click', '.icon-add-input-1', function () {
+        $(this).parent().prev().append(`<div class="row row-cols-2 row-cols-md-2 row-cols-lg-1 mt-11">
+                                                <div class="col d-flex w-calc-200 align-items-center">
+                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <span class="ms-20">m</span>
+                                                    <img class="ms-20 me-20" src="./asset/image/icon_x.svg"/>
+                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <span class="ms-20 me-20">m</span>
+                                                    <span>:</span>
+                                                </div>
+                                                <div class="col d-flex w-200 align-items-center mt-3 mt-lg-0">
+                                                    <input type="text"
+                                                           class="w-92 ps-23 text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                                    <span class="ms-20 me-20">枚</span>
+                                                    <img class="cursor-pointer sub-input icon-disable" src="./asset/image/icon_sub.svg"/>
+                                                </div>
+                                            </div>`);
+    })
+
+    $('body').on('click', '.icon-add-input-2', function () {
+        $(this).parent().prev().append(`<div class="d-flex align-items-center mt-12">
+                                                <select class="ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                                    <option>1.1m x 1.1m</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                                <span class="ms-20 me-20">:</span>
+                                                <input type="text"
+                                                       class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                                <span class="ms-20 me-20">枚</span>
+                                                <span><img class="cursor-pointer sub-input" src="./asset/image/icon_sub.svg"/></span>
+                                            </div>`);
+    })
+
     $('body').on('click', '.submit-form', function () {
         $(this).addClass('d-none');
         $(this).parent().next().removeClass('visually-hidden');
@@ -89,6 +123,11 @@ $(document).ready(function () {
             }
 
         })
+
+        $('.icon-add-input-1').each(function (e, value) {}).click(false);
+        $('.icon-add-input-2').each(function (e, value) {}).click(false);
+        $('.icon-add-input').each(function (e, value) {}).click(false);
+        $('.sub-input').each(function (e, value) {}).click(false);
 
         $('.form-checkbox').each(function (e, value) {
             $('.notification').removeClass('visually-hidden')
@@ -114,7 +153,6 @@ $(document).ready(function () {
             $('span', value).addClass('text-gray-blur');
             $(value).css('background', '#DBDBDB');
             $(value).css('border', '1px dashed #003B90');
-            console.log();
         });
 
         $('.button-disable').each(function (e, value) {
