@@ -26,41 +26,18 @@ $(document).ready(function () {
     // Bind event listener
     $(window).resize(checkWidth);
 
-    function checkTabScroll(){
-        if ($(window).scrollTop() < $('#tab2').offset().top - 170){
-            $('.custom-brick').addClass('active1');
-            $('.custom-brick').removeClass('active2');
-            $('.custom-brick').removeClass('active3');
-
-        }
-        if ($(window).scrollTop() > $('#tab2').offset().top - 170 && $(window).scrollTop() < $('#tab3').offset().top - 170){
-            $('.custom-brick').addClass('active2');
-            $('.custom-brick').removeClass('active1');
-            $('.custom-brick').removeClass('active3');
-        }
-        if ($(window).scrollTop() >= $('#tab3').offset().top - 170){
-            $('.custom-brick').addClass('active3');
-            $('.custom-brick').removeClass('active1');
-            $('.custom-brick').removeClass('active2');
-        }
-    }
-
-    checkTabScroll();
-
-    $( window ).scroll(function() {
-        checkTabScroll();
-    });
-    // Input check box
-
     $(".input-checkbox:checkbox").change(function () {
+        console.log('abc');
         if ($(this).is(':checked') === true) {
             $(this).parent().addClass('active');
         } else {
             $(this).parent().removeClass('active');
         }
     });
+    console.log('abc')
 
     $(".input-checkbox:radio").change(function () {
+        console.log('abc');
         let child = $(this).parent().parent().siblings();
         $('.form-checkbox', child).removeClass('active');
         $(this).parent().addClass('active');
@@ -69,6 +46,10 @@ $(document).ready(function () {
     $('body').on('click', '.icon-show', function () {
         $(this).toggleClass('show');
     })
+    $('body').on('click', '.text-show-collapse', function (){
+        $(this).prev().toggleClass('show');
+    });
+
     $('body').on('click', '.sub-input', function () {
         $(this).parent().parent().remove();
     })
@@ -211,5 +192,12 @@ $(document).ready(function () {
         });
     })
 
+
+    // datepicker-custom
+
+    $('body').on('click', '.datepicker-custom', function (){
+        $('#modal-backdrop').addClass('modal-backdrop');
+        $(this).addClass('test123');
+    })
 
 });

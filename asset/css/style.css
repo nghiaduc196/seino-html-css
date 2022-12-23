@@ -34,6 +34,16 @@ input.input-number {
   letter-spacing: 0.05em;
 }
 
+.color-gray-place::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #C8C8C8;
+}
+.color-gray-place:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #C8C8C8;
+}
+.color-gray-place:-ms-input-placeholder { /* Microsoft Edge */
+  color: #C8C8C8;
+}
+
 .text-black {
   color: #000000 !important;
 }
@@ -167,6 +177,10 @@ input.input-number {
   height: 24px;
 }
 
+.w-61 {
+  width: 61px;
+}
+
 .w-40 {
   width: 40px;
 }
@@ -179,6 +193,10 @@ input.input-number {
   width: 252px;
 }
 
+.w-124 {
+  width: 124px;
+}
+
 .w-166 {
   width: 166px;
 }
@@ -189,6 +207,10 @@ input.input-number {
 
 .w-130 {
   width: 130px;
+}
+
+.w-calc-150 {
+  width: calc(100% - 150px);
 }
 
 .w-170 {
@@ -205,6 +227,10 @@ input.input-number {
 
 .m-w-570 {
   min-width: 570px;
+}
+
+.max-w-665 {
+  max-width: 665px;
 }
 
 .w-298 {
@@ -415,6 +441,30 @@ input.input-number {
   margin-top: 26px !important;
 }
 
+.mt-23 {
+  margin-top: 23px;
+}
+
+.mt-49 {
+  margin-top: 49px;
+}
+
+.mt-64 {
+  margin-top: 64px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.me-22 {
+  margin-right: 22px;
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -449,6 +499,10 @@ input.input-number {
 
 .mt-34 {
   margin-top: 34px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
 }
 
 .mt-17 {
@@ -521,6 +575,11 @@ input.input-number {
 
 .p-6 {
   padding: 6px;
+}
+
+.px-38 {
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 .p-17 {
@@ -859,7 +918,7 @@ ul {
   margin: 23px 20px 10px 20px;
 }
 .sidebar-wrapper .sidebar .box-slogan .slogan {
-  font-family: "Noto Sans";
+  font-family: "notosan";
   font-style: normal;
   font-weight: 700;
   font-size: 23px;
@@ -1084,6 +1143,9 @@ ul {
   position: relative;
   color: #000000;
   height: 50px;
+}
+.content-wrapper .content .header .header-bottom .box-nav-tab .nav-link.text-gray-blur {
+  color: #8A8A8A;
 }
 .content-wrapper .content .header .header-bottom .box-nav-tab .nav-link .badge {
   width: 28px;
@@ -1378,6 +1440,7 @@ ul {
 .form-checkbox.active {
   background: #B7C8DE !important;
   border: 2px solid #003B90;
+  margin-left: -1px;
 }
 .form-checkbox .checkmark {
   border: 1px solid #D8D8D8;
@@ -1396,9 +1459,8 @@ input[type=checkbox], input[type=radio] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
   z-index: 1;
+  border-radius: 50%;
 }
 
 /* Create a custom checkbox */
@@ -1539,6 +1601,73 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
   top: 5px;
   right: 6px;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 992px) {
+  .modal-4 .box-form-date .w-252 {
+    width: 177px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .modal-4 .box-form-date .w-61 {
+    width: 46px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .modal-4 .w-124 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .modal-4 .w-166 {
+    width: 50%;
+  }
+}
+
+.ui-datepicker {
+  width: 458px !important;
+  height: 416px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto;
+  padding: 40px !important;
+  border: 1px solid #DBDBDB !important;
+  border-radius: 5px !important;
+  z-index: 9999 !important;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: transparent;
+  border: none;
+}
+.ui-datepicker .ui-state-default {
+  border: none !important;
+  background: transparent !important;
+  color: #003B90 !important;
+  line-height: 45px;
+  border-radius: 50%;
+  transition: 0.2s ease-out;
+  font-size: 19px;
+  font-family: notosan;
+  font-style: normal;
+  text-align: center;
+}
+.ui-datepicker .ui-state-default:hover {
+  background: #003B90 !important;
+  color: #FFFFFF !important;
+}
+.ui-datepicker .ui-state-default.ui-state-active {
+  background: #003B90;
+  color: #FFFFFF;
+}
+.ui-datepicker td, .ui-datepicker a {
+  height: 52px !important;
+  width: 52px !important;
+}
+.ui-datepicker td, .ui-datepicker th, .ui-datepicker a {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

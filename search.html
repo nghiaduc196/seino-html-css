@@ -3,8 +3,8 @@
 <title>HTML</title>
 <link href="./asset/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 <link href="./asset/css/style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="./asset/css/jquery-ui.css">
 <body>
-
 <div class="wrapper">
 
     <div class="sidebar-wrapper">
@@ -98,7 +98,7 @@
                     <div class="box-nav-tab mt-30">
                         <ul class="nav nav-tabs justify-content-around">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link fw-500" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-1">
                                     ステータス
                                     <!--                                    <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>-->
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link text-gray-blur" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-3">
                                     配達中
                                     <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>
@@ -120,28 +120,28 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link text-gray-blur" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-4">
                                     受領印未確認
                                     <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link text-gray-blur" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-5">
                                     完了
                                     <!--                                    <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>-->
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link text-gray-blur" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-6">
                                     キャンセル
                                     <!--                                    <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>-->
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="tab"
+                                <a class="nav-link text-gray-blur ff-nt-sans fst-normal" aria-current="page" href="#" data-bs-toggle="tab"
                                    data-bs-target="#page-7">
                                     すべて
                                     <!--                                    <span class="ms-14 badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal">99</span>-->
@@ -169,25 +169,26 @@
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+<!--                                            <input data-bs-toggle="modal" data-bs-target="#modal-5" type="text" id="datepicker" placeholder="指定なし" class="form-control h-41"/>-->
+                                            <input type="text" id="datepicker" placeholder="指定なし" class="datepicker-custom form-control h-41"/>
                                         </div>
                                     </div>
 
                                     <div class="col-auto d-flex align-items-center w-34-0">
-                                        <span class="me-2 text-end w-120">依頼日</span>
+                                        <span class="me-2 text-end w-120">荷主</span>
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+                                            <input  data-bs-toggle="modal" data-bs-target="#modal-1"   type="text" placeholder="指定なし" class="form-control h-41"/>
                                         </div>
                                     </div>
 
                                     <div class="col-auto d-flex align-items-center w-47-0 mt-3 mt-xl-0">
-                                        <span class="me-2 text-end w-120">依頼日</span>
+                                        <span class="me-2 text-end w-120">集荷先</span>
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+                                            <input data-bs-toggle="modal" data-bs-target="#modal-2" type="text" placeholder="指定なし" class="form-control h-41"/>
                                         </div>
                                         <div class="position-relative">
                                             <input type="button" value="一括クリア"
@@ -213,7 +214,7 @@
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+                                            <input data-bs-toggle="modal" data-bs-target="#modal-3" type="text" placeholder="指定なし" class="form-control h-41"/>
                                         </div>
                                     </div>
 
@@ -222,7 +223,7 @@
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+                                            <input data-bs-toggle="modal" data-bs-target="#modal-4" type="text" placeholder="指定なし" class="form-control h-41"/>
                                         </div>
                                         <div class="position-relative">
                                             <button class="form-control h-41 button w-120 ms-2 d-flex align-items-center justify-content-center bg-color-blue border-radius-5">
@@ -503,9 +504,281 @@
 <!--</div>-->
 
 
+<div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content max-w-665 px-38 border-radius-5">
+            <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
+                <label class="fs-16 ff-nt-sans fst-normal">運送契約荷主</label>
+               <input type="text" class="form-control h-5 mt-11" />
+            </div>
+            <div class="modal-footer justify-content-end border-0 p-0 mb-36">
+                <button type="button"
+                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    クリア
+                </button>
+                <button type="button"
+                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content max-w-665 px-38 border-radius-5">
+            <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
+                <label class="fs-16 ff-nt-sans fst-normal">集荷先</label>
+                <input type="text" class="form-control h-5 mt-11" />
+            </div>
+            <div class="modal-footer justify-content-end border-0 p-0 mb-36">
+                <button type="button"
+                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    クリア
+                </button>
+                <button type="button"
+                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content max-w-665 px-38 border-radius-5">
+            <div class="modal-body p-0 me-22">
+                <div class="mt-64 mb-38 ms-1">
+                    <label class="fs-16 ff-nt-sans fst-normal">運送会社</label>
+                    <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11" />
+                </div>
+                <div>
+                    <span class="text-black fs-16 ff-nt-sans fst-normal">集荷担当</span>
+                </div>
+
+
+                <div class="row row-cols-2 row-cols-lg-4 gx-3 mt-11">
+                    <div class="col">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom active">
+                            <input type="radio" name="radio-1" checked id="checkbox-4"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-4">地場</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-1"  id="checkbox-1"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-1">エキス</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-1" id="checkbox-2" class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-2">カーゴ</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-1"  id="checkbox-3"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-3">OEM</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer justify-content-end border-0 p-0 mb-45 mt-49">
+                <button type="button"
+                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    クリア
+                </button>
+                <button type="button"
+                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-4" id="modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content max-w-665 px-38 border-radius-5">
+            <div class="modal-body p-0 me-22">
+
+                <div class="box-form mt-50">
+                    <div class="d-inline-block label">
+                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷日</label>
+                    </div>
+                    <div class="box-form-date row row-cols-3 mt-11 align-items-center g-0">
+                        <div class="col w-252">
+                            <div class="form-date">
+                                <img class="date" src="./asset/image/icon_date.svg"/>
+                                <input type="date" value="2018-11-15"
+                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                            </div>
+                        </div>
+                        <div class="col w-61 text-center">
+                            <span>〜</span>
+                        </div>
+                        <div class="col w-252">
+                            <div class="form-date">
+                                <img class="date" src="./asset/image/icon_date.svg"/>
+                                <input type="date" value="2018-11-15"
+                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-form mt-26">
+                    <div class="d-inline-block label">
+                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配達日</label>
+                    </div>
+                    <div class="box-form-date row row-cols-3 mt-11 align-items-center g-0">
+                        <div class="col w-252">
+                            <div class="form-date">
+                                <img class="date" src="./asset/image/icon_date.svg"/>
+                                <input type="date" value="2018-11-15"
+                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                            </div>
+                        </div>
+                        <div class="col w-61 text-center">
+                            <span>〜</span>
+                        </div>
+                        <div class="col w-252">
+                            <div class="form-date">
+                                <img class="date" src="./asset/image/icon_date.svg"/>
+                                <input type="date" value="2018-11-15"
+                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-64 mb-38 ms-1 mb-38">
+                    <label class="fs-16 ff-nt-sans fst-normal">発行店</label>
+                    <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11" />
+                </div>
+
+                <h4 class="fs-16 fw-bolder fst-normal ff-nt-sans letter-spacing-10 mb-0">その他</h4>
+                <div class="row row-cols-2 row-cols-lg-4 gx-3 mt-11 align-items-center">
+                    <div class="col">
+                        <label class="fs-16 ff-nt-sans fst-normal">商品区分</label>
+                    </div>
+                    <div class="col w-124">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-8"  id="checkbox-8"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-1">貸切</label>
+                        </div>
+                    </div>
+                    <div class="col w-166">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-8" id="checkbox-9" class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-2">メガEXP</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-8"  id="checkbox-10"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-3">その他</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gx-3 mt-23 align-items-center">
+                    <div class="col-auto w-25">
+                        <label class="fs-16 ff-nt-sans fst-normal">なびPro区分</label>
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
+                            <input type="radio" name="radio-5"  id="checkbox-5"
+                                   class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                            <span class="checkmark-radio"></span>
+                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                   for="checkbox-1">なびPro</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer justify-content-end border-0 p-0 mb-45 mt-49">
+                <button type="button"
+                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    クリア
+                </button>
+                <button type="button"
+                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content align-items-center bg-transparent border-0 max-w-665 px-38 border-radius-5">
+<!--            <div id="datepicker" class="datepicker-custom"></div>-->
+<!--            <div class="modal-footer justify-content-end border-0 p-0 mb-36">-->
+<!--                <button type="button"-->
+<!--                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"-->
+<!--                        data-bs-dismiss="modal">-->
+<!--                    クリア-->
+<!--                </button>-->
+<!--                <button type="button"-->
+<!--                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"-->
+<!--                        data-bs-dismiss="modal">-->
+<!--                    保存-->
+<!--                </button>-->
+<!--            </div>-->
+        </div>
+
+    </div>
+</div>
+<!--<p>Date: <input type="text" id="datepicker"></p>-->
+
+
+
+<div id="modal-backdrop" class="fade show"></div>
+
+<script src="./asset/js/jquery.js"></script>
+<script src="./asset/js/jquery-ui.js"></script>
 <script src="./asset/bootstrap/bootstrap.min.js"></script>
-<script src="./asset/js/jquery.min.js"></script>
+<!--<script src="./asset/js/jquery.min.js"></script>-->
 <script src="./asset/js/script.js"></script>
+<script src="./asset/js/search.js"></script>
 </body>
 
 </html>
