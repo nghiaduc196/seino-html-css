@@ -215,4 +215,26 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
         $('.modal-content').css('opacity', '1');
     });
+
+
+
+    var availableTags = [
+        "0584738888：セイノー情報サービス",
+        "0584738887：セイノー情報サービス",
+        "0584738886：セイノー情報サービス",
+        "0584738885：セイノー情報サービス",
+    ];
+
+    $("#tags").autocomplete({
+        source: availableTags,
+        minLength: 6,
+        focus: function (event, ui) {
+            event.preventDefault();
+            $("#tags").val(ui.item.label);
+        },
+        select: function (event, ui) {
+            event.preventDefault();
+            $("#tags").val(ui.item.label);
+        }
+    });
 });

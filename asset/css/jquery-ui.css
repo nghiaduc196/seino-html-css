@@ -1312,3 +1312,30 @@ a.ui-button:active,
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
 }
+
+/* Autocomplete */
+.ui-autocomplete {
+	position: absolute;
+	cursor: default;
+	background:#FFFFFF;
+}
+
+.ui-autocomplete.ui-menu {
+	border: none;
+}
+
+.ui-autocomplete.ui-menu .ui-menu-item {
+	line-height: 50px;
+	height: 50px;
+}
+
+.ui-autocomplete .ui-state-hover,
+.ui-autocomplete .ui-state-active,
+.ui-autocomplete .ui-state-focus {
+	text-decoration: none;
+	color: #212529 !important;
+	background-color: #F1F4F7 !important;
+	cursor: pointer;
+	border: none;
+}
+
