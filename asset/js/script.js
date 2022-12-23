@@ -27,17 +27,14 @@ $(document).ready(function () {
     $(window).resize(checkWidth);
 
     $(".input-checkbox:checkbox").change(function () {
-        console.log('abc');
         if ($(this).is(':checked') === true) {
             $(this).parent().addClass('active');
         } else {
             $(this).parent().removeClass('active');
         }
     });
-    console.log('abc')
 
     $(".input-checkbox:radio").change(function () {
-        console.log('abc');
         let child = $(this).parent().parent().siblings();
         $('.form-checkbox', child).removeClass('active');
         $(this).parent().addClass('active');
@@ -131,11 +128,11 @@ $(document).ready(function () {
                 value.style.background = "#F5F5F5";
                 value.style.color = "#003B90";
                 value.style.fontWeight = "700";
-                value.setAttribute("readonly", "");
+                value.setAttribute("disabled", "");
             } else {
                 value.style.border = "1px solid #DBDBDB";
                 value.style.background = "#F5F5F5";
-                value.setAttribute("readonly", "");
+                value.setAttribute("disabled", "");
             }
 
         })
@@ -150,7 +147,7 @@ $(document).ready(function () {
             if ($('input', $(this))[0].checked) {
                 value.style.border = "2px solid #003B90";
                 value.style.background = "#F5F5F5";
-                $('input', $(this))[0].setAttribute("readOnly", "");
+                $('input', $(this))[0].setAttribute("disabled", "");
             } else {
                 value.style.border = "1px solid #DBDBDB";
                 value.style.background = "#F5F5F5";
@@ -197,7 +194,25 @@ $(document).ready(function () {
 
     $('body').on('click', '.datepicker-custom', function (){
         $('#modal-backdrop').addClass('modal-backdrop');
-        $(this).addClass('test123');
-    })
+        $('body').addClass('overflow-hidden');
+        $('.modal-content').css('opacity', 0.7);
+    });
 
+    $('body').on('click', '.modal-backdrop', function (){
+        $('#modal-backdrop').removeClass('modal-backdrop');
+        $('body').removeClass('overflow-hidden');
+        $('.modal-content').css('opacity', '1');
+    });
+
+    // $('body').on('click', '.modal', function (){
+    //     $('#modal-backdrop').removeClass('modal-backdrop');
+    //     $('body').removeClass('overflow-hidden');
+    //     $('.modal-content').css('opacity', '1');
+    // });
+
+    $('body').on('change', '.datepicker-custom', function (){
+        $('#modal-backdrop').removeClass('modal-backdrop');
+        $('body').removeClass('overflow-hidden');
+        $('.modal-content').css('opacity', '1');
+    });
 });

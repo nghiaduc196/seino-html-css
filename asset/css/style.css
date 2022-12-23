@@ -193,12 +193,16 @@ input.input-number {
   width: 252px;
 }
 
-.w-124 {
-  width: 124px;
+.w-125 {
+  width: 125px;
 }
 
 .w-166 {
   width: 166px;
+}
+
+.w-165 {
+  width: 165px;
 }
 
 .w-120 {
@@ -1560,6 +1564,13 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
 .table tr td:last-child, .table tr th:last-child {
   border-right: 0;
 }
+.table .tr-hover {
+  transition: 0.3s ease-out;
+}
+.table .tr-hover:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 
 .form-checkbox-custom {
   background: #A3A3A3;
@@ -1614,33 +1625,63 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
   }
 }
 @media only screen and (max-width: 992px) {
-  .modal-4 .w-124 {
+  .modal-4 .w-125 {
     width: 50%;
   }
 }
 @media only screen and (max-width: 992px) {
-  .modal-4 .w-166 {
+  .modal-4 .w-165 {
     width: 50%;
   }
 }
 
 .ui-datepicker {
   width: 458px !important;
-  height: 416px !important;
+  height: 475px !important;
   position: fixed !important;
-  top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  bottom: 0 !important;
   margin: auto;
   padding: 40px !important;
   border: 1px solid #DBDBDB !important;
   border-radius: 5px !important;
-  z-index: 9999 !important;
+  z-index: 9991 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 !important;
+  text-align: start !important;
+  font-family: notosan;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
 }
 .ui-datepicker .ui-datepicker-header {
   background: transparent;
   border: none;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  position: absolute;
+  left: unset;
+  width: 10px !important;
+  height: 18px !important;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+  border: none;
+  opacity: 0.8;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  background: url("../image/icon_arr_left_red.svg") no-repeat;
+  right: 54px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  background: url("../image/icon_arr_right_red.svg") no-repeat;
+  right: 5px;
 }
 .ui-datepicker .ui-state-default {
   border: none !important;
@@ -1653,14 +1694,15 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
   font-family: notosan;
   font-style: normal;
   text-align: center;
+  z-index: 9992 !important;
 }
 .ui-datepicker .ui-state-default:hover {
   background: #003B90 !important;
   color: #FFFFFF !important;
 }
 .ui-datepicker .ui-state-default.ui-state-active {
-  background: #003B90;
-  color: #FFFFFF;
+  background: #003B90 !important;
+  color: #FFFFFF !important;
 }
 .ui-datepicker td, .ui-datepicker a {
   height: 52px !important;
@@ -1668,6 +1710,15 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
 }
 .ui-datepicker td, .ui-datepicker th, .ui-datepicker a {
   text-align: center;
+}
+.ui-datepicker th {
+  color: #BABABA;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.datepicker-custom-icon {
+  padding-left: 66px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

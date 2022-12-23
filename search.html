@@ -13,7 +13,7 @@
                 <a class="cursor-pointer" id="menu">
                     <img src="./asset/image/icon_menu.svg">
                 </a>
-                <span class="slogan">web貸切システム</span>
+                <span class="slogan">Web貸切システム</span>
             </div>
             <div class="box-info">
                 <span class="name">大垣支店（社員番号999999）</span>
@@ -205,7 +205,7 @@
                                         <div class="position-relative w-100">
                                             <img class="position-absolute top-11 right-17"
                                                  src="./asset/image/icon_arr_right_2.svg"/>
-                                            <input type="text" placeholder="指定なし" class="form-control h-41"/>
+                                            <input data-bs-toggle="modal" data-bs-target="#modal-1" type="text" placeholder="指定なし" class="form-control h-41"/>
                                         </div>
                                     </div>
 
@@ -505,8 +505,8 @@
 
 
 <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content max-w-665 px-38 border-radius-5">
+    <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
+        <div class="modal-content px-38 border-radius-5">
             <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
                 <label class="fs-16 ff-nt-sans fst-normal">運送契約荷主</label>
                <input type="text" class="form-control h-5 mt-11" />
@@ -528,8 +528,8 @@
 </div>
 
 <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content max-w-665 px-38 border-radius-5">
+    <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
+        <div class="modal-content px-38 border-radius-5">
             <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
                 <label class="fs-16 ff-nt-sans fst-normal">集荷先</label>
                 <input type="text" class="form-control h-5 mt-11" />
@@ -552,8 +552,8 @@
 
 
 <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content max-w-665 px-38 border-radius-5">
+    <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
+        <div class="modal-content px-38 border-radius-5">
             <div class="modal-body p-0 me-22">
                 <div class="mt-64 mb-38 ms-1">
                     <label class="fs-16 ff-nt-sans fst-normal">運送会社</label>
@@ -620,8 +620,8 @@
 </div>
 
 <div class="modal fade modal-4" id="modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content max-w-665 px-38 border-radius-5">
+    <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
+        <div class="modal-content px-38 border-radius-5">
             <div class="modal-body p-0 me-22">
 
                 <div class="box-form mt-50">
@@ -632,8 +632,8 @@
                         <div class="col w-252">
                             <div class="form-date">
                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                <input type="date" value="2018-11-15"
-                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                <input type="text"
+                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                             </div>
                         </div>
                         <div class="col w-61 text-center">
@@ -642,8 +642,8 @@
                         <div class="col w-252">
                             <div class="form-date">
                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                <input type="date" value="2018-11-15"
-                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                <input type="text"
+                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                             </div>
                         </div>
                     </div>
@@ -657,8 +657,8 @@
                         <div class="col w-252">
                             <div class="form-date">
                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                <input type="date" value="2018-11-15"
-                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                <input type="text"
+                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                             </div>
                         </div>
                         <div class="col w-61 text-center">
@@ -667,8 +667,8 @@
                         <div class="col w-252">
                             <div class="form-date">
                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                <input type="date" value="2018-11-15"
-                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                <input type="text"
+                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                             </div>
                         </div>
                     </div>
@@ -685,7 +685,7 @@
                     <div class="col">
                         <label class="fs-16 ff-nt-sans fst-normal">商品区分</label>
                     </div>
-                    <div class="col w-124">
+                    <div class="col w-125">
                         <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
                             <input type="radio" name="radio-8"  id="checkbox-8"
                                    class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
@@ -694,7 +694,7 @@
                                    for="checkbox-1">貸切</label>
                         </div>
                     </div>
-                    <div class="col w-166">
+                    <div class="col w-165">
                         <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
                             <input type="radio" name="radio-8" id="checkbox-9" class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                             <span class="checkmark-radio"></span>
@@ -747,28 +747,49 @@
 </div>
 
 
+<!--<div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog modal-dialog-centered modal-lg">-->
+<!--        <div class="modal-content align-items-center bg-transparent border-0 max-w-665 px-38 border-radius-5">-->
+<!--&lt;!&ndash;            <div id="datepicker" class="datepicker-custom"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="modal-footer justify-content-end border-0 p-0 mb-36">&ndash;&gt;-->
+<!--&lt;!&ndash;                <button type="button"&ndash;&gt;-->
+<!--&lt;!&ndash;                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"&ndash;&gt;-->
+<!--&lt;!&ndash;                        data-bs-dismiss="modal">&ndash;&gt;-->
+<!--&lt;!&ndash;                    クリア&ndash;&gt;-->
+<!--&lt;!&ndash;                </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                <button type="button"&ndash;&gt;-->
+<!--&lt;!&ndash;                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"&ndash;&gt;-->
+<!--&lt;!&ndash;                        data-bs-dismiss="modal">&ndash;&gt;-->
+<!--&lt;!&ndash;                    保存&ndash;&gt;-->
+<!--&lt;!&ndash;                </button>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+
 <div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content align-items-center bg-transparent border-0 max-w-665 px-38 border-radius-5">
-<!--            <div id="datepicker" class="datepicker-custom"></div>-->
-<!--            <div class="modal-footer justify-content-end border-0 p-0 mb-36">-->
-<!--                <button type="button"-->
-<!--                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"-->
-<!--                        data-bs-dismiss="modal">-->
-<!--                    クリア-->
-<!--                </button>-->
-<!--                <button type="button"-->
-<!--                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"-->
-<!--                        data-bs-dismiss="modal">-->
-<!--                    保存-->
-<!--                </button>-->
-<!--            </div>-->
+        <div class="modal-content max-w-665 px-38 border-radius-5">
+            <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
+                <label class="fs-16 ff-nt-sans fst-normal">原票番号</label>
+                <input type="text" class="form-control h-5 mt-11" />
+            </div>
+            <div class="modal-footer justify-content-end border-0 p-0 mb-36">
+                <button type="button"
+                        class="m-0 w-130 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white bg-color-gray-dark border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    クリア
+                </button>
+                <button type="button"
+                        class="ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    保存
+                </button>
+            </div>
         </div>
-
     </div>
 </div>
-<!--<p>Date: <input type="text" id="datepicker"></p>-->
-
 
 
 <div id="modal-backdrop" class="fade show"></div>

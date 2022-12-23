@@ -3,6 +3,7 @@
 <title>HTML</title>
 <link href="./asset/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 <link href="./asset/css/style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="./asset/css/jquery-ui.css">
 <body>
 
 <div class="wrapper">
@@ -111,12 +112,12 @@
                     <div class="col w-calc-319">
                         <div class="box-content-left">
                             <div class="notification mb-30 border-dashed border-radius-5 visually-hidden">
-                                    <div class="bg-color-blue-blur  pt-23 pb-27 text-center letter-spacing-10 ff-nt-sans fst-normal fs-16">
-                                        <span>こちらの内容でよろしいでしょうか？</span>
-                                        <br>
-                                        <span>入力内容を確認し「登録完了」ボタンを押下してください。</span>
-                                    </div>
+                                <div class="bg-color-blue-blur  pt-23 pb-27 text-center letter-spacing-10 ff-nt-sans fst-normal fs-16">
+                                    <span>こちらの内容でよろしいでしょうか？</span>
+                                    <br>
+                                    <span>入力内容を確認し「登録完了」ボタンを押下してください。</span>
                                 </div>
+                            </div>
 
                             <div class="scrollspy-example">
 
@@ -160,8 +161,9 @@
                                         </div>
                                         <div class="form-date">
                                             <img class="date" src="./asset/image/icon_date.svg"/>
-                                            <input type="date" value="2018-11-15"
-                                                   class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+<!--                                            <input type="text" placeholder="指定なし" class="datepicker-custom form-control h-41"/>-->
+                                            <input type="text"
+                                                   class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                         </div>
                                     </div>
 
@@ -173,7 +175,8 @@
                                             <input type="checkbox" id="checkbox-1"
                                                    class="input-checkbox start-0 end-0 top-0 bottom-0"/>
                                             <span class="checkmark"></span>
-                                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10" for="checkbox-1">なびPro</label>
+                                            <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                                   for="checkbox-1">なびPro</label>
                                         </div>
                                     </div>
 
@@ -384,7 +387,8 @@
                                                 <div class="checkmark icon">
                                                     <span class="checkmark"></span>
                                                 </div>
-                                                <label class="ms-18 ff-nt-sans fst-normal fs-16 letter-spacing-10 text-white" for="checkbox-102">輸送情報を保存</label>
+                                                <label class="ms-18 ff-nt-sans fst-normal fs-16 letter-spacing-10 text-white"
+                                                       for="checkbox-102">輸送情報を保存</label>
                                             </div>
                                         </div>
                                     </div>
@@ -412,8 +416,8 @@
                                             </div>
                                             <div class="form-date">
                                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                                <input type="date" value="2018-11-15"
-                                                       class="ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                                <input type="text"
+                                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -682,7 +686,8 @@
                                                 <div class="checkmark icon">
                                                     <span class="checkmark"></span>
                                                 </div>
-                                                <label class="ms-18 ff-nt-sans fst-normal fs-16 letter-spacing-10 text-white" for="checkbox-100">輸送情報を保存</label>
+                                                <label class="ms-18 ff-nt-sans fst-normal fs-16 letter-spacing-10 text-white"
+                                                       for="checkbox-100">輸送情報を保存</label>
                                             </div>
                                         </div>
                                     </div>
@@ -757,8 +762,8 @@
                                             </div>
                                             <div class="form-date">
                                                 <img class="date" src="./asset/image/icon_date.svg"/>
-                                                <input type="date" value="2018-11-15"
-                                                       class=" ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                                <input type="text"
+                                                       class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -1082,7 +1087,8 @@
                                                     <input type="text"
                                                            class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
                                                     <span class="ms-20 me-20">枚</span>
-                                                    <span><img class="visibility-hidden" src="./asset/image/icon_sub.svg"/></span>
+                                                    <span><img class="visibility-hidden"
+                                                               src="./asset/image/icon_sub.svg"/></span>
                                                 </div>
                                             </div>
 
@@ -1108,7 +1114,8 @@
                                                         <input type="text"
                                                                class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
                                                         <span class="ms-20 me-20">枚</span>
-                                                        <img class="visibility-hidden" src="./asset/image/icon_sub.svg"/>
+                                                        <img class="visibility-hidden"
+                                                             src="./asset/image/icon_sub.svg"/>
                                                     </div>
                                                 </div>
 
@@ -1125,7 +1132,8 @@
                                                         <input type="text"
                                                                class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
                                                         <span class="ms-20 me-20">枚</span>
-                                                        <img class="icon-disable cursor-pointer sub-input" src="./asset/image/icon_sub.svg"/>
+                                                        <img class="icon-disable cursor-pointer sub-input"
+                                                             src="./asset/image/icon_sub.svg"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1380,7 +1388,8 @@
 
                                     <div class="toggle-box d-flex align-items-center mt-25">
                                         <img data-bs-toggle="collapse" data-bs-target="#collapse-6"
-                                             class="cursor-pointer icon-show" src="./asset/image/icon_arrow_bottom.svg"/>
+                                             class="cursor-pointer icon-show"
+                                             src="./asset/image/icon_arrow_bottom.svg"/>
                                         <span data-bs-toggle="collapse" data-bs-target="#collapse-6"
                                               class="cursor-pointer fs-14 ms-14 text-blue letter-spacing-10 fs-14 ff-nt-sans fst-normal  text-show-collapse">詳細入力</span>
                                     </div>
@@ -1469,7 +1478,8 @@
 
                                     <div class="toggle-box d-flex align-items-center mt-25">
                                         <img data-bs-toggle="collapse" data-bs-target="#collapse-8"
-                                             class="cursor-pointer icon-show" src="./asset/image/icon_arrow_bottom.svg"/>
+                                             class="cursor-pointer icon-show"
+                                             src="./asset/image/icon_arrow_bottom.svg"/>
                                         <span data-bs-toggle="collapse" data-bs-target="#collapse-8"
                                               class="cursor-pointer fs-14 ms-14 text-blue letter-spacing-10 fs-14 ff-nt-sans fst-normal  text-show-collapse">荷主連絡先情報</span>
                                     </div>
@@ -1730,8 +1740,8 @@
                                         </div>
                                         <div class="form-date">
                                             <img class="date" src="./asset/image/icon_date.svg"/>
-                                            <input type="date" value="2018-11-15"
-                                                   class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
+                                            <input type="text"
+                                                   class="datepicker-custom datepicker-custom-icon bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                         </div>
                                     </div>
 
@@ -1961,7 +1971,7 @@
                         <th class="text-center">個数</th>
                         <th class="text-center">重量</th>
                     </tr>
-                    <tr style="background: #CAD8EC;">
+                    <tr class="tr-hover" style="background: #CAD8EC;">
                         <td>2022/00/00</td>
                         <td>058412345678</td>
                         <td>株式会社◯□△倉庫</td>
@@ -1969,7 +1979,7 @@
                         <td class="text-center">1</td>
                         <td class="text-center">10,000kg</td>
                     </tr>
-                    <tr>
+                    <tr class="tr-hover">
                         <td>2022/00/00</td>
                         <td>058412345678</td>
                         <td>株式会社◯□△倉庫</td>
@@ -1992,10 +2002,19 @@
 </div>
 
 
+<!--<script src="./asset/bootstrap/bootstrap.min.js"></script>-->
+<!--<script src="./asset/js/jquery.min.js"></script>-->
+<!--<script src="./asset/js/script.js"></script>-->
+<!--<script src="./asset/js/register-form.js"></script>-->
+
+<div id="modal-backdrop" class="fade show"></div>
+
+<script src="./asset/js/jquery.js"></script>
+<script src="./asset/js/jquery-ui.js"></script>
 <script src="./asset/bootstrap/bootstrap.min.js"></script>
-<script src="./asset/js/jquery.min.js"></script>
+<!--<script src="./asset/js/jquery.min.js"></script>-->
 <script src="./asset/js/script.js"></script>
-<script src="./asset/js/register-form.js"></script>
+<script src="./asset/js/search.js"></script>
 </body>
 
 </html>
