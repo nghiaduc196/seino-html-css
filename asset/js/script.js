@@ -211,12 +211,9 @@ $(document).ready(function () {
             if ($('.same-as-selected', $(value).next()).length){
                 value.style.border = "2px solid #003B90";
                 value.style.background = "#F5F5F5";
+                value.style.color = "#003B90";
+                value.style.fontWeight = "700";
             }
-            value.addEventListener('click', function (){
-                console.log('hung test 1')
-            });
-
-            $(value).parent()[0].addEventListener('click', function (){});
         });
     })
 
