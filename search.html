@@ -2,8 +2,8 @@
 <html>
 <title>HTML</title>
 <link href="./asset/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+<link href="./asset/css/jquery-ui.css" rel="stylesheet"/>
 <link href="./asset/css/style.css" rel="stylesheet"/>
-<link rel="stylesheet" href="./asset/css/jquery-ui.css">
 <body>
 <div class="wrapper">
 
@@ -162,7 +162,7 @@
                             <div class="tab-pane fade" id="page-1">1</div>
                             <div class="tab-pane fade show active" id="page-2">
 
-                                <form>
+                                <form id="search-form">
                                     <div class="row row-cols-lg-3 gx-0">
 
                                         <div class="col-auto d-flex align-items-center w-19-0">
@@ -180,7 +180,7 @@
                                             <div class="position-relative w-100">
                                                 <img class="position-absolute top-11 right-17"
                                                      src="./asset/image/icon_arr_right_2.svg"/>
-                                                <input  data-bs-toggle="modal" data-bs-target="#modal-1"   type="text" placeholder="指定なし" class="form-control h-41"/>
+                                                <input  data-bs-toggle="modal" data-bs-target="#modal-1" name="field-1" type="text" placeholder="指定なし" class="form-control h-41"/>
                                             </div>
                                         </div>
 
@@ -189,7 +189,7 @@
                                             <div class="position-relative w-100">
                                                 <img class="position-absolute top-11 right-17"
                                                      src="./asset/image/icon_arr_right_2.svg"/>
-                                                <input data-bs-toggle="modal" data-bs-target="#modal-2" type="text" placeholder="指定なし" class="form-control h-41"/>
+                                                <input data-bs-toggle="modal" data-bs-target="#modal-2" name="field-2" type="text" placeholder="指定なし" class="form-control h-41"/>
                                             </div>
                                             <div class="position-relative">
                                                 <input type="reset" value="一括クリア"
@@ -206,7 +206,7 @@
                                             <div class="position-relative w-100">
                                                 <img class="position-absolute top-11 right-17"
                                                      src="./asset/image/icon_arr_right_2.svg"/>
-                                                <input data-bs-toggle="modal" data-bs-target="#modal-5" type="text" placeholder="指定なし" class="form-control h-41"/>
+                                                <input data-bs-toggle="modal" data-bs-target="#modal-5" name="field-5" type="text" placeholder="指定なし" class="form-control h-41"/>
                                             </div>
                                         </div>
 
@@ -215,8 +215,10 @@
                                             <div class="position-relative w-100">
                                                 <img class="position-absolute top-11 right-17"
                                                      src="./asset/image/icon_arr_right_2.svg"/>
-                                                <input data-bs-toggle="modal" data-bs-target="#modal-3" type="text" placeholder="指定なし" class="form-control h-41"/>
+                                                <input data-bs-toggle="modal" data-bs-target="#modal-3" name="field-3" type="text" placeholder="指定なし" class="form-control h-41"/>
                                             </div>
+                                            <input type="hidden" id="field-3-1">
+                                            <input type="hidden" id="field-3-2">
                                         </div>
 
                                         <div class="col-auto d-flex align-items-center w-47-0 mt-3 mt-xl-0">
@@ -224,8 +226,15 @@
                                             <div class="position-relative w-100">
                                                 <img class="position-absolute top-11 right-17"
                                                      src="./asset/image/icon_arr_right_2.svg"/>
-                                                <input data-bs-toggle="modal" data-bs-target="#modal-4" type="text" placeholder="指定なし" class="form-control h-41"/>
+                                                <input data-bs-toggle="modal" data-bs-target="#modal-4" name="field-4" type="text" placeholder="指定なし" class="form-control h-41"/>
                                             </div>
+                                            <input type="hidden" id="field-4-1">
+                                            <input type="hidden" id="field-4-2">
+                                            <input type="hidden" id="field-4-3">
+                                            <input type="hidden" id="field-4-4">
+                                            <input type="hidden" id="field-4-5">
+                                            <input type="hidden" id="field-4-6">
+                                            <input type="hidden" id="field-4-7">
                                             <div class="position-relative">
                                                 <button class="form-control h-41 button w-120 ms-2 d-flex align-items-center justify-content-center bg-color-blue border-radius-5">
                                                     <img src="./asset/image/icon_search.svg"/>
@@ -508,11 +517,11 @@
 
 <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog max-w-665 modal-dialog-centered modal-xl">
-        <form class="max-w-665 w-100">
+        <form class="max-w-665 w-100" id="form-modal-1">
             <div class="modal-content px-38 border-radius-5">
                 <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
                     <label class="fs-16 ff-nt-sans fst-normal">運送契約荷主</label>
-                    <input type="text" class="form-control h-5 mt-11" />
+                    <input type="text" name="field-1-modal-1" class="form-control h-5 mt-11" />
                 </div>
                 <div class="modal-footer justify-content-end border-0 p-0 mb-36">
                     <button type="reset"
@@ -520,9 +529,8 @@
                             data-bs-dismiss="modal">
                         クリア
                     </button>
-                    <button type="button"
-                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
-                            data-bs-dismiss="modal">
+                    <button type="submit"
+                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center">
                         保存
                     </button>
                 </div>
@@ -533,11 +541,11 @@
 
 <div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
-        <form class="max-w-665 w-100">
+        <form class="max-w-665 w-100" id="form-modal-2">
             <div class="modal-content px-38 border-radius-5">
                 <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
                     <label class="fs-16 ff-nt-sans fst-normal">集荷先</label>
-                    <input type="text" class="form-control h-5 mt-11" />
+                    <input type="text" name="field-1-modal-2" class="form-control h-5 mt-11" />
                 </div>
                 <div class="modal-footer justify-content-end border-0 p-0 mb-36">
                     <button type="reset"
@@ -545,9 +553,8 @@
                             data-bs-dismiss="modal">
                         クリア
                     </button>
-                    <button type="button"
-                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
-                            data-bs-dismiss="modal">
+                    <button type="submit"
+                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center">
                         保存
                     </button>
                 </div>
@@ -559,12 +566,12 @@
 
 <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
-        <form class="max-w-665 w-100">
+        <form class="max-w-665 w-100" id="form-modal-3">
             <div class="modal-content px-38 border-radius-5">
                 <div class="modal-body p-0 me-22">
                     <div class="mt-64 mb-38 ms-1">
                         <label class="fs-16 ff-nt-sans fst-normal">運送会社</label>
-                        <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11" />
+                        <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" name="field-1-modal-3" class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11" />
                     </div>
                     <div>
                         <span class="text-black fs-16 ff-nt-sans fst-normal">集荷担当</span>
@@ -574,7 +581,7 @@
                     <div class="row row-cols-2 row-cols-lg-4 gx-3 mt-11">
                         <div class="col">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-1" id="checkbox-4"
+                                <input type="radio" name="field-2-modal-3" id="checkbox-4" value="地場"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -583,7 +590,7 @@
                         </div>
                         <div class="col">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-1"  id="checkbox-1"
+                                <input type="radio" name="field-2-modal-3"  id="checkbox-1" value="エキス"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -592,7 +599,8 @@
                         </div>
                         <div class="col">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-1" id="checkbox-2" class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                <input type="radio" name="field-2-modal-3" id="checkbox-2" value="カーゴ"
+                                       class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
                                        for="checkbox-2">カーゴ</label>
@@ -600,7 +608,7 @@
                         </div>
                         <div class="col">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-1"  id="checkbox-3"
+                                <input type="radio" name="field-2-modal-3"  id="checkbox-3" value="OEM"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -616,9 +624,8 @@
                             data-bs-dismiss="modal">
                         クリア
                     </button>
-                    <button type="button"
-                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
-                            data-bs-dismiss="modal">
+                    <button type="submit"
+                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center">
                         保存
                     </button>
                 </div>
@@ -629,7 +636,7 @@
 
 <div class="modal fade modal-4" id="modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog max-w-665 modal-dialog-centered modal-lg">
-        <form class="max-w-665 w-100">
+        <form class="max-w-665 w-100" id="form-modal-4">
             <div class="modal-content px-38 border-radius-5">
                 <div class="modal-body p-0 me-22">
 
@@ -640,7 +647,7 @@
                         <div class="box-form-date row row-cols-3 mt-11 align-items-center g-0">
                             <div class="col w-252">
                                 <div class="form-date form-date-custom">
-                                    <input type="text"
+                                    <input type="text" name="field-1-modal-4"
                                            class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                 </div>
                             </div>
@@ -649,7 +656,7 @@
                             </div>
                             <div class="col w-252">
                                 <div class="form-date form-date-custom">
-                                    <input type="text"
+                                    <input type="text" name="field-2-modal-4"
                                            class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                 </div>
                             </div>
@@ -663,7 +670,7 @@
                         <div class="box-form-date row row-cols-3 mt-11 align-items-center g-0">
                             <div class="col w-252">
                                 <div class="form-date form-date-custom">
-                                    <input type="text"
+                                    <input type="text" name="field-3-modal-4"
                                            class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                 </div>
                             </div>
@@ -672,7 +679,7 @@
                             </div>
                             <div class="col w-252">
                                 <div class="form-date form-date-custom">
-                                    <input type="text"
+                                    <input type="text" name="field-4-modal-4"
                                            class="datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input"/>
                                 </div>
                             </div>
@@ -682,7 +689,8 @@
 
                     <div class="mt-64 mb-38 ms-1 mb-38">
                         <label class="fs-16 ff-nt-sans fst-normal">発行店</label>
-                        <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11" />
+                        <input placeholder="発行店コードまたは名称を指定（前方一致）" type="text" name="field-5-modal-4"
+                               class="border-gray color-gray-place ff-nt-sans fst-normal fs-16 letter-spacing-10 form-control h-5 mt-11"/>
                     </div>
 
                     <h4 class="fs-16 fw-bolder fst-normal ff-nt-sans letter-spacing-10 mb-0">その他</h4>
@@ -692,7 +700,7 @@
                         </div>
                         <div class="col w-125">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-8"  id="checkbox-8"
+                                <input type="radio" name="field-6-modal-4"  id="checkbox-8" value="貸切"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -701,7 +709,8 @@
                         </div>
                         <div class="col w-165">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-8" id="checkbox-9" class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                <input type="radio" name="field-6-modal-4" id="checkbox-9" value="メガEXP"
+                                       class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
                                        for="checkbox-2">メガEXP</label>
@@ -709,7 +718,7 @@
                         </div>
                         <div class="col">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-8"  id="checkbox-10"
+                                <input type="radio" name="field-6-modal-4" id="checkbox-10" value="その他"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -724,7 +733,7 @@
                         </div>
                         <div class="col-auto">
                             <div class="form-checkbox mb-3 mb-lg-0 position-relative h-5 border-input border-radius-55 d-flex align-items-center p-17 radio-custom">
-                                <input type="radio" name="radio-5"  id="checkbox-5"
+                                <input type="radio" name="field-7-modal-4"  id="checkbox-5" value="なびPro"
                                        class="ms-0 input-checkbox start-0 end-0 top-0 bottom-0"/>
                                 <span class="checkmark-radio"></span>
                                 <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
@@ -742,8 +751,7 @@
                         クリア
                     </button>
                     <button type="submit"
-                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
-                            data-bs-dismiss="modal">
+                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center">
                         保存
                     </button>
                 </div>
@@ -776,11 +784,11 @@
 
 <div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <form class="max-w-665 w-100">
+        <form class="max-w-665 w-100" id="form-modal-5">
             <div class="modal-content max-w-665 px-38 border-radius-5">
                 <div class="modal-body p-0 mt-45 mb-38 me-22 ms-1">
                     <label class="fs-16 ff-nt-sans fst-normal">原票番号</label>
-                    <input type="text" class="form-control h-5 mt-11" />
+                    <input type="text" class="form-control h-5 mt-11" name="field-1-modal-5"/>
                 </div>
                 <div class="modal-footer justify-content-end border-0 p-0 mb-36">
                     <button type="reset"
@@ -788,9 +796,8 @@
                             data-bs-dismiss="modal">
                         クリア
                     </button>
-                    <button type="button"
-                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center"
-                            data-bs-dismiss="modal">
+                    <button type="submit"
+                            class="submit-button ms-14 me-0 mt-0 mb-0 ff-nt-sans fst-normal fw-500 letter-spacing-10 h-5 text-white w-130 bg-color-green-blur  border-radius-7 btn d-flex align-items-center justify-content-center">
                         保存
                     </button>
                 </div>

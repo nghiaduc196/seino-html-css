@@ -26,9 +26,9 @@ $(document).ready(function () {
     // Bind event listener
     $(window).resize(checkWidth);
 
-    $('body').on('click', '.submit-button', function (){
-        event.preventDefault();
-    })
+    // $('body').on('click', '.submit-button', function (){
+    //     event.preventDefault();
+    // })
 
     $('body').on('click', '.reset-button', function (){
         let form = $(this).parent().parent().parent();
