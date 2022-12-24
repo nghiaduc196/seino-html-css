@@ -1,0 +1,112 @@
+@font-face {
+  font-family: notosan;
+  src: url("../font/Noto_Sans/NotoSans-Regular.ttf");
+}
+.wrapper .wrapper-background {
+  background-image: url("../image/backgroud_login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 200%;
+  overflow-x: hidden;
+}
+.wrapper .wrapper-background .wrapper-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 554px;
+  max-height: 821px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login {
+  background: #F1F4F7;
+  margin: auto;
+  height: 100%;
+  border-radius: 10px;
+  padding: 50px 77px 86px 90px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .logo {
+  max-width: 121px;
+  max-height: 94px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .slogan {
+  font-family: notosan;
+  color: #003B90;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-top: 42px;
+  margin-bottom: 25px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .description {
+  font-family: notosan;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  line-height: 35px;
+  margin-bottom: 46px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .password {
+  margin-top: 21px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .box-form .label {
+  font-family: notosan;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.1em;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .box-form .button {
+  font-family: notosan;
+  width: 62px;
+  height: 26px;
+  line-height: 26px;
+  background: #DA3915;
+  border-radius: 4px;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 14px;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .box-form .form-control {
+  font-family: notosan;
+  margin-top: 12px;
+  height: 50px;
+  border: 1px solid #DBDBDB;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .box-form .form-control:focus {
+  box-shadow: none;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .button-submit {
+  margin-top: 31px;
+  width: 100%;
+  height: 70px;
+  background: #75C450;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  position: relative;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .button-submit img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 15%;
+}
+.wrapper .wrapper-background .wrapper-login .box-login .button-submit span {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=login.css.map */

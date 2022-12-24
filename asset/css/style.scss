@@ -1816,3 +1816,12 @@ input:checked ~ .checkmark:after, input:checked ~ .checkmark-radio:after {
     left: 13px;
   }
 }
+
+ul.ui-autocomplete {
+  li {
+    background: #FFFFFF;
+    &:hover {
+      background: #F1F4F7 !important;
+    }
+  }
+}
