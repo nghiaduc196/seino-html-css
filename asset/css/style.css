@@ -241,6 +241,15 @@ input.input-number {
   max-width: 665px;
 }
 
+.max-w-916 {
+  max-width: 916px;
+}
+
+.max-w-740 {
+  max-width: 740px;
+  margin-right: 20px;
+}
+
 .w-298 {
   width: 298px;
 }
@@ -453,6 +462,10 @@ input.input-number {
   margin-top: 23px;
 }
 
+.mt-70 {
+  margin-top: 70px;
+}
+
 .mt-49 {
   margin-top: 49px;
 }
@@ -471,6 +484,10 @@ input.input-number {
 
 .me-22 {
   margin-right: 22px;
+}
+
+.me-40 {
+  margin-right: 40px;
 }
 
 .mb-10 {
@@ -686,6 +703,10 @@ input.input-number {
 
 .h-80 {
   height: 80px;
+}
+
+.min-h-80 {
+  min-height: 80px;
 }
 
 .border-gray {
@@ -1801,6 +1822,26 @@ ul.ui-autocomplete li {
 }
 ul.ui-autocomplete li:hover {
   background: #F1F4F7 !important;
+}
+
+.ui-autocomplete .ui-state-hover, .ui-autocomplete .ui-state-active, .ui-autocomplete .ui-state-focus {
+  margin: 0;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  padding-left: 19px !important;
+  height: 50px !important;
+  transition: 0s;
+}
+.ui-menu .ui-menu-item-wrapper:hover {
+  background: #F1F4F7 !important;
+}
+
+.hover-opacity {
+  transition: 0.3s ease-out;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */

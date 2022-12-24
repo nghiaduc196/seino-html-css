@@ -26,9 +26,9 @@ $(document).ready(function () {
     // Bind event listener
     $(window).resize(checkWidth);
 
-    $('body').on('click', '.submit-button', function (){
-        event.preventDefault();
-    })
+    // $('body').on('click', '.submit-button', function (){
+    //     event.preventDefault();
+    // })
 
     $('body').on('click', '.reset-button', function (){
         let form = $(this).parent().parent().parent();
@@ -223,20 +223,12 @@ $(document).ready(function () {
     $('body').on('focus', '.datepicker-custom', function () {
         $('#modal-backdrop').addClass('modal-backdrop');
         $('body').addClass('overflow-hidden');
-        $('.modal-content').css('opacity', 0.7);
     });
 
     $('body').on('click', '.modal-backdrop', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
         $('body').removeClass('overflow-hidden');
-        $('.modal-content').css('opacity', '1');
     });
-
-    // $('body').on('click', '.modal', function (){
-    //     $('#modal-backdrop').removeClass('modal-backdrop');
-    //     $('body').removeClass('overflow-hidden');
-    //     $('.modal-content').css('opacity', '1');
-    // });
 
     $('body').on('change', '.datepicker-custom', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
