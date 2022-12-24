@@ -220,7 +220,7 @@ $(document).ready(function () {
 
     // datepicker-custom
 
-    $('body').on('click', '.datepicker-custom', function () {
+    $('body').on('focus', '.datepicker-custom', function () {
         $('#modal-backdrop').addClass('modal-backdrop');
         $('body').addClass('overflow-hidden');
         $('.modal-content').css('opacity', 0.7);
