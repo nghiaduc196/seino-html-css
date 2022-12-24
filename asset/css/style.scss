@@ -499,6 +499,9 @@ input {
   padding-left: 38px;
   padding-right: 38px;
 }
+.pe-40 {
+  padding-right: 40px !important;
+}
 .p-17 {
   padding: 17px;
 }
@@ -1212,6 +1215,14 @@ ul {
               }
               td {
                 padding: 30px 18px !important;
+              }
+              tbody {
+                tr {
+                  cursor: pointer;
+                  &:hover {
+                    opacity: 0.7;
+                  }
+                }
               }
 
               tr:nth-child(even){

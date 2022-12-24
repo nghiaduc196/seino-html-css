@@ -230,6 +230,11 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
     });
 
+    $('body').on('click', '.modal', function (){
+        $('#modal-backdrop').removeClass('modal-backdrop');
+        $('body').removeClass('overflow-hidden');
+    });
+
     $('body').on('change', '.datepicker-custom', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
         $('body').removeClass('overflow-hidden');

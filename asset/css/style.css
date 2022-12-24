@@ -607,6 +607,10 @@ input.input-number {
   padding-right: 38px;
 }
 
+.pe-40 {
+  padding-right: 40px !important;
+}
+
 .p-17 {
   padding: 17px;
 }
@@ -1326,6 +1330,12 @@ ul {
 }
 .content-wrapper .content .main .box-content .tab-content .box-table .table-project td {
   padding: 30px 18px !important;
+}
+.content-wrapper .content .main .box-content .tab-content .box-table .table-project tbody tr {
+  cursor: pointer;
+}
+.content-wrapper .content .main .box-content .tab-content .box-table .table-project tbody tr:hover {
+  opacity: 0.7;
 }
 .content-wrapper .content .main .box-content .tab-content .box-table .table-project tr:nth-child(even) {
   background-color: #F5F5F5;
