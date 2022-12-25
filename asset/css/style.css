@@ -1388,10 +1388,25 @@ ul {
   top: 0;
 }
 .content-wrapper .content .main .box-content .box-content-right .custom-brick.active2:before {
-  top: 60px;
+  top: 58px;
 }
 .content-wrapper .content .main .box-content .box-content-right .custom-brick.active3:before {
-  top: 119px;
+  top: 116px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active4:before {
+  top: 174px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active5:before {
+  top: 232px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active6:before {
+  top: 290px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active7:before {
+  top: 348px;
+}
+.content-wrapper .content .main .box-content .box-content-right .custom-brick.active8:before {
+  top: 408px;
 }
 .content-wrapper .content .main .box-content .box-content-right .text-focus {
   transition: 0.3s ease-in-out;
@@ -1852,6 +1867,14 @@ ul.ui-autocomplete li:hover {
 }
 .hover-opacity:hover {
   opacity: 0.8;
+}
+
+.loading {
+  z-index: 9999;
+}
+.loading .backdrop {
+  background: #FFFFFF;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,7 +26,7 @@
             <div class="box-menu">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <a class="nav-link d-flex align-items-center" href="top.html">
                             <img class="icon-menu" src="./asset/image/icon_home.svg"/>
                             <span class="text-menu">トップメニュー</span>
                         </a>
@@ -58,7 +58,7 @@
 
                 </ul>
                 <div class="logout">
-                    <a class="nav-link d-flex align-items-center justify-content-center" href="#">
+                    <a class="nav-link d-flex align-items-center justify-content-center" href="login.html">
                         <img class="icon-menu" src="./asset/image/icon_logout_1.svg"/>
                         <span class="text-menu text-blue fs-16">ログアウト</span>
                     </a>
@@ -129,7 +129,7 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10" for="tags">運送契約荷主 </label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input id="tags" class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="例）0584738888"/>
+                                        <input type="tel" id="tags" class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="例）0584738888"/>
                                     </div>
                                     <div class="mt-14 bg-w-d border-radius-5 bg-w-d" style="min-height: 50px">
                                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-0">
@@ -147,7 +147,7 @@
 
                                 </div>
 
-                                <div class="box box-2">
+                                <div class="box box-2" id="tab2" >
                                     <h4 class="mb-0 text-blue ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10">
                                         原票情報</h4>
                                     <div class="box-form">
@@ -369,7 +369,7 @@
                                     </div>
                                 </div>
 
-                                <div class="box box-3 mt-20" id="tab2">
+                                <div class="box box-3 mt-20" id="tab3">
                                     <div class="row align-items-center">
                                         <h4 class="col mb-0 text-blue ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10">
                                             荷主情報</h4>
@@ -391,7 +391,7 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷先電話番号</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input value="0584738888：セイノー情報サービス"
+                                        <input type="tel" value="0584738888：セイノー情報サービス"
                                                class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                         <div class="mt-11">
                                             <button class="button-disable button form-control h-5 border-input bg-base-color d-flex align-items-center justify-content-center">
@@ -667,7 +667,7 @@
 
                                 </div>
 
-                                <div class="box box-4 mt-20">
+                                <div class="box box-4 mt-20" id="tab4" >
                                     <div class="row align-items-center">
                                         <h4 class="col mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
                                             配達先情報</h4>
@@ -690,7 +690,7 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配達先電話番号</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input value="0584738888：セイノー情報サービス"
+                                        <input type="tel" value="0584738888：セイノー情報サービス"
                                                class="ff-nt-sans fst-normal fs-16 letter-spacing-10  form-control h-5 border-input error"/>
                                         <div class="error mt-11">
                                             <span class="fw-500 ff-nt-sans fst-normal letter-spacing-10 text-red">エラーメッセージはこちらに表示いたします。</span>
@@ -1016,7 +1016,7 @@
 
                                 </div>
 
-                                <div class="box box-5 mt-20">
+                                <div class="box box-5 mt-20" id="tab5">
                                     <h4 class="mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
                                         商品情報</h4>
                                     <div class="box-form">
@@ -1271,14 +1271,14 @@
                                     </div>
                                 </div>
 
-                                <div class="box box-6 mt-20">
+                                <div class="box box-6 mt-20" id="tab6">
                                     <h4 class="mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
                                         依頼先情報</h4>
 
                                     <div class="box-form">
                                         <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">品名</label>
                                         <div>
-                                            <input value="0584738888：セイノー情報サービス"
+                                            <input type="tel" value="0584738888：セイノー情報サービス"
                                                    class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"
                                                    style="width: 100%;"/>
                                         </div>
@@ -1512,7 +1512,7 @@
 
                                 </div>
 
-                                <div class="box box-7 mt-20">
+                                <div class="box box-7 mt-20" id="tab7">
                                     <h4 class="mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
                                         運賃情報</h4>
 
@@ -1702,14 +1702,14 @@
 
                                 </div>
 
-                                <div class="box box-8 mt-20" id="tab3">
+                                <div class="box box-8 mt-20" id="tab8">
                                     <h4 class="mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
                                         支払情報</h4>
                                     <div class="box-form mt-26">
                                         <div class="d-inline-block label mt-0">
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用車</label>
                                         </div>
-                                        <input value="0584738888：セイノー情報サービス"
+                                        <input type="tel" value="0584738888：セイノー情報サービス"
                                                class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                     </div>
 
@@ -1838,11 +1838,31 @@
                                         </li>
                                         <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
                                             <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
-                                               data-id="2">輸送情報</a>
+                                               data-id="2">原票情報</a>
                                         </li>
                                         <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
                                             <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
-                                               data-id="3">請求支払い情報</a>
+                                               data-id="3">輸送情報</a>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
+                                            <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
+                                               data-id="4">配達先情報</a>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
+                                            <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
+                                               data-id="5">商品情報</a>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
+                                            <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
+                                               data-id="6">依頼先情報</a>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
+                                            <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
+                                               data-id="7">運賃情報</a>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10">
+                                            <a class="cursor-pointer tab-scroll fst-normal ff-nt-sans fw-500 fs-16 text-blue mt-34 letter-spacing-10"
+                                               data-id="8">請求支払い情報</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1851,15 +1871,15 @@
                                         登録／更新
                                     </a>
                                 </div>
-                                <div class="visually-hidden">
-                                    <a href="register-done.html"
-                                       class="submit-form button bg-color-green h-5 border-radius-5 text-white text-center w-100 d-block l-h-50">
-                                        登録完了
-                                    </a>
-                                </div>
+<!--                                <div class="visually-hidden">-->
+<!--                                    <a href="register-done.html"-->
+<!--                                       class="submit-form button bg-color-green h-5 border-radius-5 text-white text-center w-100 d-block l-h-50">-->
+<!--                                        登録完了-->
+<!--                                    </a>-->
+<!--                                </div>-->
                                 <div>
                                     <a href="register-form.html"
-                                       class="button bg-color-gray-dark h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
+                                       class="button-back button bg-color-gray-dark h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
                                         キャンセル／更新
                                     </a>
                                 </div>
@@ -1995,9 +2015,17 @@
 <!--<script src="./asset/bootstrap/bootstrap.min.js"></script>-->
 <!--<script src="./asset/js/jquery.min.js"></script>-->
 <!--<script src="./asset/js/script.js"></script>-->
-<!--<script src="./asset/js/register-form.js"></script>-->
 
 <div id="modal-backdrop" class="fade show"></div>
+
+<!--Loading-->
+<div class="d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 end-0 start-0 m-auto loading visually-hidden">
+    <div class="backdrop position-absolute top-0 bottom-0 end-0 start-0"></div>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <span class="ms-14 ff-nt-sans fst-normal text-black">お待ちください</span>
+</div>
 
 <script src="./asset/js/jquery.js"></script>
 <script src="./asset/js/jquery-ui.js"></script>
@@ -2005,6 +2033,7 @@
 <!--<script src="./asset/js/jquery.min.js"></script>-->
 <script src="./asset/js/script.js"></script>
 <script src="./asset/js/search.js"></script>
+<script src="./asset/js/register-form.js"></script>
 </body>
 
 </html>

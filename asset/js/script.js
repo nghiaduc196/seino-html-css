@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    const time = 2;
     $('body').on('click', '#menu', function () {
         $('.wrapper').toggleClass("collapse-menu");
     });
@@ -30,14 +31,14 @@ $(document).ready(function () {
     //     event.preventDefault();
     // })
 
-    $('body').on('click', '.reset-button', function (){
+    $('body').on('click', '.reset-button', function () {
         let form = $(this).parent().parent().parent();
-        if ($('.input-checkbox', form).is(':checked')){
+        if ($('.input-checkbox', form).is(':checked')) {
             $('.input-checkbox', form).parent().removeClass('active');
         }
     })
 
-    function ActiveCheck(){
+    function ActiveCheck() {
         $(".input-checkbox:checkbox").change(function () {
             if ($(this).is(':checked') === true) {
                 $(this).parent().addClass('active');
@@ -67,16 +68,43 @@ $(document).ready(function () {
 
     $('body').on('click', '.tab-scroll', function () {
         let id = $(this).attr('data-id');
+        let fixed = $('.header').outerHeight();
+        let tab1 = $('#tab1').offset().top;
+        let tab2 = $('#tab2').offset().top;
+        let tab3 = $('#tab3').offset().top;
+        let tab4 = $('#tab4').offset().top;
+        let tab5 = $('#tab5').offset().top;
+        let tab6 = $('#tab6').offset().top;
+        let tab7 = $('#tab7').offset().top;
+        let tab8 = $('#tab8').offset().top;
+
         if (id == 1) {
-            $(window).scrollTop($('#tab1').offset().top - 160);
+            $(window).scrollTop(tab1 - fixed);
         }
         if (id == 2) {
-            $(window).scrollTop($('#tab2').offset().top - 160);
+            $(window).scrollTop(tab2 - fixed);
         }
         if (id == 3) {
-            $(window).scrollTop($('#tab3').offset().top - 160);
+            $(window).scrollTop(tab3 - fixed);
         }
+        if (id == 4) {
+            $(window).scrollTop(tab4 - fixed);
+        }
+        if (id == 5) {
+            $(window).scrollTop(tab5 - fixed);
+        }
+        if (id == 6) {
+            $(window).scrollTop(tab6 - fixed);
+        }
+        if (id == 7) {
+            $(window).scrollTop(tab7 - fixed);
+        }
+        if (id == 8) {
+            $(window).scrollTop(tab8 - fixed);
+        }
+
     });
+
 
     $('body').on('click', '.icon-add-input', function () {
         $(this).parent().prev().append(`<div class="row row-cols-1 row-cols-lg-2 mt-3 gx-0">
@@ -134,87 +162,280 @@ $(document).ready(function () {
                                             </div>`);
     })
 
+    $('body').on('click', '.button-back', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-form.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+    $('body').on('click', '.submit-form-done', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-done.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+    $('body').on('click', '.button-back-register', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-form.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+
     $('body').on('click', '.submit-form', function () {
-        $(this).addClass('d-none');
-        $(this).parent().next().removeClass('visually-hidden');
-        $('.form-control').each(function (e, value) {
-            if (value.value.length > 0) {
-                value.style.border = "2px solid #003B90";
-                value.style.background = "#F5F5F5";
-                value.style.color = "#003B90";
-                value.style.fontWeight = "700";
+        $('.loading').removeClass('visually-hidden');
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            // $(this).addClass('d-none');
+            // $(this).parent().next().removeClass('visually-hidden');
+            $(this).text('登録完了');
+            $(this).removeClass('submit-form');
+            $(this).addClass('submit-form-done');
+            $('.form-control').each(function (e, value) {
+                if (value.value.length > 0) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    value.style.color = "#003B90";
+                    value.style.fontWeight = "700";
+                    value.setAttribute("disabled", "");
+                } else {
+                    value.style.border = "1px solid #DBDBDB";
+                    value.style.background = "#F5F5F5";
+                    value.setAttribute("disabled", "");
+                }
+
+            })
+
+            $('.icon-add-input-1').each(function (e, value) {
+            }).click(false);
+            $('.icon-add-input-2').each(function (e, value) {
+            }).click(false);
+            $('.icon-add-input').each(function (e, value) {
+            }).click(false);
+            $('.sub-input').each(function (e, value) {
+            }).click(false);
+
+            $('.form-checkbox').each(function (e, value) {
+                $('.notification').removeClass('visually-hidden')
+                if ($('input', $(this))[0].checked) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    $('input', $(this))[0].setAttribute("disabled", "");
+                } else {
+                    value.style.border = "1px solid #DBDBDB";
+                    value.style.background = "#F5F5F5";
+                    $('input', $(this))[0].setAttribute("disabled", "");
+                    $('.checkmark', $(this)).css('background', '#F5F5F5');
+                    $('.checkmark-radio', $(this)).css('background', '#F5F5F5');
+                }
+            });
+
+            $('select').each(function (e, value) {
                 value.setAttribute("disabled", "");
-            } else {
-                value.style.border = "1px solid #DBDBDB";
-                value.style.background = "#F5F5F5";
+            });
+
+            $('.button-custom').each(function (e, value) {
+                $('img', value).attr('src', './asset/image/icon_add_disabled.svg');
+                $('span', value).addClass('text-gray-blur');
+                $(value).css('background', '#DBDBDB');
+                $(value).css('border', '1px dashed #003B90');
+            });
+
+            $('.button-disable').each(function (e, value) {
+                $(value).addClass('bg-disable');
+                $('div', value).addClass('bg-disable-2');
+            });
+
+            $('.icon-disable').each(function (e, value) {
+                $(value).attr('src', './asset/image/icon_sub_disable.svg');
+                $(value).removeClass('sub-input');
+            });
+
+            $('.form-checkbox-custom').each(function (e, value) {
+                $('input', $(this))[0].setAttribute("disabled", "");
+                if ($('input', value)[0].checked) {
+                    value.style.background = "#A2A2A2";
+                    $('.icon', value).css('background', '#5F5D5D');
+                } else {
+                    value.style.background = "#A2A2A2";
+                }
+            });
+
+            $('.select-selected').each(function (e, value) {
+                if ($('.same-as-selected', $(value).next()).length) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    value.style.color = "#003B90";
+                    value.style.fontWeight = "700";
+                }
+            });
+
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    })
+
+    $('body').on('click', '.button-back', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-form.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+    $('body').on('click', '.submit-form-done', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-done.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+    $('body').on('click', '.button-back-register', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+        e.preventDefault();
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+            window.location.href = 'register-form.html';
+        }, time * 1000);
+
+        return () => clearInterval(interval);
+
+    });
+
+
+    $('body').on('click', '.submit-form', function () {
+        $('.loading').removeClass('visually-hidden');
+        let interval = setInterval(() => {
+            $('.loading').addClass('visually-hidden');
+            // $(this).addClass('d-none');
+            // $(this).parent().next().removeClass('visually-hidden');
+            $(this).text('登録完了');
+            $(this).removeClass('submit-form');
+            $(this).addClass('submit-form-done');
+            $('.form-control').each(function (e, value) {
+                if (value.value.length > 0) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    value.style.color = "#003B90";
+                    value.style.fontWeight = "700";
+                    value.setAttribute("disabled", "");
+                } else {
+                    value.style.border = "1px solid #DBDBDB";
+                    value.style.background = "#F5F5F5";
+                    value.setAttribute("disabled", "");
+                }
+
+            })
+
+            $('.icon-add-input-1').each(function (e, value) {
+            }).click(false);
+            $('.icon-add-input-2').each(function (e, value) {
+            }).click(false);
+            $('.icon-add-input').each(function (e, value) {
+            }).click(false);
+            $('.sub-input').each(function (e, value) {
+            }).click(false);
+
+            $('.form-checkbox').each(function (e, value) {
+                $('.notification').removeClass('visually-hidden')
+                if ($('input', $(this))[0].checked) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    $('input', $(this))[0].setAttribute("disabled", "");
+                } else {
+                    value.style.border = "1px solid #DBDBDB";
+                    value.style.background = "#F5F5F5";
+                    $('input', $(this))[0].setAttribute("disabled", "");
+                    $('.checkmark', $(this)).css('background', '#F5F5F5');
+                    $('.checkmark-radio', $(this)).css('background', '#F5F5F5');
+                }
+            });
+
+            $('select').each(function (e, value) {
                 value.setAttribute("disabled", "");
-            }
+            });
 
-        })
+            $('.button-custom').each(function (e, value) {
+                $('img', value).attr('src', './asset/image/icon_add_disabled.svg');
+                $('span', value).addClass('text-gray-blur');
+                $(value).css('background', '#DBDBDB');
+                $(value).css('border', '1px dashed #003B90');
+            });
 
-        $('.icon-add-input-1').each(function (e, value) {
-        }).click(false);
-        $('.icon-add-input-2').each(function (e, value) {
-        }).click(false);
-        $('.icon-add-input').each(function (e, value) {
-        }).click(false);
-        $('.sub-input').each(function (e, value) {
-        }).click(false);
+            $('.button-disable').each(function (e, value) {
+                $(value).addClass('bg-disable');
+                $('div', value).addClass('bg-disable-2');
+            });
 
-        $('.form-checkbox').each(function (e, value) {
-            $('.notification').removeClass('visually-hidden')
-            if ($('input', $(this))[0].checked) {
-                value.style.border = "2px solid #003B90";
-                value.style.background = "#F5F5F5";
+            $('.icon-disable').each(function (e, value) {
+                $(value).attr('src', './asset/image/icon_sub_disable.svg');
+                $(value).removeClass('sub-input');
+            });
+
+            $('.form-checkbox-custom').each(function (e, value) {
                 $('input', $(this))[0].setAttribute("disabled", "");
-            } else {
-                value.style.border = "1px solid #DBDBDB";
-                value.style.background = "#F5F5F5";
-                $('input', $(this))[0].setAttribute("disabled", "");
-                $('.checkmark', $(this)).css('background', '#F5F5F5');
-                $('.checkmark-radio', $(this)).css('background', '#F5F5F5');
-            }
-        });
+                if ($('input', value)[0].checked) {
+                    value.style.background = "#A2A2A2";
+                    $('.icon', value).css('background', '#5F5D5D');
+                } else {
+                    value.style.background = "#A2A2A2";
+                }
+            });
 
-        $('select').each(function (e, value) {
-            value.setAttribute("disabled", "");
-        });
+            $('.select-selected').each(function (e, value) {
+                if ($('.same-as-selected', $(value).next()).length) {
+                    value.style.border = "2px solid #003B90";
+                    value.style.background = "#F5F5F5";
+                    value.style.color = "#003B90";
+                    value.style.fontWeight = "700";
+                }
+            });
 
-        $('.button-custom').each(function (e, value) {
-            $('img', value).attr('src', './asset/image/icon_add_disabled.svg');
-            $('span', value).addClass('text-gray-blur');
-            $(value).css('background', '#DBDBDB');
-            $(value).css('border', '1px dashed #003B90');
-        });
+        }, time * 1000);
 
-        $('.button-disable').each(function (e, value) {
-            $(value).addClass('bg-disable');
-            $('div', value).addClass('bg-disable-2');
-        });
+        return () => clearInterval(interval);
 
-        $('.icon-disable').each(function (e, value) {
-            $(value).attr('src', './asset/image/icon_sub_disable.svg');
-            $(value).removeClass('sub-input');
-        });
-
-        $('.form-checkbox-custom').each(function (e, value) {
-            $('input', $(this))[0].setAttribute("disabled", "");
-            if ($('input', value)[0].checked) {
-                value.style.background = "#A2A2A2";
-                $('.icon', value).css('background', '#5F5D5D');
-            } else {
-                value.style.background = "#A2A2A2";
-            }
-        });
-
-        $('.select-selected').each(function (e, value) {
-            if ($('.same-as-selected', $(value).next()).length){
-                value.style.border = "2px solid #003B90";
-                value.style.background = "#F5F5F5";
-                value.style.color = "#003B90";
-                value.style.fontWeight = "700";
-            }
-        });
     })
 
 
@@ -230,7 +451,7 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
     });
 
-    $('body').on('click', '.modal', function (){
+    $('body').on('click', '.modal', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
         $('body').removeClass('overflow-hidden');
     });
@@ -268,8 +489,8 @@ $(document).ready(function () {
         var x, j, l, ll, selElmnt, a, b, c;
         x = document.getElementsByClassName("custom-select");
         l = x.length;
-        $('.custom-select').each(function (i, e){
-            if (!$('.select-selected', e)[0]){
+        $('.custom-select').each(function (i, e) {
+            if (!$('.select-selected', e)[0]) {
                 selElmnt = x[i].getElementsByTagName("select")[0];
                 ll = selElmnt.length;
                 a = document.createElement("DIV");

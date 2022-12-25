@@ -1,22 +1,46 @@
 $(document).ready(function () {
 
     function checkTabScroll(){
-        if ($(window).scrollTop() < $('#tab2').offset().top - 170){
-            $('.custom-brick').addClass('active1');
-            $('.custom-brick').removeClass('active2');
-            $('.custom-brick').removeClass('active3');
+        let fixed = $('.header').outerHeight() + 1;
+        let tab1 = $('#tab1').offset().top;
+        let tab2 = $('#tab2').offset().top;
+        let tab3 = $('#tab3').offset().top;
+        let tab4 = $('#tab4').offset().top;
+        let tab5 = $('#tab5').offset().top;
+        let tab6 = $('#tab6').offset().top;
+        let tab7 = $('#tab7').offset().top;
+        let tab8 = $('#tab8').offset().top;
+        let scrollTop = $(window).scrollTop();
 
+        if (scrollTop < tab2 - fixed){
+            removeClassACtive(1)
+        }else if (scrollTop >= tab2 - fixed && scrollTop < tab3 - fixed){
+            removeClassACtive(2)
+        }else if (scrollTop >= tab3 - fixed && scrollTop < tab4 - fixed){
+            removeClassACtive(3)
+        }else if (scrollTop >= tab4 - fixed && scrollTop < tab5 - fixed){
+            removeClassACtive(4)
+        }else if (scrollTop >= tab5 - fixed && scrollTop < tab6 - fixed){
+            removeClassACtive(5)
+        }else if (scrollTop >= tab6 - fixed && scrollTop < tab7 - fixed){
+            removeClassACtive(6)
+        }else if (scrollTop >= tab7 - fixed && scrollTop < tab8 - fixed){
+            removeClassACtive(7)
+        }else if (scrollTop >= tab8 - fixed){
+            removeClassACtive(8)
         }
-        if ($(window).scrollTop() > $('#tab2').offset().top - 170 && $(window).scrollTop() < $('#tab3').offset().top - 170){
-            $('.custom-brick').addClass('active2');
-            $('.custom-brick').removeClass('active1');
-            $('.custom-brick').removeClass('active3');
-        }
-        if ($(window).scrollTop() >= $('#tab3').offset().top - 170){
-            $('.custom-brick').addClass('active3');
-            $('.custom-brick').removeClass('active1');
-            $('.custom-brick').removeClass('active2');
-        }
+    }
+
+    function removeClassACtive(param) {
+        const active = ['active1', 'active2', 'active3', 'active4', 'active5', 'active6', 'active7', 'active8'];
+        active.forEach( (e, i) => {
+            if (i + 1 === +param){
+                $('.custom-brick').addClass(e);
+            }else {
+                $('.custom-brick').removeClass(e);
+            }
+        });
+
     }
 
     checkTabScroll();
@@ -46,5 +70,28 @@ $(document).ready(function () {
         showMonthAfterYear: true,
         yearSuffix: "年",
     });
+
+    // autocomplete
+
+    var availableTags = [
+        "0584738888：セイノー情報サービス",
+        "0584738887：セイノー情報サービス",
+        "0584738886：セイノー情報サービス",
+        "0584738885：セイノー情報サービス",
+    ];
+
+    $("#tags").autocomplete({
+        source: availableTags,
+        minLength: 6,
+        focus: function (event, ui) {
+            event.preventDefault();
+            $("#tags").val(ui.item.label);
+        },
+        select: function (event, ui) {
+            event.preventDefault();
+            $("#tags").val(ui.item.label);
+        }
+    });
+
 
 });

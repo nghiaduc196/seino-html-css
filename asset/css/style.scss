@@ -1286,12 +1286,37 @@ ul {
             }
             &.active2 {
               &:before {
-                top: 60px;
+                top: 58px;
               }
             }
             &.active3 {
               &:before {
-                top: 119px;
+                top: 116px;
+              }
+            }
+            &.active4 {
+              &:before {
+                top: 174px;
+              }
+            }
+            &.active5 {
+              &:before {
+                top: 232px;
+              }
+            }
+            &.active6 {
+              &:before {
+                top: 290px;
+              }
+            }
+            &.active7 {
+              &:before {
+                top: 348px;
+              }
+            }
+            &.active8 {
+              &:before {
+                top: 408px;
               }
             }
           }
@@ -1872,5 +1897,13 @@ ul.ui-autocomplete {
   transition: 0.3s ease-out;
   &:hover {
     opacity: 0.8;
+  }
+}
+
+.loading {
+  z-index: 9999;
+  .backdrop {
+    background: #FFFFFF;
+    opacity: 0.5;
   }
 }

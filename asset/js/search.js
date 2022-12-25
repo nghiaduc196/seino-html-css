@@ -58,6 +58,8 @@ $(document).ready(function () {
         yearSuffix: "年",
     });
 
+    
+
     $('#search-form').on('reset', function (e){
         $('#form-modal-1').trigger('reset');
         $('#form-modal-2').trigger('reset');
@@ -65,6 +67,11 @@ $(document).ready(function () {
         $('#form-modal-4').trigger('reset');
         $('#form-modal-5').trigger('reset');
         $("input[type='hidden']", $(this)).val('');
+
+        let input = $('.search-form input[type="text"]');
+        input.css('border', '1px solid #ced4da');
+        input.css('color', '#000000');
+        input.css('font-weight', '400');
     });
 
     $('#search-form [name=field-1], #search-form [name=field-2], #search-form [name=field-3], #search-form [name=field-4], #search-form [name=field-5]').keydown(function(event) {
@@ -80,11 +87,13 @@ $(document).ready(function () {
         e.preventDefault();
         $('#modal-1').modal('hide');
         $('#search-form [name=field-1]').val($('[name=field-1-modal-1]', $(this)).val());
+        activeForm();
     });
     $('#form-modal-2').submit(function (e) {
         e.preventDefault();
         $('#modal-2').modal('hide');
         $('#search-form [name=field-2]').val($('[name=field-1-modal-2]', $(this)).val());
+        activeForm();
     });
     $('#form-modal-3').submit(function (e) {
         e.preventDefault();
@@ -93,6 +102,7 @@ $(document).ready(function () {
         $('#field-3-1').val($('[name=field-1-modal-3]', $(this)).val());
         $('#field-3-2').val($('[name=field-2-modal-3]:checked').val());
         $('#search-form [name=field-3]').val(text);
+        activeForm();
     });
     $('#form-modal-4').submit(function (e) {
         e.preventDefault();
@@ -112,11 +122,13 @@ $(document).ready(function () {
         $('#field-4-6').val($('[name=field-6-modal-4]:checked').val());
         $('#field-4-7').val($('[name=field-7-modal-4]:checked').val());
         $('#search-form [name=field-4]').val(text);
+        activeForm();
     });
     $('#form-modal-5').submit(function (e) {
         e.preventDefault();
         $('#modal-5').modal('hide');
         $('#search-form [name=field-5]').val($('[name=field-1-modal-5]', $(this)).val());
+        activeForm();
     });
 
     $('#modal-1').on('shown.bs.modal', function () {
@@ -151,6 +163,39 @@ $(document).ready(function () {
         $('[name=field-1-modal-5]', $(this)).val($('#search-form [name=field-5]').val());
         $('#form-modal-5 [name=field-1-modal-5]').focus();
     });
+
+
+    $('body').on('change', '#search-form .datepicker-custom', function (){
+        activeForm();
+    });
+
+    function activeForm(){
+        $('.search-form input[type="text"]').each(function (e, i){
+            // console.log($(i).val().length)
+            if ($(i).val().length){
+                $(i).css('border', '1px solid #003B90');
+                $(i).css('color', '#003B90');
+                $(i).css('font-weight', '700');
+            } else {
+                $(i).css('border', '1px solid #ced4da');
+                $(i).css('color', '#000000');
+                $(i).css('font-weight', '400');
+            }
+        });
+        $('.search-form input[type="tel"]').each(function (e, i){
+            // console.log($(i).val().length)
+            if ($(i).val().length){
+                $(i).css('border', '1px solid #003B90');
+                $(i).css('color', '#003B90');
+                $(i).css('font-weight', '700');
+            } else {
+                $(i).css('border', '1px solid #ced4da');
+                $(i).css('color', '#000000');
+                $(i).css('font-weight', '400');
+            }
+        });
+    }
+    activeForm();
 });
 
 

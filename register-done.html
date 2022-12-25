@@ -25,7 +25,7 @@
             <div class="box-menu">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="#">
+                        <a class="nav-link d-flex align-items-center" href="top.html">
                             <img class="icon-menu" src="./asset/image/icon_home.svg"/>
                             <span class="text-menu">トップメニュー</span>
                         </a>
@@ -57,7 +57,7 @@
 
                 </ul>
                 <div class="logout">
-                    <a class="nav-link d-flex align-items-center justify-content-center" href="#">
+                    <a class="nav-link d-flex align-items-center justify-content-center" href="login.html">
                         <img class="icon-menu" src="./asset/image/icon_logout_1.svg"/>
                         <span class="text-menu text-blue fs-16">ログアウト</span>
                     </a>
@@ -231,7 +231,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <a href="register-form.html" class="button bg-color-green h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
+                                    <a href="register-form.html" class="button-back-register button bg-color-green h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
                                         続けて登録
                                     </a>
                                 </div>
@@ -363,6 +363,14 @@
 <!--    </div>-->
 <!--</div>-->
 
+<!--Loading-->
+<div class="d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 end-0 start-0 m-auto loading visually-hidden">
+    <div class="backdrop position-absolute top-0 bottom-0 end-0 start-0"></div>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <span class="ms-14 ff-nt-sans fst-normal text-black">お待ちください</span>
+</div>
 
 <script src="./asset/bootstrap/bootstrap.min.js"></script>
 <script src="./asset/js/jquery.min.js"></script>
