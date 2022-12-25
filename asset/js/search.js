@@ -89,7 +89,7 @@ $(document).ready(function () {
     $('#form-modal-3').submit(function (e) {
         e.preventDefault();
         $('#modal-3').modal('hide');
-        const text = ($('[name=field-1-modal-3]', $(this)).val() || '') + '; ' + ($('[name=field-2-modal-3]:checked').val() || '');
+        const text = ($('[name=field-1-modal-3]', $(this)).val() ? $('[name=field-1-modal-3]', $(this)).val() + '; ' : '') + ($('[name=field-2-modal-3]:checked').val() || '');
         $('#field-3-1').val($('[name=field-1-modal-3]', $(this)).val());
         $('#field-3-2').val($('[name=field-2-modal-3]:checked').val());
         $('#search-form [name=field-3]').val(text);
@@ -97,13 +97,13 @@ $(document).ready(function () {
     $('#form-modal-4').submit(function (e) {
         e.preventDefault();
         $('#modal-4').modal('hide');
-        const text = ($('[name=field-1-modal-3]', $(this)).val() || '') + '; ' +
-            ($('[name=field-2-modal-4]', $(this)).val() || '') + '; ' +
-            ($('[name=field-3-modal-4]', $(this)).val() || '') + '; ' +
-            ($('[name=field-4-modal-4]', $(this)).val() || '') + '; ' +
-            ($('[name=field-5-modal-4]', $(this)).val() || '') + '; ' +
-            ($('[name=field-6-modal-4]:checked').val() || '') + '; ' +
-            ($('[name=field-7-modal-4]:checked').val() || '');
+        const text = ($('[name=field-1-modal-4]', $(this)).val() ? $('[name=field-1-modal-4]', $(this)).val() + '~ ' : '')  +
+          ($('[name=field-2-modal-4]', $(this)).val() ? $('[name=field-2-modal-4]', $(this)).val() + '; ' : '')  +
+          ($('[name=field-3-modal-4]', $(this)).val() ? $('[name=field-3-modal-4]', $(this)).val() + '~ ' : '')  +
+          ($('[name=field-4-modal-4]', $(this)).val() ? $('[name=field-4-modal-4]', $(this)).val() + '; ' : '')  +
+          ($('[name=field-5-modal-4]', $(this)).val() ? $('[name=field-5-modal-4]', $(this)).val() + '; ' : '')  +
+          ($('[name=field-6-modal-4]:checked').val() ? $('[name=field-6-modal-4]:checked').val() + '; ' : '')  +
+          ($('[name=field-7-modal-4]:checked').val() || '');
         $('#field-4-1').val($('[name=field-1-modal-4]', $(this)).val());
         $('#field-4-2').val($('[name=field-2-modal-4]', $(this)).val());
         $('#field-4-3').val($('[name=field-3-modal-4]', $(this)).val());

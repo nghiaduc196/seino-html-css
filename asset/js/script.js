@@ -241,7 +241,7 @@ $(document).ready(function () {
         $('.modal-content').css('opacity', '1');
     });
 
-
+    // custom autocomplate option
     var availableTags = [
         "0584738888：セイノー情報サービス",
         "0584738887：セイノー情報サービス",
