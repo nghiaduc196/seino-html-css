@@ -355,7 +355,7 @@ $(document).ready(function () {
             $(this).addClass('submit-form-done');
             $('.form-control').each(function (e, value) {
                 if (value.value.length > 0) {
-                    value.style.border = "2px solid #003B90";
+                    value.style.border = "4px solid #003B90";
                     value.style.background = "#F5F5F5";
                     value.style.color = "#003B90";
                     value.style.fontWeight = "700";
@@ -380,9 +380,11 @@ $(document).ready(function () {
             $('.form-checkbox').each(function (e, value) {
                 $('.notification').removeClass('visually-hidden')
                 if ($('input', $(this))[0].checked) {
-                    value.style.border = "2px solid #003B90";
+                    value.style.border = "4px solid #003B90";
                     value.style.background = "#F5F5F5";
                     $('input', $(this))[0].setAttribute("disabled", "");
+                    $('.checkmark', $(this)).css('top', '9px');
+                    $('.checkmark-radio', $(this)).css('top', '9px')
                 } else {
                     value.style.border = "1px solid #DBDBDB";
                     value.style.background = "#F5F5F5";
@@ -425,7 +427,7 @@ $(document).ready(function () {
 
             $('.select-selected').each(function (e, value) {
                 if ($('.same-as-selected', $(value).next()).length) {
-                    value.style.border = "2px solid #003B90";
+                    value.style.border = "4px solid #003B90";
                     value.style.background = "#F5F5F5";
                     value.style.color = "#003B90";
                     value.style.fontWeight = "700";
@@ -435,7 +437,6 @@ $(document).ready(function () {
         }, time * 1000);
 
         return () => clearInterval(interval);
-
     })
 
 
@@ -559,4 +560,9 @@ $(document).ready(function () {
     }
 
     document.addEventListener("click", closeAllSelect);
+
+    // radio
+    $('body').on('click', 'input[type="radio"]', function (e, i){
+        console.log($(this)[0].checked);
+    });
 });

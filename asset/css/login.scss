@@ -11,22 +11,24 @@
     background-size: cover;
     width: 200%;
     overflow-x: hidden;
+    position: absolute;
     .wrapper-login {
       position: absolute;
-      top: 0;
+      //top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      //bottom: 0;
       margin: auto;
       max-width: 554px;
-      max-height: 821px;
+      //max-height: 821px;
       .box-login {
         background: #F1F4F7;
         margin: auto;
         height: 100%;
         border-radius: 10px;
         padding: 50px 77px 86px 90px ;
-
+        margin-top: 50px;
+        margin-bottom: 70px;
         .logo {
           max-width: 121px;
           max-height: 94px;
