@@ -72,6 +72,11 @@ $(document).ready(function () {
         input.css('border', '1px solid #ced4da');
         input.css('color', '#000000');
         input.css('font-weight', '400');
+        $('#field-1-badge').hide();
+        $('#field-2-badge').hide();
+        $('#field-3-badge').hide();
+        $('#field-4-badge').hide();
+        $('#field-5-badge').hide();
     });
 
     $('#search-form [name=field-1], #search-form [name=field-2], #search-form [name=field-3], #search-form [name=field-4], #search-form [name=field-5]').keydown(function(event) {
@@ -103,6 +108,11 @@ $(document).ready(function () {
         if ($('[name=field-1-modal-1]', $(this)).val()){
             count++;
         }
+        if (count != 0) {
+            $('#field-1-badge').show();
+        } else {
+            $('#field-1-badge').hide();
+        }
         $('#field-1-badge').html(count)
         activeForm();
     });
@@ -113,6 +123,11 @@ $(document).ready(function () {
         $('#search-form [name=field-2]').val($('[name=field-1-modal-2]', $(this)).val());
         if ($('[name=field-1-modal-2]', $(this)).val()){
             count++;
+        }
+        if (count != 0) {
+            $('#field-2-badge').show();
+        } else {
+            $('#field-2-badge').hide();
         }
         $('#field-2-badge').html(count)
         activeForm();
@@ -132,6 +147,11 @@ $(document).ready(function () {
         if ($('[name=field-2-modal-3]:checked').val()){
             count++;
         }
+        if (count != 0) {
+            $('#field-3-badge').show();
+        } else {
+            $('#field-3-badge').hide();
+        }
         $('#field-3-badge').html(count)
         activeForm();
     });
@@ -141,23 +161,35 @@ $(document).ready(function () {
         let text = '';
         let count = 0;
         if($('[name=field-1-modal-4]', $(this)).val()){
-            text += $('[name=field-1-modal-4]', $(this)).val() + '~ ';
-            count++;
+            if ($('[name=field-2-modal-4]', $(this)).val()) {
+                text += $('[name=field-1-modal-4]', $(this)).val() + '~ ';
+            } else {
+                text += $('[name=field-1-modal-4]', $(this)).val() + '; ';
+            }
         }
         if($('[name=field-2-modal-4]', $(this)).val()){
             text += $('[name=field-2-modal-4]', $(this)).val() + '; ';
+        }
+        if($('[name=field-2-modal-4]', $(this)).val() || $('[name=field-1-modal-4]', $(this)).val()){
             count++;
         }
         if($('[name=field-3-modal-4]', $(this)).val()){
-            text += $('[name=field-3-modal-4]', $(this)).val() + '~ ';
-            count++;
+            if ($('[name=field-4-modal-4]', $(this)).val()) {
+                text += $('[name=field-3-modal-4]', $(this)).val() + '~ ';
+            } else {
+                text += $('[name=field-3-modal-4]', $(this)).val() + '; ';
+            }
+
         }
         if($('[name=field-4-modal-4]', $(this)).val()){
             text += $('[name=field-4-modal-4]', $(this)).val() + '; ';
+        }
+        if($('[name=field-3-modal-4]', $(this)).val() || $('[name=field-4-modal-4]', $(this)).val()){
             count++;
         }
         if($('[name=field-5-modal-4]', $(this)).val()){
             text += $('[name=field-5-modal-4]', $(this)).val() + '; ';
+            count++;
         }
         if($('[name=field-6-modal-4]:checked').val()){
             text += $('[name=field-6-modal-4]:checked').val() + '; ';
@@ -175,7 +207,11 @@ $(document).ready(function () {
         $('#field-4-5').val($('[name=field-5-modal-4]', $(this)).val());
         $('#field-4-6').val($('[name=field-6-modal-4]:checked').val());
         $('#field-4-7').val($('[name=field-7-modal-4]:checked').val());
-
+        if (count != 0) {
+            $('#field-4-badge').show();
+        } else {
+            $('#field-4-badge').hide();
+        }
         $('#field-4-badge').html(count)
         $('#search-form [name=field-4]').val(text);
         activeForm();
@@ -188,8 +224,12 @@ $(document).ready(function () {
         if ($('[name=field-1-modal-5]', $(this)).val()){
             count++;
         }
+        if (count != 0) {
+            $('#field-5-badge').show();
+        } else {
+            $('#field-5-badge').hide();
+        }
         $('#field-5-badge').html(count)
-
         activeForm();
     });
 

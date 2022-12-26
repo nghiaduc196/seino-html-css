@@ -1889,4 +1889,11 @@ ul.ui-autocomplete li:hover {
   opacity: 0.5;
 }
 
+.badge-search {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
