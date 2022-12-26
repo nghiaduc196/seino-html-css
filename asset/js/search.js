@@ -82,6 +82,18 @@ $(document).ready(function () {
         $(this).blur()
     });
 
+    $('input[type=radio]').click(function (e){
+        let currentValue = $(this).data('currentValue');
+        if(currentValue){
+            $(this).prop("checked", false);
+            $(this).closest('.active').removeClass('active');
+            currentValue = false;
+        }else{
+            currentValue = true;
+        }
+        $(this).data('currentValue', currentValue);
+    })
+
 
     $('#form-modal-1').submit(function (e) {
         e.preventDefault();
@@ -107,13 +119,36 @@ $(document).ready(function () {
     $('#form-modal-4').submit(function (e) {
         e.preventDefault();
         $('#modal-4').modal('hide');
-        const text = ($('[name=field-1-modal-4]', $(this)).val() ? $('[name=field-1-modal-4]', $(this)).val() + '~ ' : '')  +
-          ($('[name=field-2-modal-4]', $(this)).val() ? $('[name=field-2-modal-4]', $(this)).val() + '; ' : '')  +
-          ($('[name=field-3-modal-4]', $(this)).val() ? $('[name=field-3-modal-4]', $(this)).val() + '~ ' : '')  +
-          ($('[name=field-4-modal-4]', $(this)).val() ? $('[name=field-4-modal-4]', $(this)).val() + '; ' : '')  +
-          ($('[name=field-5-modal-4]', $(this)).val() ? $('[name=field-5-modal-4]', $(this)).val() + '; ' : '')  +
-          ($('[name=field-6-modal-4]:checked').val() ? $('[name=field-6-modal-4]:checked').val() + '; ' : '')  +
-          ($('[name=field-7-modal-4]:checked').val() || '');
+        let text = '';
+        let count = 0;
+        if($('[name=field-1-modal-4]', $(this)).val()){
+            text += $('[name=field-1-modal-4]', $(this)).val() + '~ ';
+            count++;
+        }
+        if($('[name=field-2-modal-4]', $(this)).val()){
+            text += $('[name=field-2-modal-4]', $(this)).val() + '; ';
+            count++;
+        }
+        if($('[name=field-3-modal-4]', $(this)).val()){
+            text += $('[name=field-3-modal-4]', $(this)).val() + '~ ';
+            count++;
+        }
+        if($('[name=field-4-modal-4]', $(this)).val()){
+            text += $('[name=field-4-modal-4]', $(this)).val() + '; ';
+            count++;
+        }
+        if($('[name=field-5-modal-4]', $(this)).val()){
+            text += $('[name=field-5-modal-4]', $(this)).val() + '; ';
+        }
+        if($('[name=field-6-modal-4]:checked').val()){
+            text += $('[name=field-6-modal-4]:checked').val() + '; ';
+            count++;
+        }
+        if($('[name=field-7-modal-4]:checked').val()){
+            text += $('[name=field-7-modal-4]:checked').val() + '; ';
+            count++;
+        }
+
         $('#field-4-1').val($('[name=field-1-modal-4]', $(this)).val());
         $('#field-4-2').val($('[name=field-2-modal-4]', $(this)).val());
         $('#field-4-3').val($('[name=field-3-modal-4]', $(this)).val());
@@ -121,6 +156,8 @@ $(document).ready(function () {
         $('#field-4-5').val($('[name=field-5-modal-4]', $(this)).val());
         $('#field-4-6').val($('[name=field-6-modal-4]:checked').val());
         $('#field-4-7').val($('[name=field-7-modal-4]:checked').val());
+
+        $('#field-4-badge').html(count)
         $('#search-form [name=field-4]').val(text);
         activeForm();
     });
