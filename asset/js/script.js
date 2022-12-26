@@ -444,22 +444,18 @@ $(document).ready(function () {
 
     $('body').on('focus', '.datepicker-custom', function () {
         $('#modal-backdrop').addClass('modal-backdrop');
-        $('body').addClass('overflow-hidden');
     });
 
     $('body').on('click', '.modal-backdrop', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
-        $('body').removeClass('overflow-hidden');
     });
 
     $('body').on('click', '.modal', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
-        $('body').removeClass('overflow-hidden');
     });
 
     $('body').on('change', '.datepicker-custom', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
-        $('body').removeClass('overflow-hidden');
         $('.modal-content').css('opacity', '1');
     });
 

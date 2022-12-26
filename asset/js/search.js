@@ -125,8 +125,10 @@ $(document).ready(function () {
             count++;
         }
         if (count != 0) {
+            console.log(';abc');
             $('#field-1-badge').show();
         } else {
+            console.log(';abc123123');
             $('#field-1-badge').hide();
         }
         $('#field-1-badge').html(count)

@@ -495,6 +495,9 @@ input {
 .p-6 {
   padding: 6px;
 }
+.pe-17 {
+  padding-right: 17px;
+}
 .px-38 {
   padding-left: 38px;
   padding-right: 38px;
@@ -1926,6 +1929,9 @@ ul.ui-autocomplete {
   line-height: 26px;
   padding: 0;
 }
- .display-badge {
-   display: none !important;
+ //.display-badge {
+ //  display: none !important;
+ //}
+ .modal-backdrop {
+   transition: 0.3s ease-in-out;
  }
