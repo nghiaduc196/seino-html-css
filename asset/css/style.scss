@@ -1057,6 +1057,9 @@ ul {
         }
 
         .box-nav-tab {
+          .nav-tabs {
+            border: none;
+          }
           .nav-link {
             border: none !important;
             position: relative;

@@ -1183,6 +1183,9 @@ ul {
 .content-wrapper .content .header .header-bottom .quantity .date-time {
   margin-left: 6px;
 }
+.content-wrapper .content .header .header-bottom .box-nav-tab .nav-tabs {
+  border: none;
+}
 .content-wrapper .content .header .header-bottom .box-nav-tab .nav-link {
   border: none !important;
   position: relative;
@@ -1894,6 +1897,10 @@ ul.ui-autocomplete li:hover {
   height: 26px;
   line-height: 26px;
   padding: 0;
+}
+
+.display-badge {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
