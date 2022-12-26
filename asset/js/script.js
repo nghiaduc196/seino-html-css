@@ -310,9 +310,11 @@ $(document).ready(function () {
 
     // datepicker-custom
 
-    // $('body').on('focus', '.datepicker-custom', function () {
-    //     $('#modal-backdrop').addClass('modal-backdrop');
-    // });
+    $('body').on('focus', '.datepicker-custom', function () {
+        if($('.modal-backdrop.show').length == 0){
+            $('#modal-backdrop').addClass('modal-backdrop');
+        }
+    });
 
     $('body').on('click', '.modal-backdrop', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
