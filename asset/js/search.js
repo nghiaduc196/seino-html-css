@@ -85,6 +85,13 @@ $(document).ready(function () {
                 $(this).closest('.form-checkbox').removeClass('active');
             }
         });
+
+        $('#search-form [name=field-1]').removeClass('pe-70');
+        $('#search-form [name=field-2]').removeClass('pe-70');
+        $('#search-form [name=field-3]').removeClass('pe-70');
+        $('#search-form [name=field-4]').removeClass('pe-70');
+        $('#search-form [name=field-5]').removeClass('pe-70');
+
     });
 
     $('#search-form [name=field-1], #search-form [name=field-2], #search-form [name=field-3], #search-form [name=field-4], #search-form [name=field-5]').keydown(function(event) {
@@ -113,6 +120,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('#modal-1').modal('hide');
         $('#search-form [name=field-1]').val($('[name=field-1-modal-1]', $(this)).val());
+        $('#search-form [name=field-1]').addClass('pe-70')
         if ($('[name=field-1-modal-1]', $(this)).val()){
             count++;
         }
@@ -129,6 +137,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('#modal-2').modal('hide');
         $('#search-form [name=field-2]').val($('[name=field-1-modal-2]', $(this)).val());
+        $('#search-form [name=field-2]').addClass('pe-70')
         if ($('[name=field-1-modal-2]', $(this)).val()){
             count++;
         }
@@ -149,6 +158,7 @@ $(document).ready(function () {
         $('#field-3-1').val( $('[name=field-1-modal-3]', $(this)).val());
         $('#field-3-2').val($('[name=field-2-modal-3]:checked').val());
         $('#search-form [name=field-3]').val(text);
+        $('#search-form [name=field-3]').addClass('pe-70')
         if ($('[name=field-1-modal-3]', $(this)).val()){
             count++;
         }
@@ -222,6 +232,7 @@ $(document).ready(function () {
         }
         $('#field-4-badge').html(count)
         $('#search-form [name=field-4]').val(text);
+        $('#search-form [name=field-4]').addClass('pe-70')
         activeForm();
     });
     $('#form-modal-5').submit(function (e) {
@@ -229,6 +240,7 @@ $(document).ready(function () {
         e.preventDefault();
         $('#modal-5').modal('hide');
         $('#search-form [name=field-5]').val($('[name=field-1-modal-5]', $(this)).val());
+        $('#search-form [name=field-5]').addClass('pe-70')
         if ($('[name=field-1-modal-5]', $(this)).val()){
             count++;
         }
