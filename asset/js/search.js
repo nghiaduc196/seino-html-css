@@ -96,24 +96,43 @@ $(document).ready(function () {
 
 
     $('#form-modal-1').submit(function (e) {
+        let count = 0;
         e.preventDefault();
         $('#modal-1').modal('hide');
         $('#search-form [name=field-1]').val($('[name=field-1-modal-1]', $(this)).val());
+        if ($('[name=field-1-modal-1]', $(this)).val()){
+            count++;
+        }
+        $('#field-1-badge').html(count)
         activeForm();
     });
     $('#form-modal-2').submit(function (e) {
+        let count = 0;
         e.preventDefault();
         $('#modal-2').modal('hide');
         $('#search-form [name=field-2]').val($('[name=field-1-modal-2]', $(this)).val());
+        if ($('[name=field-1-modal-2]', $(this)).val()){
+            count++;
+        }
+        $('#field-2-badge').html(count)
         activeForm();
     });
     $('#form-modal-3').submit(function (e) {
         e.preventDefault();
         $('#modal-3').modal('hide');
+        let count = 0;
+        $('#field-3-badge').html('1')
         const text = ($('[name=field-1-modal-3]', $(this)).val() ? $('[name=field-1-modal-3]', $(this)).val() + '; ' : '') + ($('[name=field-2-modal-3]:checked').val() || '');
-        $('#field-3-1').val($('[name=field-1-modal-3]', $(this)).val());
+        $('#field-3-1').val( $('[name=field-1-modal-3]', $(this)).val());
         $('#field-3-2').val($('[name=field-2-modal-3]:checked').val());
         $('#search-form [name=field-3]').val(text);
+        if ($('[name=field-1-modal-3]', $(this)).val()){
+            count++;
+        }
+        if ($('[name=field-2-modal-3]:checked').val()){
+            count++;
+        }
+        $('#field-3-badge').html(count)
         activeForm();
     });
     $('#form-modal-4').submit(function (e) {
@@ -162,9 +181,15 @@ $(document).ready(function () {
         activeForm();
     });
     $('#form-modal-5').submit(function (e) {
+        let count = 0;
         e.preventDefault();
         $('#modal-5').modal('hide');
         $('#search-form [name=field-5]').val($('[name=field-1-modal-5]', $(this)).val());
+        if ($('[name=field-1-modal-5]', $(this)).val()){
+            count++;
+        }
+        $('#field-5-badge').html(count)
+
         activeForm();
     });
 

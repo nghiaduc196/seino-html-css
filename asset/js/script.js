@@ -560,9 +560,4 @@ $(document).ready(function () {
     }
 
     document.addEventListener("click", closeAllSelect);
-
-    // radio
-    $('body').on('click', 'input[type="radio"]', function (e, i){
-        console.log($(this)[0].checked);
-    });
 });
