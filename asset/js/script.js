@@ -310,9 +310,9 @@ $(document).ready(function () {
 
     // datepicker-custom
 
-    $('body').on('focus', '.datepicker-custom', function () {
-        $('#modal-backdrop').addClass('modal-backdrop');
-    });
+    // $('body').on('focus', '.datepicker-custom', function () {
+    //     $('#modal-backdrop').addClass('modal-backdrop');
+    // });
 
     $('body').on('click', '.modal-backdrop', function () {
         $('#modal-backdrop').removeClass('modal-backdrop');
@@ -430,9 +430,8 @@ $(document).ready(function () {
         $('.text-truncate', $(ele)).css('width', $(ele).outerWidth() - 40)
     });
 
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
+    $('.text-truncate-toggle').click(function(){
+        $(this).toggleClass('text-truncate')
     })
 
     $('body').on('click', '.button-fade', function (e) {
