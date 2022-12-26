@@ -560,4 +560,14 @@ $(document).ready(function () {
     }
 
     document.addEventListener("click", closeAllSelect);
+
+    $('.table-project td').each((idx, ele)=>{
+        $(ele).css('width', $(ele).outerWidth());
+        $('.text-truncate', $(ele)).css('width', $(ele).outerWidth()-40)
+    });
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
 });
