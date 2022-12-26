@@ -77,6 +77,14 @@ $(document).ready(function () {
         $('#field-3-badge').hide();
         $('#field-4-badge').hide();
         $('#field-5-badge').hide();
+
+        $('input[type="radio"]').each(function (e){
+            if($(this).is(':checked')){
+                $(this).closest('.form-checkbox').addClass('active');
+            }else{
+                $(this).closest('.form-checkbox').removeClass('active');
+            }
+        });
     });
 
     $('#search-form [name=field-1], #search-form [name=field-2], #search-form [name=field-3], #search-form [name=field-4], #search-form [name=field-5]').keydown(function(event) {
