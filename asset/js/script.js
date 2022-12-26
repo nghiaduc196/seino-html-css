@@ -162,12 +162,17 @@ $(document).ready(function () {
                                             </div>`);
     })
 
+
     $('body').on('click', '.button-back', function (e) {
         $('.loading').removeClass('visually-hidden');
         $('body').addClass('overflow-hidden');
-
+        let i = 0;
         e.preventDefault();
-        let interval = setInterval(() => {
+        setInterval(() => {
+            if (i === 1) {
+                clearInterval(interval);
+            }
+            i++;
             $('.loading').addClass('visually-hidden');
             $('body').removeClass('overflow-hidden');
             window.location.href = 'register-form.html';
@@ -181,28 +186,32 @@ $(document).ready(function () {
         $('.loading').removeClass('visually-hidden');
         $('body').addClass('overflow-hidden');
         e.preventDefault();
-        let interval = setInterval(() => {
+        let i = 0;
+        setInterval(() => {
+            if (i === 1) {
+                clearInterval(interval);
+            }
+            i++;
             $('.loading').addClass('visually-hidden');
             $('body').removeClass('overflow-hidden');
             window.location.href = 'register-done.html';
         }, time * 1000);
-
-        return () => clearInterval(interval);
-
     });
 
     $('body').on('click', '.button-back-register', function (e) {
         $('.loading').removeClass('visually-hidden');
         $('body').addClass('overflow-hidden');
         e.preventDefault();
-        let interval = setInterval(() => {
+        let i = 0;
+        setInterval(() => {
+            if (i === 1) {
+                clearInterval(interval);
+            }
+            i++;
             $('.loading').addClass('visually-hidden');
             $('body').removeClass('overflow-hidden');
             window.location.href = 'register-form.html';
         }, time * 1000);
-
-        return () => clearInterval(interval);
-
     });
 
 
@@ -210,146 +219,6 @@ $(document).ready(function () {
         $('.loading').removeClass('visually-hidden');
         let interval = setInterval(() => {
             $('.loading').addClass('visually-hidden');
-            // $(this).addClass('d-none');
-            // $(this).parent().next().removeClass('visually-hidden');
-            $(this).text('登録完了');
-            $(this).removeClass('submit-form');
-            $(this).addClass('submit-form-done');
-            $('.form-control').each(function (e, value) {
-                if (value.value.length > 0) {
-                    value.style.border = "2px solid #003B90";
-                    value.style.background = "#F5F5F5";
-                    value.style.color = "#003B90";
-                    value.style.fontWeight = "700";
-                    value.setAttribute("disabled", "");
-                } else {
-                    value.style.border = "1px solid #DBDBDB";
-                    value.style.background = "#F5F5F5";
-                    value.setAttribute("disabled", "");
-                }
-
-            })
-
-            $('.icon-add-input-1').each(function (e, value) {
-            }).click(false);
-            $('.icon-add-input-2').each(function (e, value) {
-            }).click(false);
-            $('.icon-add-input').each(function (e, value) {
-            }).click(false);
-            $('.sub-input').each(function (e, value) {
-            }).click(false);
-
-            $('.form-checkbox').each(function (e, value) {
-                $('.notification').removeClass('visually-hidden')
-                if ($('input', $(this))[0].checked) {
-                    value.style.border = "2px solid #003B90";
-                    value.style.background = "#F5F5F5";
-                    $('input', $(this))[0].setAttribute("disabled", "");
-                } else {
-                    value.style.border = "1px solid #DBDBDB";
-                    value.style.background = "#F5F5F5";
-                    $('input', $(this))[0].setAttribute("disabled", "");
-                    $('.checkmark', $(this)).css('background', '#F5F5F5');
-                    $('.checkmark-radio', $(this)).css('background', '#F5F5F5');
-                }
-            });
-
-            $('select').each(function (e, value) {
-                value.setAttribute("disabled", "");
-            });
-
-            $('.button-custom').each(function (e, value) {
-                $('img', value).attr('src', './asset/image/icon_add_disabled.svg');
-                $('span', value).addClass('text-gray-blur');
-                $(value).css('background', '#DBDBDB');
-                $(value).css('border', '1px dashed #003B90');
-            });
-
-            $('.button-disable').each(function (e, value) {
-                $(value).addClass('bg-disable');
-                $('div', value).addClass('bg-disable-2');
-            });
-
-            $('.icon-disable').each(function (e, value) {
-                $(value).attr('src', './asset/image/icon_sub_disable.svg');
-                $(value).removeClass('sub-input');
-            });
-
-            $('.form-checkbox-custom').each(function (e, value) {
-                $('input', $(this))[0].setAttribute("disabled", "");
-                if ($('input', value)[0].checked) {
-                    value.style.background = "#A2A2A2";
-                    $('.icon', value).css('background', '#5F5D5D');
-                } else {
-                    value.style.background = "#A2A2A2";
-                }
-            });
-
-            $('.select-selected').each(function (e, value) {
-                if ($('.same-as-selected', $(value).next()).length) {
-                    value.style.border = "2px solid #003B90";
-                    value.style.background = "#F5F5F5";
-                    value.style.color = "#003B90";
-                    value.style.fontWeight = "700";
-                }
-            });
-
-        }, time * 1000);
-
-        return () => clearInterval(interval);
-
-    })
-
-    $('body').on('click', '.button-back', function (e) {
-        $('.loading').removeClass('visually-hidden');
-        $('body').addClass('overflow-hidden');
-
-        e.preventDefault();
-        let interval = setInterval(() => {
-            $('.loading').addClass('visually-hidden');
-            $('body').removeClass('overflow-hidden');
-            window.location.href = 'register-form.html';
-        }, time * 1000);
-
-        return () => clearInterval(interval);
-
-    });
-
-    $('body').on('click', '.submit-form-done', function (e) {
-        $('.loading').removeClass('visually-hidden');
-        $('body').addClass('overflow-hidden');
-        e.preventDefault();
-        let interval = setInterval(() => {
-            $('.loading').addClass('visually-hidden');
-            $('body').removeClass('overflow-hidden');
-            window.location.href = 'register-done.html';
-        }, time * 1000);
-
-        return () => clearInterval(interval);
-
-    });
-
-    $('body').on('click', '.button-back-register', function (e) {
-        $('.loading').removeClass('visually-hidden');
-        $('body').addClass('overflow-hidden');
-        e.preventDefault();
-        let interval = setInterval(() => {
-            $('.loading').addClass('visually-hidden');
-            $('body').removeClass('overflow-hidden');
-            window.location.href = 'register-form.html';
-        }, time * 1000);
-
-        return () => clearInterval(interval);
-
-    });
-
-
-    $('body').on('click', '.submit-form', function () {
-        $('.loading').removeClass('visually-hidden');
-        let interval = setInterval(() => {
-            $('.loading').addClass('visually-hidden');
-            // $(this).addClass('d-none');
-            // $(this).parent().next().removeClass('visually-hidden');
             $(this).text('登録完了');
             $(this).removeClass('submit-form');
             $(this).addClass('submit-form-done');
@@ -365,7 +234,6 @@ $(document).ready(function () {
                     value.style.background = "#F5F5F5";
                     value.setAttribute("disabled", "");
                 }
-
             })
 
             $('.icon-add-input-1').each(function (e, value) {
@@ -557,13 +425,38 @@ $(document).ready(function () {
 
     document.addEventListener("click", closeAllSelect);
 
-    $('.table-project td').each((idx, ele)=>{
+    $('.table-project td').each((idx, ele) => {
         $(ele).css('width', $(ele).outerWidth());
-        $('.text-truncate', $(ele)).css('width', $(ele).outerWidth()-40)
+        $('.text-truncate', $(ele)).css('width', $(ele).outerWidth() - 40)
     });
 
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)
     })
+
+    $('body').on('click', '.button-fade', function (e) {
+        $('.loading').removeClass('visually-hidden');
+        $('body').addClass('overflow-hidden');
+        $('.modal').addClass('d-none');
+        $('.modal-backdrop').addClass('d-none');
+        e.preventDefault();
+        let i = 0;
+        let interval = setInterval(() => {
+            i++;
+            if (i === 1) {
+                clearInterval(interval)
+            }
+            console.log(i)
+            $('.modal').removeClass('d-none');
+            $('.modal-backdrop').removeClass('d-none');
+            $('.loading').addClass('visually-hidden');
+            $('body').removeClass('overflow-hidden');
+        }, time * 1000);
+    });
+
+    $('body').on('blur', '.focus-uppercase', function (index, ele) {
+        let value = $(this).val();
+        $(this).val(value.toUpperCase());
+    });
 });
