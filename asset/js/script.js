@@ -131,10 +131,10 @@ $(document).ready(function () {
     $('body').on('click', '.icon-add-input-1', function () {
         $(this).parent().prev().append(`<div class="row row-cols-2 row-cols-md-2 row-cols-lg-1 mt-11">
                                                 <div class="col d-flex w-calc-200 align-items-center">
-                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" placeholder="例）1.3"/>
                                                     <span class="ms-20">m</span>
                                                     <img class="ms-20 me-20" src="./asset/image/icon_x.svg"/>
-                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <input class="text-black ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" placeholder="例）1.3"/>
                                                     <span class="ms-20 me-20">m</span>
                                                     <span>:</span>
                                                 </div>
