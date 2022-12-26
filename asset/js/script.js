@@ -460,4 +460,24 @@ $(document).ready(function () {
         let value = $(this).val();
         $(this).val(value.toUpperCase());
     });
+
+    $('body').on('click', '.add-item-cat', function () {
+        $(this).parent().prev().append(`<div class="bg-white border-radius-10 p-30 mt-20">
+                            <h3 class="fs-21 ff-nt-sans fst-normal letter-spacing-10 fw-bolder text-blue mb-0">取込情報</h3>
+                            <div class="d-inline-block label mt-20">
+                                <label class="me-19 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">取込ファイル </label>
+                                <button class="button button-danger bg-color-red text-white border-radius-4 w-62 h-26">必須</button>
+                            </div>
+                            <div class="custom-select w-100 position-relative mt-14 mb-4px">
+                                <select style="z-index: 1" class="border-radius-5 form-control ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                    <option class="text-color-gray-dark" value="0">配送依頼データ</option>
+                                    <option>配送依頼データ 1</option>
+                                    <option>配送依頼データ 2</option>
+                                    <option>配送依頼データ 3</option>
+                                    <option>配送依頼データ 4</option>
+                                </select>
+                            </div>
+                        </div>`);
+        changeSelect();
+    });
 });
