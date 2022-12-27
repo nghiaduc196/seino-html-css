@@ -154,6 +154,12 @@ input {
 .bg-color-gray-dark {
   background: $base-color-gray-dark !important;
 }
+.bg-color-gray-5 {
+  background: #685F5F !important;
+  &:hover {
+    opacity: 0.9;
+  }
+}
 
 .bg-color-gray {
   background: $base-color-gray;
@@ -211,7 +217,9 @@ input {
 .fw-500 {
   font-weight: 500;
 }
-
+.h-30 {
+  height: 30px;
+}
 // Width
 .w-24 {
   width: 24px;
@@ -223,7 +231,9 @@ input {
 .w-61 {
   width: 61px;
 }
-
+.w-30 {
+  width: 30px;
+}
 .w-62 {
   width: 62px;
 }

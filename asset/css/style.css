@@ -123,6 +123,13 @@ input.input-number {
   background: #C8C8C8 !important;
 }
 
+.bg-color-gray-5 {
+  background: #685F5F !important;
+}
+.bg-color-gray-5:hover {
+  opacity: 0.9;
+}
+
 .bg-color-gray {
   background: #DBDBDB;
 }
@@ -176,6 +183,10 @@ input.input-number {
   font-weight: 500;
 }
 
+.h-30 {
+  height: 30px;
+}
+
 .w-24 {
   width: 24px;
   height: 24px;
@@ -187,6 +198,10 @@ input.input-number {
 
 .w-61 {
   width: 61px;
+}
+
+.w-30 {
+  width: 30px;
 }
 
 .w-62 {

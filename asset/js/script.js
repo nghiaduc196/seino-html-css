@@ -462,9 +462,15 @@ $(document).ready(function () {
         }, time * 1000);
     });
 
+    function zenkaku2Hankaku(str) {
+        return str.replace(/[A-Za-z0-9]/g, function(s) {
+            return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+        });
+    }
+
     $('body').on('blur', '.focus-uppercase', function (index, ele) {
         let value = $(this).val();
-        $(this).val(value.toUpperCase());
+        $(this).val(zenkaku2Hankaku(value.toUpperCase()));
     });
 
     $('body').on('click', '.add-item-cat', function () {
@@ -492,5 +498,10 @@ $(document).ready(function () {
                                                 <input type="tel" class="text-end border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="3,000"/>
                                                 <span>円</span>
                                             </div>`);
-    })
+    });
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
 });
