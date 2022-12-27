@@ -149,17 +149,23 @@ $(document).ready(function () {
 
     $('body').on('click', '.icon-add-input-2', function () {
         $(this).parent().prev().append(`<div class="d-flex align-items-center mt-12">
-                                                <select class="ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
-                                                    <option>1.1m x 1.1m</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                </select>
-                                                <span class="ms-20 me-20">:</span>
-                                                <input type="text"
-                                                       class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
-                                                <span class="ms-20 me-20">枚</span>
-                                                <span><img class="cursor-pointer sub-input" src="./asset/image/icon_sub.svg"/></span>
-                                            </div>`);
+                                                    <div class="custom-select w-100 position-relative">
+                                                        <select style="z-index: 1" class="border-radius-5 form-control ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                                            <option class="text-color-gray-dark" value="0">1.1m x 1.1m</option>
+                                                            <option>1.1m x 1.2m</option>
+                                                            <option>1.1m x 1.3m</option>
+                                                            <option>1.1m x 1.4m</option>
+                                                            <option>1.1m x 1.5m</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <span class="ms-20 me-20">:</span>
+                                                    <input type="text"
+                                                           class="w-92 ps-23  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input">
+                                                    <span class="ms-20 me-20">枚</span>
+                                                    <span><img class="cursor-pointer sub-input" src="./asset/image/icon_sub.svg"/></span>
+                                                </div>`);
+        changeSelect();
     })
 
 
