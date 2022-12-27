@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<title>HTML</title>
+<link href="./asset/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+<link href="./asset/css/jquery-ui.css" rel="stylesheet"/>
+<link href="./asset/css/style.css" rel="stylesheet"/>
+<body>
+
+<div class="wrapper">
+
+    <div class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="box-slogan d-flex align-items-center">
+                <a class="cursor-pointer" id="menu"><img src="./asset/image/icon_menu.svg"></a>
+                <span class="slogan">Web貸切システム</span>
+            </div>
+            <div class="box-info">
+                <span class="name">大垣支店（社員番号999999）</span>
+                <span class="day">2022/00/00</span>
+                <span class="date">24:59</span>
+            </div>
+            <div class="box-logo">
+                <img src="./asset/image/logo.svg"/>
+            </div>
+
+            <div class="box-menu">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="top.html">
+                            <img class="icon-menu" src="./asset/image/icon_home.svg"/>
+                            <span class="text-menu">トップメニュー</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./register-form.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_2.svg"/>
+                            <span class="text-menu">案件登録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="search.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_4.svg"/>
+                            <span class="text-menu">案件一覧</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center active" href="cat.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_3.svg"/>
+                            <span class="text-menu">貸切一括登録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <img class="icon-menu" src="./asset/image/icon_menu_8.svg"/>
+                            <span class="text-menu">仕立登録</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="logout">
+                    <a class="nav-link d-flex align-items-center justify-content-center" href="login.html">
+                        <img class="icon-menu" src="./asset/image/icon_logout_1.svg"/>
+                        <span class="text-menu text-blue fs-16">ログアウト</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-wrapper">
+
+        <section class="content">
+            <div class="header position-sticky">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img class="icon-menu" src="./asset/image/icon_menu_3.svg"/>
+                        <span class="text-menu-1 fs-21 letter-spacing-10 ff-nt-sans fw-bolder">貸切案件登録</span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="main">
+                <div class="box-content cat">
+                    <div class="mt-25">
+                        <h3 class="fs-26 fw-500 fst-normal ff-nt-sans letter-spacing-15 text-blue">一括登録データ確認</h3>
+                        <p class="ff-nt-sans fst-normal fs-18 letter-spacing-5 mt-22 l-h-35">
+                            一括登録データの先頭から３行、各行の先頭５項目を表示しています。
+                            <br>
+                            データの内容が正しい事をご確認の上、一括登録するボタンを押下してください。
+                        </p>
+                    </div>
+                    <table class="table table-project mt-20 table-border-top">
+                        <thead>
+                        <tr class="align-middle text-white fw-normal letter-spacing-10 bg-color-gray-4">
+                            <td>
+                                <div><span class="fs-16 fw-500 ff-nt-sans fst-normal">荷主コード</span></div>
+                            </td>
+                            <td>
+                                <div><span class="fs-16 fw-500 ff-nt-sans fst-normal">荷主名</span></div>
+                            </td>
+                            <td>
+                                <div><span class="fs-16 fw-500 ff-nt-sans fst-normal">集荷先名</span></div>
+                            </td>
+                            <td width="154.219px">
+                                <div><span class="fs-16 fw-500 ff-nt-sans fst-normal">集荷希望日時</span></div>
+                            </td>
+                            <td>
+                                <div><span class="fs-16 fw-500 ff-nt-sans fst-normal">配達先名</span></div>
+                            </td>
+                        </tr>
+                        </thead>
+
+                        <tbody class="bg-white">
+                        <tr class="fw-normal letter-spacing-10 cursor-pointer">
+                            <td>
+                                <div><span>0584738888</span></div>
+                            </td>
+                            <td>
+                                <div><span>株式会社セイノー情報サービス</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　大垣本社</span></div>
+                            </td>
+                            <td>
+                                <div><span>2022072010</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　西日本営業部・大阪支店</span></div>
+                            </td>
+                        </tr>
+                        <tr class="fw-normal letter-spacing-10 cursor-pointer">
+                            <td>
+                                <div><span>0584738888</span></div>
+                            </td>
+                            <td>
+                                <div><span>株式会社セイノー情報サービス</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　大垣本社</span></div>
+                            </td>
+                            <td>
+                                <div><span>2022072010</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　西日本営業部・大阪支店</span></div>
+                            </td>
+                        </tr>
+                        <tr class="fw-normal letter-spacing-10 cursor-pointer">
+                            <td>
+                                <div><span>0584738888</span></div>
+                            </td>
+                            <td>
+                                <div><span>株式会社セイノー情報サービス</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　大垣本社</span></div>
+                            </td>
+                            <td>
+                                <div><span>2022072010</span></div>
+                            </td>
+                            <td>
+                                <div><span>セイノー情報サービス　西日本営業部・大阪支店</span></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center mt-30 d-flex justify-content-center">
+                        <div class="d-flex" style="width: 540px">
+                            <a href="#"
+                               class="text-white bg-color-gray h-5 d-block w-250 m-auto l-h-50 border-radius-7">キャンセル</a>
+                            <a href="cat-2.html"
+                               class="text-white bg-color-green h-5 d-block w-250 m-auto l-h-50 border-radius-7">一括登録</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog modal-dialog-centered modal-lg">-->
+<!--        <div class="modal-content rounded-0 bg-transparent border-0">-->
+<!--            <div class="modal-body bg-error border-red border-radius-10 py-28 px-45 position-relative">-->
+<!--                <div class="position-absolute top-13 right-17 cursor-pointer" data-bs-dismiss="modal">-->
+<!--                    <img src="./asset/image/icon_x_error.svg"/>-->
+<!--                </div>-->
+
+<!--                <div class="d-flex align-items-center">-->
+<!--                    <img src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25">-->
+<!--                        <span class="text-red fw-bolder ff-nt-sans fs-18 letter-spacing-5">貸切受領印入力を行ってください</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="d-flex align-items-center l-h-35 mt-10">-->
+<!--                    <img class="visibility-hidden" src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25 ff-nt-sans fst-normal fs-16 letter-spacing-5">-->
+<!--                        <div><span>支払締日が近づいています。</span></div>-->
+<!--                        <div><span>配達未完了の原票が<strong class="text-red">２件</strong>あります。</span></div>-->
+<!--                        <div><span>カンガルーオンラインで貸切受領印入力を行ってください。</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="modal-footer justify-content-center border-0 mt-20">-->
+<!--                <button type="button"-->
+<!--                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"-->
+<!--                        data-bs-dismiss="modal">-->
+<!--                    <img class="me-25" src="./asset/image/icon_x.svg"/>-->
+<!--                    <span>閉じる</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content rounded-0 bg-transparent border-0">
+            <div class="modal-body p-0 bg-white">
+                <table class="table">
+                    <tr class="bg-base-color text-white" style="height: 63px; line-height: 63px">
+                        <th>住所</th>
+                    </tr>
+                    <tr class="bg-color-blue-blur">
+                        <td class="border-0">熊本県熊本市植木町亀甲　2169</td>
+                    </tr>
+                    <tr>
+                        <td class="border-0">熊本県熊本市植木町亀甲　2169</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button"
+                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    <img class="me-25" src="./asset/image/icon_x.svg"/>
+                    <span>閉じる</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content rounded-0 bg-transparent border-0">
+            <div class="modal-body p-0">
+                <table class="table table-border bg-white">
+                    <tr style="background: #003B90; color: #fff; height: 63px; line-height: 63px">
+                        <th>出荷日</th>
+                        <th>運送契約荷主コード</th>
+                        <th>届け先名</th>
+                        <th>お届け先住所</th>
+                        <th class="text-center">個数</th>
+                        <th class="text-center">重量</th>
+                    </tr>
+                    <tr class="tr-hover" style="background: #CAD8EC;">
+                        <td>2022/00/00</td>
+                        <td>058412345678</td>
+                        <td>株式会社◯□△倉庫</td>
+                        <td>熊本県熊本市植木町亀甲　2169</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">10,000kg</td>
+                    </tr>
+                    <tr class="tr-hover">
+                        <td>2022/00/00</td>
+                        <td>058412345678</td>
+                        <td>株式会社◯□△倉庫</td>
+                        <td>熊本県熊本市植木町亀甲　2169</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">10,000kg</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button"
+                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    <img class="me-25" src="./asset/image/icon_x.svg"/>
+                    <span>閉じる</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="./asset/bootstrap/bootstrap.min.js"></script>-->
+<!--<script src="./asset/js/jquery.min.js"></script>-->
+<!--<script src="./asset/js/script.js"></script>-->
+
+<div id="modal-backdrop" class="fade show"></div>
+
+<!--Loading-->
+<div class="d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 end-0 start-0 m-auto loading visually-hidden">
+    <div class="backdrop position-absolute top-0 bottom-0 end-0 start-0"></div>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <span class="ms-14 ff-nt-sans fst-normal text-black">お待ちください</span>
+</div>
+
+<script src="./asset/js/jquery.js"></script>
+<script src="./asset/js/jquery-ui.js"></script>
+<script src="./asset/bootstrap/bootstrap.min.js"></script>
+<!--<script src="./asset/js/jquery.min.js"></script>-->
+<script src="./asset/js/script.js"></script>
+<script src="./asset/js/search.js"></script>
+<!--<script src="./asset/js/register-form.js"></script>-->
+</body>
+
+</html>

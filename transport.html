@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<title>HTML</title>
+<link href="./asset/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+<link href="./asset/css/jquery-ui.css" rel="stylesheet"/>
+<link href="./asset/css/style.css" rel="stylesheet"/>
+<body>
+
+<div class="wrapper">
+
+    <div class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="box-slogan d-flex align-items-center">
+                <a class="cursor-pointer" id="menu"><img src="./asset/image/icon_menu.svg"></a>
+                <span class="slogan">Web貸切システム</span>
+            </div>
+            <div class="box-info">
+                <span class="name">大垣支店（社員番号999999）</span>
+                <span class="day">2022/00/00</span>
+                <span class="date">24:59</span>
+            </div>
+            <div class="box-logo">
+                <img src="./asset/image/logo.svg"/>
+            </div>
+
+            <div class="box-menu">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="top.html">
+                            <img class="icon-menu" src="./asset/image/icon_home.svg"/>
+                            <span class="text-menu">トップメニュー</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./register-form.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_2.svg"/>
+                            <span class="text-menu">案件登録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="search.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_4.svg"/>
+                            <span class="text-menu">案件一覧</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="cat.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_3.svg"/>
+                            <span class="text-menu">貸切一括登録</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center active" href="transport.html">
+                            <img class="icon-menu" src="./asset/image/icon_menu_8.svg"/>
+                            <span class="text-menu">仕立登録</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="logout">
+                    <a class="nav-link d-flex align-items-center justify-content-center" href="login.html">
+                        <img class="icon-menu" src="./asset/image/icon_logout_1.svg"/>
+                        <span class="text-menu text-blue fs-16">ログアウト</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-wrapper">
+
+        <section class="content">
+            <div class="header position-sticky">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img class="icon-menu" src="./asset/image/icon_menu_7.svg"/>
+                        <span class="text-menu-1 fs-21 letter-spacing-10 ff-nt-sans fw-bolder">仕立登録</span>
+                    </div>
+                    <div class="me-15">
+                        <button class="button w-200 bg-color-blue-1 rounded-pill p-2 d-flex align-items-center">
+                            <img class="ms-18" src="./asset/image/icon_arr_left.svg"/>
+                            <span class="ms-35 text-blue ff-nt-sans fs-16 fst-normal letter-spacing-10">一覧に戻る</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="header-bottom">
+                    <div class="row row-cols-1 row-cols-md-2 m-0 w-calc-319">
+                        <div class="col d-flex align-items-center my-3 px-0 fs-16">
+                            収受運賃合計<img class="ms-10 me-15" src="./asset/image/icon_stripes.svg">
+                            <strong class="me-1 fs-22 fw-bolder fst-normal ff-nt-sans">100,000</strong>円
+                        </div>
+                        <div class="col d-flex align-items-center my-3 px-0 fs-16">
+                            収受運賃合計<img class="ms-10 me-15" src="./asset/image/icon_stripes.svg">
+                            <strong class="me-1 fs-22 fw-bolder fst-normal ff-nt-sans">84,000</strong>円
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="box-content row row-cols-md-2 row-cols-lg-2 gx-0">
+                    <div class="col w-calc-319">
+                        <div class="box-content-left">
+
+                            <div class="scrollspy-example">
+
+                                <div class="box box-1" id="tab1">
+                                    <h4 class="text-blue mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 mt-1">仕立情報</h4>
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">仕立店</label>
+                                        </div>
+                                        <input type="tel" class="border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="0520：大垣店"/>
+                                    </div>
+
+                                    <div class="box-form">
+                                        <div class="row row-cols-1 row-cols-lg-2 gx-3">
+                                            <div class="col w-252-rps">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">仕立日付</label>
+                                                </div>
+                                                <div class="form-date form-date-custom">
+                                                    <input type="text"
+                                                           class="bg-color-gray-1 datepicker-custom datepicker-custom-icon ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input" value="2022/11/15"/>
+                                                </div>
+                                            </div>
+                                            <div class="col w-calc-252-rps">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">仕立担当者</label>
+                                                </div>
+                                                <input type="text" class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用事</label>
+                                            <button class="button button-danger">必須</button>
+                                        </div>
+                                        <input type="text" class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="A219：田中輸送"/>
+                                    </div>
+
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">車両番号</label>
+                                            <button class="button button-danger">必須</button>
+                                        </div>
+                                        <input type="text" class="ff-nt-sans max-w-327 fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="A2191"/>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2">
+                                        <div class="d-inline-block label col-12">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">積込区分</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
+                                                <input type="radio" name="radio-2" id="checkbox-1"
+                                                       class="input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                                <span class="checkmark-radio"></span>
+                                                <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                                       for="checkbox-1">積込</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-checkbox w-100 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
+                                                <input type="radio" name="radio-2" id="checkbox-2"
+                                                       class="input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                                <span class="checkmark-radio"></span>
+                                                <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                                       for="checkbox-2">積足し</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2 mb-3">
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">収受運賃合計</label>
+                                                    <button class="button button-danger">必須</button>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="100,000"/>
+                                                    <span>円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">支払金額合計</label>
+                                                    <button class="button button-danger">必須</button>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="84,000"/>
+                                                    <span>円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="box box-2 mt-20" id="tab3">
+                                    <div>
+                                        <button class="button bg-color-red text-white h-27 w-100 border-radius-5 fs-14 ff-nt-sans fst-normal">E：運賃エラー</button>
+                                    </div>
+                                    <div class="row align-items-center mt-20">
+                                        <h4 class="col mb-0 text-blue ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10">
+                                            原票情報</h4>
+                                        <div class="col text-end d-flex justify-content-end">
+                                            <div class="form-checkbox-custom h-40 w-232 p-0 position-relative h-5 border-input border-radius-6 d-flex align-items-center bg-white-custom active">
+                                                <input type="checkbox" id="checkbox-102"
+                                                       class="input-checkbox input-checkbox-custom start-0 end-0 top-0 bottom-0" checked/>
+                                                <div class="checkmark icon">
+                                                    <span class="checkmark"></span>
+                                                </div>
+                                                <label class="ms-18 ff-nt-sans fst-normal fs-16 letter-spacing-10 text-white"
+                                                       for="checkbox-102">処理対象</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">原票番号</label>
+                                            <button class="button button-danger">必須</button>
+                                        </div>
+                                        <div class="row gx-4 row-cols-1 row-cols-lg-2">
+                                            <div class="col w-calc-298">
+                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"
+                                                       style="width: 100%;"/>
+                                            </div>
+                                            <div class="col w-298">
+                                                <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                        class="button-disable button form-control h-5 border-input bg-base-color d-flex align-items-center justify-content-center">
+                                                    <img class="me-15" src="./asset/image/icon_search_document.svg"/>
+                                                    <span class="text-white ff-nt-sans fst-normal fs-16 letter-spacing-10">原票情報を参照</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2 mb-3">
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">収受運賃</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="100,000"/>
+                                                    <span>円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">保険金額</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100"/>
+                                                    <span>円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2 mb-3">
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">重量</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="4,000"/>
+                                                    <span>Kg</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">個数</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100"/>
+                                                    <span>個</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2 mb-3">
+                                        <div class="col-auto me-70 max-w-190">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">元金</label>
+                                                </div>
+                                                <input type="text" class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="元払い"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto max-w-190">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷担当</label>
+                                                </div>
+                                                <input type="text" class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="直集"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">西濃発行店</label>
+                                        </div>
+                                        <input type="tel" class="border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="0520：大垣店"/>
+                                    </div>
+
+                                    <div class="row row-cols-1 row-cols-md-2">
+                                        <div class="d-inline-block label col-12">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">積込区分</label>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
+                                                <input type="radio" name="radio-2" id="checkbox-5"
+                                                       class="input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                                <span class="checkmark-radio"></span>
+                                                <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                                       for="checkbox-5">直配</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-checkbox w-100 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
+                                                <input type="radio" name="radio-2" id="checkbox-6"
+                                                       class="input-checkbox start-0 end-0 top-0 bottom-0"/>
+                                                <span class="checkmark-radio"></span>
+                                                <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
+                                                       for="checkbox-5">拠点卸</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-3 row-cols-md-1 row-cols-lg-2 mb-3">
+                                        <div class="col-auto me-19 w-150">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">支払率</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="84"/>
+                                                    <span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto max-w-280">
+                                            <div class="box-form">
+                                                <div class="d-inline-block label">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">支払金額（税抜き）</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="text" class="text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="84,000"/>
+                                                    <span>円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-form">
+                                        <div class="d-inline-block label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配送手数料</label>
+                                        </div>
+                                        <div class="list-box">
+                                            <div class="d-flex align-items-center">
+                                                <input type="tel" class="text-end border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="3,000"/>
+                                                <span>円</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-form mt-30 mb-38">
+                                        <button class="button-custom border-dashed  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input bg-color-blue-blur d-flex align-items-center justify-content-center add-item-transport">
+                                            <img src="./asset/image/icon_add_1.svg"/>
+                                            <span class="ms-20 ff-nt-sans fst-normal fw-500 text-blue">原票情報の追加（複写）</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box-form mt-30">
+                                <button class="border-dashed  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input bg-color-blue-blur d-flex align-items-center justify-content-center">
+                                    <img src="./asset/image/icon_add_1.svg"/>
+                                    <span class="ms-20 ff-nt-sans fst-normal fw-500 text-blue">原票情報の追加</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col w-319">
+                        <div class="box-content-right transport-left">
+                            <div class="w-fixed-200 m-auto">
+
+                                <div>
+                                    <a href="#" class="cursor-pointer submit-form button bg-color-green h-5 border-radius-5 text-white text-center w-100 d-block l-h-50">
+                                        仕立を登録
+                                    </a>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="#"
+                                       class="bg-color-red button-back button h-5 border-radius-5 text-white text-center w-100 mt-3 d-block l-h-50">
+                                        仕立を削除
+                                    </a>
+                                </div>
+
+                                <div class="box-form mt-3">
+                                    <button class="border-dashed  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input bg-color-blue-blur d-flex align-items-center justify-content-center">
+                                        <img src="./asset/image/icon_add_1.svg"/>
+                                        <span class="ms-20 ff-nt-sans fst-normal fw-500 text-blue">原票の追加</span>
+                                    </button>
+                                </div>
+
+
+                                <div id="list-example" class="bg-white mt-45 border-gray border-radius-5">
+                                    <ul class="pt-10 pb-3 px-9">
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10">
+                                            <h4 class="ff-nt-sans fst-normal fw-bolder fs-16 letter-spacing-10">仕立対象番号</h4>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10 mt-14 border-bottom-gray pb-3">
+                                            <div>
+                                                <span class="text-black">123456789012345</span>
+                                                <a class="mt-3 bg-color-green border-radius-5 d-block text-center fs-14 h-27 text-white">A：仕立済</a>
+                                            </div>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10 mt-14 border-bottom-gray pb-3">
+                                            <div>
+                                                <span class="text-black">234567890123456</span>
+                                                <a class="mt-3 bg-color-red border-radius-5 d-block text-center fs-14 h-27 text-white">E：運賃エラー</a>
+                                            </div>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10 mt-14 border-bottom-gray pb-3">
+                                            <div>
+                                                <span class="text-black">123456789012345</span>
+                                                <a class="mt-3 bg-color-green border-radius-5 d-block text-center fs-14 h-27 text-white">A：仕立済</a>
+                                            </div>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10 mt-14 border-bottom-gray pb-3">
+                                            <div>
+                                                <span class="text-black">123456789012345</span>
+                                                <a class="mt-3 bg-color-green border-radius-5 d-block text-center fs-14 h-27 text-white">A：仕立済</a>
+                                            </div>
+                                        </li>
+                                        <li class="fst-normal ff-nt-sans fw-500 fs-16 text-blue letter-spacing-10 mt-14 border-bottom-gray pb-3">
+                                            <div>
+                                                <span class="text-black">123456789012345</span>
+                                                <a class="mt-3 bg-color-green border-radius-5 d-block text-center fs-14 h-27 text-white">A：仕立済</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="py-4 text-end">
+                            <span class="text-blue fs-13 ff-nt-sans fst-normal letter-spacing-10 mx-4">Copyright © 2022 Seino Transportation Co.,Ltd. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog modal-dialog-centered modal-lg">-->
+<!--        <div class="modal-content rounded-0 bg-transparent border-0">-->
+<!--            <div class="modal-body bg-error border-red border-radius-10 py-28 px-45 position-relative">-->
+<!--                <div class="position-absolute top-13 right-17 cursor-pointer" data-bs-dismiss="modal">-->
+<!--                    <img src="./asset/image/icon_x_error.svg"/>-->
+<!--                </div>-->
+
+<!--                <div class="d-flex align-items-center">-->
+<!--                    <img src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25">-->
+<!--                        <span class="text-red fw-bolder ff-nt-sans fs-18 letter-spacing-5">貸切受領印入力を行ってください</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="d-flex align-items-center l-h-35 mt-10">-->
+<!--                    <img class="visibility-hidden" src="./asset/image/icon_!.svg"/>-->
+<!--                    <div class="ms-25 ff-nt-sans fst-normal fs-16 letter-spacing-5">-->
+<!--                        <div><span>支払締日が近づいています。</span></div>-->
+<!--                        <div><span>配達未完了の原票が<strong class="text-red">２件</strong>あります。</span></div>-->
+<!--                        <div><span>カンガルーオンラインで貸切受領印入力を行ってください。</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="modal-footer justify-content-center border-0 mt-20">-->
+<!--                <button type="button"-->
+<!--                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"-->
+<!--                        data-bs-dismiss="modal">-->
+<!--                    <img class="me-25" src="./asset/image/icon_x.svg"/>-->
+<!--                    <span>閉じる</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content rounded-0 bg-transparent border-0">
+            <div class="modal-body p-0 bg-white">
+                <table class="table">
+                    <tr class="bg-base-color text-white" style="height: 63px; line-height: 63px">
+                        <th>住所</th>
+                    </tr>
+                    <tr class="bg-color-blue-blur">
+                        <td class="border-0">熊本県熊本市植木町亀甲　2169</td>
+                    </tr>
+                    <tr>
+                        <td class="border-0">熊本県熊本市植木町亀甲　2169</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button"
+                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    <img class="me-25" src="./asset/image/icon_x.svg"/>
+                    <span>閉じる</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content rounded-0 bg-transparent border-0">
+            <div class="modal-body p-0">
+                <table class="table table-border bg-white">
+                    <tr style="background: #003B90; color: #fff; height: 63px; line-height: 63px">
+                        <th>出荷日</th>
+                        <th>運送契約荷主コード</th>
+                        <th>届け先名</th>
+                        <th>お届け先住所</th>
+                        <th class="text-center">個数</th>
+                        <th class="text-center">重量</th>
+                    </tr>
+                    <tr class="tr-hover" style="background: #CAD8EC;">
+                        <td>2022/00/00</td>
+                        <td>058412345678</td>
+                        <td>株式会社◯□△倉庫</td>
+                        <td>熊本県熊本市植木町亀甲　2169</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">10,000kg</td>
+                    </tr>
+                    <tr class="tr-hover">
+                        <td>2022/00/00</td>
+                        <td>058412345678</td>
+                        <td>株式会社◯□△倉庫</td>
+                        <td>熊本県熊本市植木町亀甲　2169</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">10,000kg</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button type="button"
+                        class="w-166 bg-color-blue-1 border-radius-40 btn d-flex align-items-center justify-content-center"
+                        data-bs-dismiss="modal">
+                    <img class="me-25" src="./asset/image/icon_x.svg"/>
+                    <span>閉じる</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="./asset/bootstrap/bootstrap.min.js"></script>-->
+<!--<script src="./asset/js/jquery.min.js"></script>-->
+<!--<script src="./asset/js/script.js"></script>-->
+
+<div id="modal-backdrop" class="fade show"></div>
+
+<!--Loading-->
+<div class="d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 end-0 start-0 m-auto loading visually-hidden">
+    <div class="backdrop position-absolute top-0 bottom-0 end-0 start-0"></div>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <span class="ms-14 ff-nt-sans fst-normal text-black">お待ちください</span>
+</div>
+
+<script src="./asset/js/jquery.js"></script>
+<script src="./asset/js/jquery-ui.js"></script>
+<script src="./asset/bootstrap/bootstrap.min.js"></script>
+<!--<script src="./asset/js/jquery.min.js"></script>-->
+<script src="./asset/js/script.js"></script>
+<script src="./asset/js/search.js"></script>
+<!--<script src="./asset/js/register-form.js"></script>-->
+</body>
+
+</html>

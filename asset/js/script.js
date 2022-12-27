@@ -480,4 +480,11 @@ $(document).ready(function () {
                         </div>`);
         changeSelect();
     });
+
+    $('body').on('click', '.add-item-transport', function (){
+        $('.list-box', $(this).parent().prev()).append(`<div class="d-flex align-items-center mt-20">
+                                                <input type="tel" class="text-end border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="3,000"/>
+                                                <span>円</span>
+                                            </div>`);
+    })
 });

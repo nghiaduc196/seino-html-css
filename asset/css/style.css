@@ -201,12 +201,44 @@ input.input-number {
   width: 274px;
 }
 
+.max-w-190 {
+  max-width: 190px;
+}
+
+.max-w-280 {
+  max-width: 280px;
+}
+
 .w-252 {
   width: 252px;
 }
 
+.w-252-rps {
+  width: 252px;
+}
+@media only screen and (max-width: 992px) {
+  .w-252-rps {
+    width: 100%;
+  }
+}
+
+.w-calc-252-rps {
+  width: calc(100% - 252px);
+  padding-left: 30px;
+}
+@media only screen and (max-width: 992px) {
+  .w-calc-252-rps {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
 .max-w-352 {
   max-width: 352px;
+}
+
+.max-w-327 {
+  max-width: 327px;
 }
 
 .w-125 {
@@ -514,6 +546,10 @@ input.input-number {
   margin-right: 40px;
 }
 
+.me-70 {
+  margin-right: 70px;
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -671,6 +707,15 @@ input.input-number {
   padding-top: 24px;
 }
 
+.pt-10 {
+  padding-top: 10px;
+}
+
+.px-9 {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 .pt-23 {
   padding-top: 23px;
 }
@@ -737,6 +782,10 @@ input.input-number {
   height: 26px;
 }
 
+.h-27 {
+  height: 27px;
+}
+
 .h-45 {
   height: 45px;
 }
@@ -791,6 +840,10 @@ input.input-number {
   left: 0;
   top: 0;
   bottom: 0;
+}
+
+.border-bottom-gray {
+  border-bottom: 1px solid #F0EFEF;
 }
 
 .border-radius-4 {
@@ -1997,6 +2050,11 @@ ul.ui-autocomplete li:hover {
   .cat {
     margin-right: 20px;
   }
+}
+
+.transport-left {
+  top: 143px !important;
+  z-index: 9999;
 }
 
 /*# sourceMappingURL=style.css.map */
