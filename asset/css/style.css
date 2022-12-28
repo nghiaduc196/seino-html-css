@@ -187,6 +187,14 @@ input.input-number {
   height: 30px;
 }
 
+.h-26 {
+  height: 26px;
+}
+
+.w-26 {
+  width: 26px;
+}
+
 .w-24 {
   width: 24px;
   height: 24px;
@@ -214,6 +222,26 @@ input.input-number {
 
 .w-274 {
   width: 274px;
+}
+
+@media only screen and (max-width: 992px) {
+  .w-md-100 {
+    width: 100%;
+  }
+}
+
+.w-calc-319-1rem {
+  width: calc(100% - 319px + 1rem);
+}
+@media only screen and (max-width: 992px) {
+  .w-calc-319-1rem {
+    width: calc(100% - 220px + 1rem);
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .w-calc-319-1rem {
+    width: calc(100% - 250px + 1rem);
+  }
 }
 
 .max-w-190 {
@@ -2069,14 +2097,11 @@ ul.ui-autocomplete li:hover {
 
 .transport-left {
   top: 143px !important;
-  z-index: 9999;
+  z-index: 11;
 }
 
-.h-26 {
-  height: 26px;
-}
-.w-26 {
-  width: 26px;
+.border-radius-10-top-right {
+  border-radius: 10px 10px 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

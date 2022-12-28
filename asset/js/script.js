@@ -475,7 +475,10 @@ $(document).ready(function () {
 
     $('body').on('click', '.add-item-cat', function () {
         $(this).parent().prev().append(`<div class="bg-white border-radius-10 p-30 mt-20">
-                            <h3 class="fs-21 ff-nt-sans fst-normal letter-spacing-10 fw-bolder text-blue mb-0">取込情報</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="fs-21 ff-nt-sans fst-normal letter-spacing-10 fw-bolder text-blue mb-0">取込情報</h3>
+                                <img class="cursor-pointer sub-input" src="./asset/image/icon_sub.svg">
+                            </div>
                             <div class="d-inline-block label mt-20">
                                 <label class="me-19 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">取込ファイル </label>
                                 <button class="button button-danger bg-color-red text-white border-radius-4 w-62 h-26">必須</button>
@@ -497,6 +500,7 @@ $(document).ready(function () {
         $('.list-box', $(this).parent().prev()).append(`<div class="d-flex align-items-center mt-20">
                                                 <input type="tel" class="text-end border-gray bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100" placeholder="3,000"/>
                                                 <span>円</span>
+                                                <span><img class="ms-14 sub-input cursor-pointer" src="./asset/image/icon_sub.svg"/></span>
                                             </div>`);
     });
 

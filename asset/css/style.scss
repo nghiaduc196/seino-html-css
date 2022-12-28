@@ -251,6 +251,20 @@ input {
 .w-274 {
   width: 274px;
 }
+.w-md-100 {
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
+}
+.w-calc-319-1rem {
+  width: calc(100% - 319px + 1rem);
+  @media only screen and (max-width: 992px) {
+    width: calc(100% - 220px + 1rem);
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    width: calc(100% - 250px + 1rem);
+  }
+}
 .max-w-190 {
   max-width: 190px;
 }
@@ -2370,5 +2384,8 @@ ul.ui-autocomplete {
 
 .transport-left {
   top: 143px !important;
-  z-index: 9999;
+  z-index: 11;
+}
+.border-radius-10-top-right {
+  border-radius: 10px 10px 0 0;
 }
