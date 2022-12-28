@@ -45,7 +45,7 @@ input {
 }
 
 .letter-spacing-10 {
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 
 .letter-spacing-5 {
@@ -539,6 +539,9 @@ input {
 .mt-23 {
   margin-top: 23px;
 }
+.mt-5px {
+  margin-top: 5px;
+}
 
 .mt-70 {
   margin-top: 70px;
@@ -696,9 +699,14 @@ input {
 .p-6 {
   padding: 6px;
 }
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 .ps-42 {
   padding-left: 42px !important;
 }
+
 .ps-36 {
   padding-left: 36px !important;
 }
@@ -809,6 +817,7 @@ input {
 }
 .h-27 {
   height: 27px;
+  line-height: 27px;
 }
 
 .h-45 {
