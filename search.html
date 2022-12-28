@@ -81,17 +81,37 @@
                 <div class="header-bottom mt-20">
                     <div class="d-flex justify-content-between align-items-center me-32 header">
                         <h3 class="text-blue fs-26 fw-500 ff-nt-sans fst-normal letter-spacing-15">貸切案件一覧</h3>
-                        <div class="d-flex">
+                        <div class="d-flex" style="position: relative">
                             <a class="button d-flex align-items-center bg-color-green border-radius-5 px-32 h-45"
                                href="#">
                                 <img src="./asset/image/icon_down.svg"/>
                                 <span class="ms-18 text-white letter-spacing-10 fs-16 fw-500">ダウンロード</span>
                             </a>
-                            <a class="button d-flex align-items-center bg-color-blue-2 border-radius-5 px-20 h-45 ms-9"
-                               href="#">
-                                <img src="./asset/image/icon_filter.svg"/>
-                                <span class="ms-18 text-blue letter-spacing-10 fs-16 fw-500">依頼番号順</span>
-                            </a>
+							<a class="sort-button button d-flex align-items-center bg-color-blue-2 border-radius-5 px-20 h-45 ms-9"
+								   href="#">
+								<img src="./asset/image/icon_filter.svg"/>
+								<span class="sort-value ms-18 text-blue letter-spacing-10 fs-16 fw-500">依頼番号順</span>
+							</a>
+							<div class="sort-menu" style="display:none;">
+								<li class="sort-menu-item">
+									<div id="ui-id-1" tabindex="-1" class="sort-menu-item-wrapper">受付新着順</div>
+								</li>
+								<li class="sort-menu-item">
+									<div id="ui-id-2" tabindex="-1" class="sort-menu-item-wrapper">受付古い順</div>
+								</li>
+								<li class="sort-menu-item">
+									<div id="ui-id-3" tabindex="-1" class="sort-menu-item-wrapper">原票番号昇順</div>
+								</li>
+								<li class="sort-menu-item">
+									<div id="ui-id-4" tabindex="-1" class="sort-menu-item-wrapper">原票番号降順</div>
+								</li>
+								<li class="sort-menu-item">
+									<div id="ui-id-5" tabindex="-1" class="sort-menu-item-wrapper">用車コード昇順</div>
+								</li>
+								<li class="sort-menu-item">
+									<div id="ui-id-6" tabindex="-1" class="sort-menu-item-wrapper">用車コード降順</div>
+								</li>
+							</div>
                         </div>
                     </div>
 
@@ -184,7 +204,7 @@
                                                 <input data-bs-toggle="modal" data-bs-target="#modal-1" name="field-1"
                                                        type="text" placeholder="指定なし"
                                                        class="cursor-pointer pe-40 form-control h-41 text-truncate"/>
-                                                <span class="badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
+                                                <span class="badge bg-color-gray-5 border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
                                                       id="field-1-badge"></span>
                                             </div>
                                         </div>
@@ -197,7 +217,7 @@
                                                 <input data-bs-toggle="modal" data-bs-target="#modal-2" name="field-2"
                                                        type="text" placeholder="指定なし"
                                                        class="cursor-pointer pe-40 form-control h-41 text-truncate"/>
-                                                <span class="badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
+                                                <span class="badge bg-color-gray-5 border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
                                                       id="field-2-badge"></span>
                                             </div>
                                             <div class="position-relative">
@@ -218,7 +238,7 @@
                                                 <input data-bs-toggle="modal" data-bs-target="#modal-5" name="field-5"
                                                        type="text" placeholder="指定なし"
                                                        class="cursor-pointer pe-40 form-control h-41 text-truncate"/>
-                                                <span class="badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
+                                                <span class="badge bg-color-gray-5 border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
                                                       id="field-5-badge"></span>
                                             </div>
                                         </div>
@@ -231,7 +251,7 @@
                                                 <input data-bs-toggle="modal" data-bs-target="#modal-3" name="field-3"
                                                        type="text" placeholder="指定なし"
                                                        class="cursor-pointer pe-40 form-control h-41 text-truncate"/>
-                                                <span class="badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
+                                                <span class="badge bg-color-gray-5 border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
                                                       id="field-3-badge"></span>
                                             </div>
                                             <input type="hidden" id="field-3-1">
@@ -246,7 +266,7 @@
                                                 <input data-bs-toggle="modal" data-bs-target="#modal-4" name="field-4"
                                                        type="text" placeholder="指定なし"
                                                        class="cursor-pointer pe-40 form-control h-41 text-truncate"/>
-                                                <span class="badge bg-color-red border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
+                                                <span class="badge bg-color-gray-5 border-radius-50 ff-nt-sans fs-16 fst-normal position-absolute top-7 right-40 badge-search display-badge"
                                                       id="field-4-badge"></span>
                                             </div>
                                             <input type="hidden" id="field-4-1">
@@ -417,6 +437,60 @@
                                                 <div class="mt-10 fw-bolder">
                                                     <span class="text-red">庭先条件あり（特殊車両）</span>
                                                 </div>
+                                            </td>
+                                        </tr>
+										<tr class="fw-normal letter-spacing-10">
+                                            <td class="border-radius-5-red">
+                                                <div><span>K220831-00001</span></div>
+                                                <div class="mt-2 text-red fw-bolder">
+                                                    原票番号未登録
+                                                </div>
+                                                <div class="mt-10">
+                                                    <a href="#"
+                                                       class="pt-10 button bg-color-red text-white py-1 border-radius-50 d-block text-center">登録中</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><span>△△△本社</span></div>
+                                                <div class="mt-2"><span class="text-red fw-bolder">運賃未入力</span>
+                                                </div>
+                                                <div class="mt-10">
+                                                    <span>2022/00/00</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><span>エキス</span></div>
+                                                <div class="mt-2 fw-bolder d-block text-truncate text-truncate-toggle"
+                                                     style="width: 10px">
+                                                    西濃エキス
+                                                </div>
+                                                <div class="mt-10">
+                                                    <span class="fw-bolder">84,000円</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><span class="text-gray-blur">△△△岐阜工場</span></div>
+                                                <div class="mt-2 fw-bolder d-block text-truncate text-truncate-toggle"
+                                                     style="width: 10px">
+                                                    岐阜県岐阜市藍川町
+                                                </div>
+                                                <div class="mt-10">
+                                                    <span class="fw-bolder">0510：岐阜支店</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><span class="text-gray-blur">△△△大阪工場</span></div>
+                                                <div class="mt-2 fw-bolder d-block text-truncate text-truncate-toggle"
+                                                     style="width: 10px">
+                                                    大阪市大阪府西城区
+                                                </div>
+                                                <div class="mt-10">
+                                                    <span class="fw-bolder text-red">店所止め</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><span>コイル／パレット</span></div>
+                                                <div class="mt-2"><span>10,000kg 10パレット</span></div>
                                             </td>
                                         </tr>
                                         </tbody>

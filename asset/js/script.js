@@ -462,15 +462,20 @@ $(document).ready(function () {
         }, time * 1000);
     });
 
-    function zenkaku2Hankaku(str) {
+    function hankaku2Zenkaku(str) {
         return str.replace(/[A-Za-z0-9]/g, function(s) {
             return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
         });
     }
 
+    $('body').on('blur', '.focus-zenkaku', function (index, ele) {
+        let value = $(this).val();
+        $(this).val(hankaku2Zenkaku(value));
+    });
+
     $('body').on('blur', '.focus-uppercase', function (index, ele) {
         let value = $(this).val();
-        $(this).val(zenkaku2Hankaku(value.toUpperCase()));
+        $(this).val(value.toUpperCase());
     });
 
     $('body').on('click', '.add-item-cat', function () {

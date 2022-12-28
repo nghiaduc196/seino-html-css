@@ -156,6 +156,7 @@
                                     <div class="box-form">
                                         <div class="d-inline-block label">
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">受付日</label>
+											<button class="button button-danger">必須</button>
                                         </div>
                                         <div class="form-date form-date-custom">
                                             <input type="text"
@@ -181,7 +182,7 @@
                                         <div class="row gx-4 row-cols-1 row-cols-lg-2">
                                             <div class="col w-calc-298">
                                                 <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"
-                                                       style="width: 100%;"/>
+                                                       style="width: 100%;" type="tel"/>
                                             </div>
                                             <div class="col w-298">
                                                 <button data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -196,7 +197,7 @@
                                     <div class="box-form">
                                         <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">品名</label>
                                         <div>
-                                            <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100"/>
+                                            <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 w-100"/>
                                         </div>
                                     </div>
 
@@ -318,11 +319,11 @@
                                         <div class="row row-cols-md-1 row-cols-lg-2 gx-3">
                                             <div class="col w-217">
                                                 <input value="0520"
-                                                       class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"/>
+                                                       class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25" placeholder="例）0520" type="tel"/>
                                             </div>
                                             <div class="col w-calc-217">
                                                 <input value="大垣支店"
-                                                       class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 bg-color-gray-1"/>
+                                                       class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 bg-color-gray-1" disabled="disabled"/>
                                             </div>
                                         </div>
                                     </div>
@@ -331,10 +332,10 @@
                                         <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">拠点卸し</label>
                                         <div class="row row-cols-md-1 row-cols-lg-2 gx-3">
                                             <div class="col w-217">
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"/>
+                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25" placeholder="例）0520" type="tel"/>
                                             </div>
                                             <div class="col w-calc-217">
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 bg-color-gray-1"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25 bg-color-gray-1" disabled="disabled"/>
                                             </div>
                                         </div>
                                     </div>
@@ -352,20 +353,20 @@
                                                 <div class="col d-flex w-233">
                                                     <label class="mt-12 h-5 l-h-50 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10 me-25"
                                                            style="padding: 2px">乗務コード1</label>
-                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-95"/>
+                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-95" type="tel"/>
                                                 </div>
                                                 <div class="col w-calc-233">
-                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <input class="focus-zenkaku mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                                 </div>
                                             </div>
                                             <div class="row mt-12 align-items-center row-cols-1 row-cols-lg-2 gx-0">
                                                 <div class="col d-flex w-233">
                                                     <label class="mt-12 h-5 l-h-50 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10 me-25"
                                                            style="padding: 2px">乗務コード2</label>
-                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-95"/>
+                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-95" type="tel"/>
                                                 </div>
                                                 <div class="col w-calc-233">
-                                                    <input class="mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                    <input class="focus-zenkaku mt-12 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -395,7 +396,7 @@
                                             <button class="button button-danger">必須</button>
                                         </div>
                                         <input type="tel" value="0584738888：セイノー情報サービス"
-                                               class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                               class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" placeholder="例）0584738888"/>
                                         <div class="mt-11">
                                             <button class="button-fade button-disable button form-control h-5 border-input bg-base-color d-flex align-items-center justify-content-center">
                                                 <img class="me-15" src="./asset/image/icon_search_document.svg"/>
@@ -458,8 +459,8 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">住所</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
-                                        <input class="mt-11 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku mt-11 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                     </div>
 
                                     <div class="box-form">
@@ -467,7 +468,7 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">名称</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                     </div>
 
                                     <div class="toggle-box d-flex align-items-center mt-25">
@@ -483,13 +484,13 @@
                                                 <div class="d-inline-block label mt-0">
                                                     <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">部署</label>
                                                 </div>
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
                                             <div class="box-form">
                                                 <div class="d-inline-block label">
                                                     <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">担当者</label>
                                                 </div>
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
                                             <div class="box-form">
                                                 <div class="d-inline-block label">
@@ -580,7 +581,7 @@
                                                         <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">高さ制限</label>
                                                     </div>
                                                     <div class="d-flex align-items-center">
-                                                        <input class="w-120 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                        <input class="w-120 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" placeholder="例）1.3"/>
                                                         <span class="ms-20 ff-nt-sans fst-normal fw-500 letter-spacing-10">m以下</span>
                                                     </div>
                                                 </div>
@@ -694,7 +695,7 @@
                                             <button class="button button-danger">必須</button>
                                         </div>
                                         <input type="tel" value="0584738888：セイノー情報サービス"
-                                               class="ff-nt-sans fst-normal fs-16 letter-spacing-10  form-control h-5 border-input error"/>
+                                               class="ff-nt-sans fst-normal fs-16 letter-spacing-10  form-control h-5 border-input error" placeholder="例）0335163888"/>
                                         <div class="error mt-11">
                                             <span class="fw-500 ff-nt-sans fst-normal letter-spacing-10 text-red">エラーメッセージはこちらに表示いたします。</span>
                                         </div>
@@ -773,7 +774,7 @@
                                                 <span class="ms-14">時</span>
                                                 <div class="border-top-blue w-16 me-3 ms-3"></div>
                                                 <input type="tel"
-                                                       class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-69 text-center input-number bg-color-gray-1"/>
+                                                       class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-69 text-center input-number bg-color-gray-1" disabled="disabled"/>
                                                 <span class="ms-14">時</span>
                                             </div>
                                         </div>
@@ -807,8 +808,8 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">住所</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
-                                        <input class="mt-11  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku mt-11  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                     </div>
 
                                     <div class="box-form">
@@ -816,7 +817,7 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">名称</label>
                                             <button class="button button-danger">必須</button>
                                         </div>
-                                        <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                     </div>
 
                                     <div class="toggle-box d-flex align-items-center mt-25">
@@ -832,13 +833,13 @@
                                                 <div class="d-inline-block label mt-0">
                                                     <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">部署</label>
                                                 </div>
-                                                <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
                                             <div class="box-form">
                                                 <div class="d-inline-block label">
                                                     <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">担当者</label>
                                                 </div>
-                                                <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
                                             <div class="box-form">
                                                 <div class="d-inline-block label">
@@ -851,13 +852,13 @@
                                             <div class="row row-cols-md-1 row-cols-lg-2">
                                                 <div class="col box-form">
                                                     <div class="d-inline-block label">
-                                                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷先連絡先</label>
+                                                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配達先連絡先</label>
                                                     </div>
-                                                    <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                    <input class=" ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" placeholder="例）0335163888"/>
                                                 </div>
                                                 <div class="col box-form">
                                                     <div class="d-inline-block label">
-                                                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷前連絡時間</label>
+                                                        <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配達前連絡時間</label>
                                                     </div>
                                                     <div class="d-flex align-items-center">
                                                         <input class="w-120  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
@@ -929,7 +930,7 @@
                                                         <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">高さ制限</label>
                                                     </div>
                                                     <div class="d-flex align-items-center">
-                                                        <input class="w-120  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                        <input class="w-120  ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" placeholder="例）1.3"/>
                                                         <span class="ms-20 ff-nt-sans fst-normal fw-500 letter-spacing-10">m以下</span>
                                                     </div>
                                                 </div>
@@ -1015,31 +1016,31 @@
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">集荷担当</label>
                                         </div>
                                         <div class="row gx-4 row-cols-md-1 row-cols-lg-3">
-                                            <div class="col">
-                                                <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
-                                                    <input type="checkbox" id="checkbox-14"
+											<div class="col mt-14">
+                                                <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center bg-white-custom">
+                                                    <input type="radio" name="radio-62" id="checkbox-62"
                                                            class="input-checkbox start-0 end-0 top-0 bottom-0"/>
-                                                    <span class="checkmark"></span>
+                                                    <span class="checkmark-radio"></span>
                                                     <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
-                                                           for="checkbox-14">パレット</label>
+                                                           for="checkbox-70">バラ</label>
                                                 </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
-                                                    <input type="checkbox" id="checkbox-15"
+                                            <div class="col mt-14">
+                                                <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center bg-white-custom">
+                                                    <input type="radio" name="radio-62" id="checkbox-63"
                                                            class="input-checkbox start-0 end-0 top-0 bottom-0"/>
-                                                    <span class="checkmark"></span>
+                                                    <span class="checkmark-radio"></span>
                                                     <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
-                                                           for="checkbox-15">バラ</label>
+                                                           for="checkbox-71">パレット</label>
                                                 </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="form-checkbox w-100 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
-                                                    <input type="checkbox" id="checkbox-16"
+											<div class="col mt-14">
+                                                <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center bg-white-custom">
+                                                    <input type="radio" name="radio-62" id="checkbox-63"
                                                            class="input-checkbox start-0 end-0 top-0 bottom-0"/>
-                                                    <span class="checkmark"></span>
+                                                    <span class="checkmark-radio"></span>
                                                     <label class="ff-nt-sans fst-normal fs-16 letter-spacing-10"
-                                                           for="checkbox-16">パレットとバラ</label>
+                                                           for="checkbox-72">パレットとバラ</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -1267,28 +1268,35 @@
                                         依頼先情報</h4>
 
                                     <div class="box-form">
-                                        <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用車</label>
+										<div class="d-inline-block label">
+											<label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用車</label>
+											<button class="button button-danger">必須</button>
+										</div>
                                         <div>
                                             <input type="tel" value="0584738888：セイノー情報サービス"
                                                    class="focus-uppercase ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"
-                                                   style="width: 100%;"/>
+                                                   style="width: 100%;" placeholder="例）Z110"/>
                                         </div>
                                     </div>
 
                                     <div class="row row-cols-md-1 row-cols-lg-2">
                                         <div class="col box-form">
-                                            <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">車両番号</label>
+											<div class="d-inline-block label">
+												<label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">車両番号</label>
+												<button class="button button-danger">必須</button>
+											</div>
                                             <div>
                                                 <input value="F953M"
-                                                       class="focus-uppercase ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25" type="tel"/>
+                                                       class="focus-uppercase ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25" type="tel" placeholder="例）Z1001"/>
                                             </div>
                                         </div>
                                         <div class="col box-form"></div>
                                     </div>
 
                                     <div class="row row-cols-md-1 row-cols-lg-2">
-                                        <div class="col-12">
-                                            <label class="label ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">商品</label>
+                                        <div class="col-12 box-form label">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">商品</label>
+											<button class="button button-danger">必須</button>
                                         </div>
                                         <div class="col">
                                             <div class="form-checkbox w-100 mb-md-3 mb-lg-0 position-relative h-5 w-166 border-input border-radius-55 d-flex align-items-center">
@@ -1454,7 +1462,7 @@
                                                     <div>
                                                         <input placeholder="例）09099999999"
                                                                class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input me-25"
-                                                               style="width: 100%;"/>
+                                                               style="width: 100%;" type="tel"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1475,7 +1483,7 @@
 
                                             <div class="box-form">
                                                 <label class="label mt-0 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">連絡先担当者</label>
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
 
                                             <div class="box-form mt-25">
@@ -1490,12 +1498,12 @@
 
                                             <div class="box-form mt-25">
                                                 <label class="label mt-0 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">連絡先メールアドレス</label>
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
                                             </div>
 
                                             <div class="box-form mt-25">
                                                 <label class="label mt-0 ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">連絡先備考</label>
-                                                <input class="ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                                <input class="focus-zenkaku ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
                                             </div>
 
                                         </div>
@@ -1552,7 +1560,6 @@
                                     <div class="box-form mt-12">
                                         <div class="d-inline-block label mt-0">
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">O：燃料サーチャージ
-                                                <img class="ms-14" src="./asset/image/icon_ask.svg"/></label>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <input value="100,000"
@@ -1702,8 +1709,8 @@
                                         <div class="d-inline-block label mt-0">
                                             <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用車</label>
                                         </div>
-                                        <input type="tel" value="0584738888：セイノー情報サービス"
-                                               class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input"/>
+                                        <input type="tel" value=""
+                                               class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" disabled="disabled"/>
                                     </div>
 
                                     <div class="box-form mt-26">
@@ -1712,8 +1719,8 @@
                                         </div>
                                         <div class="row gx-4 row-cols-md-1 row-cols-lg-2">
                                             <div class="col">
-                                                <input value="F953M"
-                                                       class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                <input value=""
+                                                       class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" disabled="disabled"/>
                                             </div>
                                         </div>
                                     </div>
@@ -1724,7 +1731,7 @@
                                         </div>
                                         <div class="form-date form-date-custom">
                                             <input type="text"
-                                                   class="datepicker-custom datepicker-custom-icon bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input" value="2020/12/20"/>
+                                                   class="datepicker-custom datepicker-custom-icon bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input" value="2020/12/20" disabled="disabled"/>
                                         </div>
                                     </div>
 
@@ -1803,10 +1810,109 @@
                                             </div>
                                             <div class="col w-calc-218 mt-17">
                                                 <div class="d-inline-block label mt-0">
-                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">発送手数料</label>
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配送手数料</label>
                                                 </div>
                                                 <div class="d-flex align-items-center">
-                                                    <input class="bg-color-gray-1 text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                    <input class="bg-color-gray-1 text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" disabled="disabled"/>
+                                                    <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">円</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+								
+								<div class="box box-8 mt-20" id="tab9">
+                                    <h4 class="mb-0 ff-nt-sans fst-normal fs-21 fw-bolder letter-spacing-10 text-blue">
+                                        支払情報</h4>
+                                    <div class="box-form mt-26">
+                                        <div class="d-inline-block label mt-0">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">用車</label>
+                                        </div>
+                                        <input type="tel" value=""
+                                               class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" disabled="disabled"/>
+                                    </div>
+
+                                    <div class="box-form mt-26">
+                                        <div class="d-inline-block label mt-0">
+                                            <label class="focus-uppercase ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">車両番号</label>
+                                        </div>
+                                        <div class="row gx-4 row-cols-md-1 row-cols-lg-2">
+                                            <div class="col">
+                                                <input value=""
+                                                       class="focus-uppercase bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" disabled="disabled"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-form mt-26">
+                                        <div class="d-inline-block label mt-0">
+                                            <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">仕立日付</label>
+                                        </div>
+                                        <div class="form-date form-date-custom">
+                                            <input type="text"
+                                                   class="datepicker-custom datepicker-custom-icon bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 input-date form-control h-5 w-252 border-input" value="2020/12/20" disabled="disabled"/>
+                                        </div>
+                                    </div>
+									
+									<div class="box-form mt-26">
+                                        <div class="row row-cols-md-1 row-cols-lg-2 gx-0">
+                                            <div class="col mt-3 mt-lg-0">
+                                                <div class="d-inline-block label mt-0">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">ハコベル運賃（税抜き）</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input value=""
+                                                           class="text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                    <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">円</span>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+									
+									<div class="box-form mt-26">
+                                        <div class="row row-cols-md-1 row-cols-lg-2 gx-0">
+                                            <div class="col mt-3 mt-lg-0">
+                                                <div class="d-inline-block label mt-0">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">ハコベル実費（税込み）</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input value=""
+                                                           class="text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel"/>
+                                                    <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">円</span>
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+
+                                    <div class="box-form mt-26">
+                                        <div class="row row-cols-md-1 row-cols-lg-2 gx-0">
+                                            <div class="col mt-3 mt-lg-0">
+                                                <div class="d-inline-block label mt-0">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">支払金額（税抜き）</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input value=""
+                                                           class="bg-color-gray-1 text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" disabled="disabled"/>
+                                                    <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">円</span>
+                                                </div>
+                                            </div>
+											<div class="col w-218 ms-28">
+                                                <div class="d-inline-block label mt-0">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">支払率</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input class="bg-color-gray-1 ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input w-150" type="tel" disabled="disabled"/>
+                                                    <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="col w-calc-218 mt-17">
+                                                <div class="d-inline-block label mt-0">
+                                                    <label class="ff-nt-sans fst-normal fw-500 fs-16 letter-spacing-10">配送手数料</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input class="bg-color-gray-1 text-end ff-nt-sans fst-normal letter-spacing-10 form-control h-5 border-input" type="tel" disabled="disabled"/>
                                                     <span class="ms-20 ff-nt-sans fst-normal fs-16 letter-spacing-10">円</span>
                                                 </div>
                                             </div>

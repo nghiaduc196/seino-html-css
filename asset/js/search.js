@@ -58,7 +58,7 @@ $(document).ready(function () {
         yearSuffix: "年",
     });
 
-    
+
 
     $('#search-form').on('reset', function (e){
         $('#form-modal-1').trigger('reset');
@@ -291,6 +291,16 @@ $(document).ready(function () {
 
     $('body').on('change', '#search-form .datepicker-custom', function (){
         activeForm();
+    });
+
+    $('.sort-button').click(function(event){
+        event.preventDefault();
+        $('.sort-menu').toggle();
+    });
+
+    $('.sort-menu-item').click(function(){
+        $('.sort-menu').hide();
+        $('.sort-value').text($(this).children().text());
     });
 
     function activeForm(){
