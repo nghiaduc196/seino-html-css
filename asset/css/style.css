@@ -851,6 +851,10 @@ input.input-number {
   min-height: 158px !important;
 }
 
+.min-vh-100-65 {
+  min-height: calc(100vh - 66px);
+}
+
 .l-h-50 {
   line-height: 50px;
 }
