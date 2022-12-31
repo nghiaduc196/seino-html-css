@@ -513,4 +513,18 @@ $(document).ready(function () {
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
+
+    $('input[type=radio]').click(function (e){
+        let currentValue = $(this).data('currentValue') || false;
+        const name = $(this).prop('name');
+        if(currentValue){
+            $(this).prop("checked", false);
+            $(this).closest('.active').removeClass('active');
+            currentValue = false;
+        }else{
+            currentValue = true;
+        }
+        $('input[type=radio][name='+name+']').data('currentValue', false);
+        $(this).data('currentValue', currentValue);
+    });
 });

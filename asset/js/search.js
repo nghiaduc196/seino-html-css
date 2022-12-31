@@ -102,18 +102,6 @@ $(document).ready(function () {
         $(this).blur()
     });
 
-    $('input[type=radio]').click(function (e){
-        let currentValue = $(this).data('currentValue');
-        if(currentValue){
-            $(this).prop("checked", false);
-            $(this).closest('.active').removeClass('active');
-            currentValue = false;
-        }else{
-            currentValue = true;
-        }
-        $(this).data('currentValue', currentValue);
-    })
-
 
     $('#form-modal-1').submit(function (e) {
         let count = 0;
