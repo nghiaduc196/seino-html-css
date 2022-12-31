@@ -57,6 +57,12 @@ $(document).ready(function () {
             // $('.form-checkbox', child).removeClass('active');
             $(this).parent().addClass('active');
         });
+
+        $(".input-checkbox:radio").each(function(){
+            const currentValue = $(this).is(':checked')
+            $(this).data('currentValue', currentValue);
+
+        });
     };
     ActiveCheck();
 
@@ -522,8 +528,12 @@ $(document).ready(function () {
     $('input[type=radio]').click(function (e){
         let currentValue = $(this).data('currentValue') || false;
         const name = $(this).prop('name');
+        $('input[type=radio][name="'+name+'"]').each(function(){
+            $(this).closest('.active').removeClass('active');
+        })
         if(currentValue){
             $(this).prop("checked", false);
+            // $(this).closest('.active').removeClass('active');
             currentValue = false;
         }else{
             currentValue = true;
