@@ -48,8 +48,13 @@ $(document).ready(function () {
         });
 
         $(".input-checkbox:radio").change(function () {
-            let child = $(this).parent().parent().siblings();
-            $('.form-checkbox', child).removeClass('active');
+            const name = $(this).prop('name');
+            $('input[type=radio][name="'+name+'"]').each(function(){
+                $(this).closest('.active').removeClass('active');
+            })
+            //
+            // let child = $(this).parent().parent().siblings();
+            // $('.form-checkbox', child).removeClass('active');
             $(this).parent().addClass('active');
         });
     };
@@ -519,12 +524,11 @@ $(document).ready(function () {
         const name = $(this).prop('name');
         if(currentValue){
             $(this).prop("checked", false);
-            $(this).closest('.active').removeClass('active');
             currentValue = false;
         }else{
             currentValue = true;
         }
-        $('input[type=radio][name='+name+']').data('currentValue', false);
+        $('input[type=radio][name="'+name+'"]').data('currentValue', false);
         $(this).data('currentValue', currentValue);
     });
 });
